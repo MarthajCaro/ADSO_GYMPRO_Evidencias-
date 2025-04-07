@@ -1,4 +1,7 @@
+using Backend_Gympro.Application.Interfaces;
+using Backend_Gympro.Application.Services;
 using Backend_Gympro.Infrastructure.Context;
+using Backend_Gympro.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +12,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IDepartamentoService, DepartamentoService>();
+builder.Services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
+builder.Services.AddScoped<IClaseService, ClaseService>();
+builder.Services.AddScoped<IClaseRepository, ClaseRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(

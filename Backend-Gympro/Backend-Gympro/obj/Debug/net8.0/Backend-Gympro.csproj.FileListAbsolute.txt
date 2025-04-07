@@ -112,3 +112,4 @@ C:\Users\yenni\OneDrive\Documentos\GitHub\Backend-Gympro\Backend-Gympro\obj\Debu
 C:\Users\yenni\OneDrive\Documentos\GitHub\Backend-Gympro\Backend-Gympro\obj\Debug\net8.0\Backend-Gympro.pdb
 C:\Users\yenni\OneDrive\Documentos\GitHub\Backend-Gympro\Backend-Gympro\obj\Debug\net8.0\Backend-Gympro.genruntimeconfig.cache
 C:\Users\yenni\OneDrive\Documentos\GitHub\Backend-Gympro\Backend-Gympro\obj\Debug\net8.0\ref\Backend-Gympro.dll
+C:\Users\yenni\OneDrive\Documentos\GitHub\Backend-Gympro\Backend-Gympro\obj\Debug\net8.0\Backend-Gympro.sourcelink.json
