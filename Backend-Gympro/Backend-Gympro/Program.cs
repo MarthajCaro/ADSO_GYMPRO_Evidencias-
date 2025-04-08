@@ -17,6 +17,26 @@ builder.Services.AddScoped<IDepartamentoService, DepartamentoService>();
 builder.Services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
 builder.Services.AddScoped<IClaseService, ClaseService>();
 builder.Services.AddScoped<IClaseRepository, ClaseRepository>();
+builder.Services.AddScoped<IMunicipioService, MunicipioService>();
+builder.Services.AddScoped<IMunicipioRepository, MunicipioRepository>();
+builder.Services.AddScoped<IInscripcionService, InscripcionService>();
+builder.Services.AddScoped<IInscripcionRepository, InscripcionRepository>();
+builder.Services.AddScoped<IMembresiaService, MembresiaService>();
+builder.Services.AddScoped<IMembresiaRepository, MembresiaRepository>();
+builder.Services.AddScoped<IMetodoPagoService, MetodoPagoService>();
+builder.Services.AddScoped<IMetodoPagoRepository, MetodoPagoRepository>();
+builder.Services.AddScoped<IPagoService, PagoService>();
+builder.Services.AddScoped<IPagoRepository, PagoRepository>();
+builder.Services.AddScoped<IPersonaService, PersonaService>();
+builder.Services.AddScoped<IPersonaRepository, PersonaRepository>();
+builder.Services.AddScoped<IRolService, RolService>();
+builder.Services.AddScoped<IRolRepository, RolRepository>();
+builder.Services.AddScoped<ISuplementoDeportivoService, SuplementoDeportivoService>();
+builder.Services.AddScoped<ISuplementoDeportivoRepository, SuplementoDeportivoRepository>();
+builder.Services.AddScoped<ITipoMembresiaService, TipoMembresiaService>();
+builder.Services.AddScoped<ITipoMembresiaRepository, TipoMembresiaRepository>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(
