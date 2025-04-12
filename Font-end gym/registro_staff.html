@@ -2,15 +2,14 @@
 <html>
 
 <head>
-	<title>Gympro | Registro </title>
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<title>Gympro | Registro</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />	
+	<link href="css/st" rel="stylesheet" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-	<script
-		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
 	<script src="js/jquery.min.js"></script>
 </head>
 
@@ -64,9 +63,10 @@
 				<!--Registo Nombre, Apellido, Correo, Checkbox boletin Y Contraseña-->
 				<!-- Este formulario debe ir dentro del <body> de tu archivo HTML principal -->
 
+
 				<div class="form-container">
-					<form action="registro.php" method="POST" class="form-registro">
-						<h2>Registro de clientes</h2>
+					<form action="registro_staff.php" method="POST" class="form-registro">
+						<h2>Registro Staff</h2>
 
 						<div class="form-group">
 							<label>Nombre:</label>
@@ -102,18 +102,8 @@
 						</div>
 
 						<div class="form-group">
-							<label>ID Municipio:</label>
-							<input type="number" name="id_municipio">
-						</div>
-
-						<div class="form-group">
 							<label>Dirección:</label>
 							<input type="text" name="direccion">
-						</div>
-
-						<div class="form-group">
-							<label>ZIP:</label>
-							<input type="text" name="zip">
 						</div>
 
 						<div class="form-group">
@@ -124,14 +114,21 @@
 						<div class="form-group">
 							<label>Confirmar contraseña:</label>
 							<input type="password" name="confirmar_contrasena">
+						</div>
 
-							
-
-							</label>
+						<div class="form-group">
+							<label>Cargo:</label>
+							<select name="cargo" required>
+								<option value="">Seleccione un cargo</option>
+								<option value="Administrador">Administrador</option>
+								<option value="Entrenador">Entrenador</option>
+								<option value="Vendedor">Vendedor</option>
+							</select>
 						</div>
 
 						<input type="submit" value="Registrar">
 					</form>
+
 				</div>
 
 				<!-- Footer-->
