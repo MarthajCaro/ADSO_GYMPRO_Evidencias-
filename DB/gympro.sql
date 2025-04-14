@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2024 a las 02:16:53
+-- Tiempo de generación: 14-04-2025 a las 02:02:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -46,7 +46,8 @@ INSERT INTO `clase` (`id`, `nombre`, `duracion_en_minutos`, `descripcion`, `id_u
 (5, 'Spinning', 45, 'Clase de resistencia cardiovascular en bicicleta estática', 8),
 (6, 'Aerobicos', 50, 'Ejercicio cardiovascular con música para mejorar la condición física', 6),
 (7, 'Cardio Fitness', 55, 'Entrenamiento enfocado en mejorar la salud cardiovascular y resistencia', 4),
-(8, 'Pilates', 60, 'Entrenamiento de fuerza, flexibilidad y control de respiración', 12);
+(8, 'Pilates', 60, 'Entrenamiento de fuerza, flexibilidad y control de respiración', 12),
+(9, 'Clases de recuperación fisica', 60, 'Clases de recuperacion fisica', 2);
 
 -- --------------------------------------------------------
 
@@ -131,23 +132,44 @@ INSERT INTO `inscripcion` (`id`, `fecha_inscripcion`, `estado`, `id_clase`, `id_
 
 CREATE TABLE `membresia` (
   `id` int(11) NOT NULL,
-  `nombre_membresia` varchar(50) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `duracion_membresia_en_meses` int(11) NOT NULL,
   `descripcion` text DEFAULT NULL,
-  `id_pago` int(11) DEFAULT NULL
+  `id_pago` int(11) DEFAULT NULL,
+  `id_tipo_membresia` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `membresia`
 --
 
-INSERT INTO `membresia` (`id`, `nombre_membresia`, `precio`, `duracion_membresia_en_meses`, `descripcion`, `id_pago`) VALUES
-(1, 'Basic', 50.00, 1, 'Acceso básico al gimnasio', 1),
-(2, 'Standard', 80.00, 3, 'Acceso a clases grupales', 2),
-(3, 'Premium', 120.00, 6, 'Acceso a clases grupales y piscina', 3),
-(4, 'Gold', 150.00, 12, 'Acceso a todas las instalaciones', 4),
-(5, 'VIP', 200.00, 12, 'Acceso a todas las instalaciones y eventos especiales', 5);
+INSERT INTO `membresia` (`id`, `precio`, `duracion_membresia_en_meses`, `descripcion`, `id_pago`, `id_tipo_membresia`) VALUES
+(1, 50.00, 1, 'Acceso básico al gimnasio', 1, 1),
+(2, 80.00, 3, 'Acceso a clases grupales', 2, 2),
+(3, 120.00, 6, 'Acceso a clases grupales y piscina', 3, 2),
+(4, 150.00, 12, 'Acceso a todas las instalaciones', 4, 1),
+(5, 200.00, 12, 'Acceso a todas las instalaciones y eventos especiales', 5, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `metodo_pago`
+--
+
+CREATE TABLE `metodo_pago` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `estado` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `metodo_pago`
+--
+
+INSERT INTO `metodo_pago` (`id`, `nombre`, `estado`) VALUES
+(1, 'Debito automatico', 'Activa'),
+(2, 'Tarjeta credito', 'Activa'),
+(3, 'Tarjeta debito', 'Activa');
 
 -- --------------------------------------------------------
 
@@ -1278,26 +1300,27 @@ CREATE TABLE `pago` (
   `id` int(11) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `fecha_pago` date NOT NULL,
-  `metodo_pago` varchar(30) NOT NULL,
   `fecha_vigencia` date DEFAULT NULL,
-  `id_usuario` int(11) DEFAULT NULL
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_metodo_pago` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pago`
 --
 
-INSERT INTO `pago` (`id`, `precio`, `fecha_pago`, `metodo_pago`, `fecha_vigencia`, `id_usuario`) VALUES
-(1, 50000.00, '2023-10-01', 'Tarjeta', '2024-10-01', 3),
-(2, 70000.00, '2023-11-01', 'Efectivo', '2024-11-01', 5),
-(3, 60000.00, '2023-09-01', 'Transferencia', '2024-09-01', 9),
-(4, 80000.00, '2023-08-01', 'Tarjeta', '2024-08-01', 6),
-(5, 90000.00, '2023-12-01', 'Efectivo', '2024-12-01', 11),
-(6, 50000.00, '2023-10-01', 'Tarjeta', '2024-10-01', 3),
-(7, 70000.00, '2023-11-01', 'Efectivo', '2024-11-01', 5),
-(8, 60000.00, '2023-09-01', 'Transferencia', '2024-09-01', 9),
-(9, 80000.00, '2023-08-01', 'Tarjeta', '2024-08-01', 6),
-(10, 90000.00, '2023-12-01', 'Efectivo', '2024-12-01', 11);
+INSERT INTO `pago` (`id`, `precio`, `fecha_pago`, `fecha_vigencia`, `id_usuario`, `id_metodo_pago`) VALUES
+(1, 50000.00, '2023-10-01', '2024-10-01', 3, 1),
+(2, 70000.00, '2023-11-01', '2024-11-01', 5, 2),
+(3, 60000.00, '2023-09-01', '2024-09-01', 9, 3),
+(4, 80000.00, '2023-08-01', '2024-08-01', 6, 1),
+(5, 90000.00, '2023-12-01', '2024-12-01', 11, 2),
+(6, 50000.00, '2023-10-01', '2024-10-01', 3, 2),
+(7, 70000.00, '2023-11-01', '2024-11-01', 5, 3),
+(8, 60000.00, '2023-09-01', '2024-09-01', 9, 1),
+(9, 80000.00, '2023-08-01', '2024-08-01', 6, 1),
+(10, 90000.00, '2023-12-01', '2024-12-01', 11, 1),
+(11, 10000.00, '2025-04-01', '2025-06-01', 5, 3);
 
 -- --------------------------------------------------------
 
@@ -1323,7 +1346,7 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`id`, `nombre`, `apellido`, `genero`, `fecha_nacimiento`, `telefono`, `correo`, `id_municipio`, `direccion`, `zip`) VALUES
-(1, 'Carlos', 'López', 'M', '1990-05-10', '3219876543', 'carlos.lopez@example.com', 1, 'Calle 45 #20-30', '111111'),
+(1, 'Carlos', 'López', 'M', '1990-05-10', '3219876543', 'carlos.lopez@example.com', 3, 'Calle 45 #20-30', '111111'),
 (2, 'Ana', 'Martínez', 'F', '1985-07-20', '3107654321', 'ana.martinez@example.com', 1, 'Carrera 10 #15-40', '111112'),
 (3, 'María', 'Gómez', 'F', '1992-09-15', '3151234567', 'maria.gomez@example.com', 2, 'Avenida Siempre Viva #742', '111113'),
 (4, 'Pedro', 'Ramírez', 'M', '1988-11-23', '3123456789', 'pedro.ramirez@example.com', 3, 'Calle 12A #55-10', '111114'),
@@ -1337,7 +1360,7 @@ INSERT INTO `persona` (`id`, `nombre`, `apellido`, `genero`, `fecha_nacimiento`,
 (12, 'Felipe', 'Diaz', 'M', '1992-12-18', '3105552020', 'felipe.diaz@example.com', 1, 'Avenida 26', '111122'),
 (13, 'Lorena', 'Ruiz', 'F', '1996-05-25', '3155553030', 'lorena.ruiz@example.com', 2, 'Carrera 66', '111123'),
 (14, 'Natalia', 'Vargas', 'F', '1990-09-09', '3195554040', 'natalia.vargas@example.com', 3, 'Calle 19', '111124'),
-(15, 'Raúl', 'Guerrero', 'M', '1987-07-13', '3105555050', 'raul.guerrero@example.com', 2, 'Carrera 20', '111125');
+(15, 'Raúl', 'Gomez', 'M', '2025-04-10', '3105555050', 'sfdsf', 2, 'strfdgdgdfing', '111124');
 
 -- --------------------------------------------------------
 
@@ -1381,7 +1404,31 @@ CREATE TABLE `suplemento_deportivo` (
 
 INSERT INTO `suplemento_deportivo` (`id`, `nombre`, `tipo`, `descripcion`, `precio`, `id_usuario`) VALUES
 (1, 'Proteína Whey', 'Proteína', 'Suplemento de proteína avanzada', 45000.00, 3),
-(2, 'Creatina', 'Creatina', 'Vitaminas y minerales esenciales', 38000.00, 5);
+(2, 'Creatina', 'Creatina', 'Vitaminas y minerales esenciales', 38000.00, 5),
+(3, 'Suplemento especial', 'Suplemento', 'Especial para recuperar el cuerpo', 50000.00, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipo_membresia`
+--
+
+CREATE TABLE `tipo_membresia` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `estado` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tipo_membresia`
+--
+
+INSERT INTO `tipo_membresia` (`id`, `nombre`, `estado`) VALUES
+(1, 'Membresia Basica', 'Activa'),
+(2, 'Membresia Premium', 'Activa'),
+(3, 'Membresia Oro', 'Activa'),
+(4, 'Membresia Plata', 'Activa'),
+(5, 'Membresia por quincenas', 'Activa');
 
 -- --------------------------------------------------------
 
@@ -1392,10 +1439,7 @@ INSERT INTO `suplemento_deportivo` (`id`, `nombre`, `tipo`, `descripcion`, `prec
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
-  `correo` varchar(100) NOT NULL,
   `contrasena` varchar(100) NOT NULL,
-  `fecha_nacimiento` date NOT NULL,
-  `edad` int(11) DEFAULT NULL,
   `id_persona` int(11) DEFAULT NULL,
   `id_rol` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -1404,21 +1448,22 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `correo`, `contrasena`, `fecha_nacimiento`, `edad`, `id_persona`, `id_rol`) VALUES
-(2, 'Carlos_López', 'carlos.lopez@example.com', 'password1', '1990-05-10', 33, 1, 1),
-(3, 'Ana_Martínez', 'ana.martinez@example.com', 'password2', '1985-07-20', 38, 2, 2),
-(4, 'María_Gómez', 'maria.gomez@example.com', 'password3', '1992-09-15', 31, 3, 3),
-(5, 'Pedro_Ramírez', 'pedro.ramirez@example.com', 'password4', '1988-11-23', 35, 4, 1),
-(6, 'Laura_Torres', 'laura.torres@example.com', 'password5', '1995-03-30', 28, 5, 2),
-(7, 'Luis_Pérez', 'luis.perez@example.com', 'password6', '1993-04-11', 30, 6, 3),
-(8, 'Jorge_Rojas', 'jorge.rojas@example.com', 'password7', '1989-02-01', 34, 7, 4),
-(9, 'Claudia_Lara', 'claudia.lara@example.com', 'password8', '1986-06-19', 37, 8, 1),
-(10, 'Sofia_Castro', 'sofia.castro@example.com', 'password9', '1994-08-25', 29, 9, 3),
-(11, 'Andrés_Mendoza', 'andres.mendoza@example.com', 'password10', '1991-10-12', 32, 10, 2),
-(12, 'Juliana_Moreno', 'juliana.moreno@example.com', 'password11', '1997-01-05', 26, 11, 3),
-(13, 'Felipe_Diaz', 'felipe.diaz@example.com', 'password12', '1992-12-18', 31, 12, 4),
-(14, 'Lorena_Ruiz', 'lorena.ruiz@example.com', 'password13', '1996-05-25', 27, 13, 2),
-(15, 'Natalia_Vargas', 'natalia.vargas@example.com', 'password14', '1990-09-09', 33, 14, 4);
+INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `id_persona`, `id_rol`) VALUES
+(2, 'Carlos_López', 'password1', 1, 1),
+(3, 'Ana_Martínez', 'password2', 2, 2),
+(4, 'María_Gómez', 'password3', 3, 3),
+(5, 'Pedro_Ramírez', 'password4', 4, 1),
+(6, 'Laura_Torres', 'password5', 5, 2),
+(7, 'Luis_Pérez', 'password6', 6, 3),
+(8, 'Jorge_Rojas', 'password7', 7, 4),
+(9, 'Claudia_Lara', 'password8', 8, 1),
+(10, 'Sofia_Castro', 'password9', 9, 3),
+(11, 'Andrés_Mendoza', 'password10', 10, 2),
+(12, 'Juliana_Moreno', 'password11', 11, 3),
+(13, 'Felipe_Diaz', 'password12', 12, 4),
+(14, 'Lorena_Ruiz', 'password13', 13, 2),
+(15, 'Natalia_Vargas', 'password14', 14, 4),
+(16, 'carlos_baute', '123456', 1, 1);
 
 --
 -- Índices para tablas volcadas
@@ -1450,7 +1495,14 @@ ALTER TABLE `inscripcion`
 --
 ALTER TABLE `membresia`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_membresia_pago` (`id_pago`);
+  ADD KEY `fk_membresia_pago` (`id_pago`),
+  ADD KEY `fk_membresia_tipo` (`id_tipo_membresia`);
+
+--
+-- Indices de la tabla `metodo_pago`
+--
+ALTER TABLE `metodo_pago`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `municipio`
@@ -1464,15 +1516,15 @@ ALTER TABLE `municipio`
 --
 ALTER TABLE `pago`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_pago_usuario` (`id_usuario`);
+  ADD KEY `fk_pago_usuario` (`id_usuario`),
+  ADD KEY `fk_pago_metodo` (`id_metodo_pago`);
 
 --
 -- Indices de la tabla `persona`
 --
 ALTER TABLE `persona`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `correo` (`correo`),
-  ADD KEY `fk_persona_municipio` (`id_municipio`);
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
 -- Indices de la tabla `rol`
@@ -1488,11 +1540,16 @@ ALTER TABLE `suplemento_deportivo`
   ADD KEY `fk_suplemento_usuario` (`id_usuario`);
 
 --
+-- Indices de la tabla `tipo_membresia`
+--
+ALTER TABLE `tipo_membresia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `correo` (`correo`),
   ADD KEY `fk_usuarios_rol` (`id_rol`),
   ADD KEY `fk_usuarios_persona` (`id_persona`) USING BTREE;
 
@@ -1504,37 +1561,37 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `clase`
 --
 ALTER TABLE `clase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `inscripcion`
 --
 ALTER TABLE `inscripcion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT de la tabla `membresia`
 --
 ALTER TABLE `membresia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `pago`
 --
 ALTER TABLE `pago`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `suplemento_deportivo`
 --
 ALTER TABLE `suplemento_deportivo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas
@@ -1560,7 +1617,8 @@ ALTER TABLE `inscripcion`
 -- Filtros para la tabla `membresia`
 --
 ALTER TABLE `membresia`
-  ADD CONSTRAINT `fk_membresia_pago` FOREIGN KEY (`id_pago`) REFERENCES `pago` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_membresia_pago` FOREIGN KEY (`id_pago`) REFERENCES `pago` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_membresia_tipo` FOREIGN KEY (`id_tipo_membresia`) REFERENCES `tipo_membresia` (`id`);
 
 --
 -- Filtros para la tabla `municipio`
@@ -1572,31 +1630,15 @@ ALTER TABLE `municipio`
 -- Filtros para la tabla `pago`
 --
 ALTER TABLE `pago`
+  ADD CONSTRAINT `fk_pago_metodo` FOREIGN KEY (`id_metodo_pago`) REFERENCES `metodo_pago` (`id`),
   ADD CONSTRAINT `fk_pago_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `pago_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
-
---
--- Filtros para la tabla `persona`
---
-ALTER TABLE `persona`
-  ADD CONSTRAINT `fk_persona_municipio` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `persona_ibfk_1` FOREIGN KEY (`tipo_identificacion`) REFERENCES `tipo_identificacion` (`id`),
-  ADD CONSTRAINT `persona_ibfk_2` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`);
 
 --
 -- Filtros para la tabla `suplemento_deportivo`
 --
 ALTER TABLE `suplemento_deportivo`
   ADD CONSTRAINT `fk_suplemento_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD CONSTRAINT `fk_usuarios_persona` FOREIGN KEY (`id_persona`) REFERENCES `persona` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_usuarios_rol` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_persona`) REFERENCES `persona` (`id`),
-  ADD CONSTRAINT `usuarios_ibfk_2` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
