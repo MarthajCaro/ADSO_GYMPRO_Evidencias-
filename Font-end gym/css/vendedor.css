@@ -1,0 +1,166 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Títulos */
+  header h1 {
+    color: rgb(240, 88, 12);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: orange;
+    margin-bottom: 10px;
+  }
+  
+  /* Contenedor general */
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Formulario */
+  .form-section {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #2b2b2b;
+    color: white;
+  }
+  
+  form button {
+    background: rgb(240, 88, 12);
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background: #ff6a00;
+  }
+  
+  /* Tabla */
+  .table-section {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  
+  th {
+    background: rgb(240, 88, 12);
+    color: white;
+  }
+  
+  .actions button {
+    margin: 5px 5px 0 0; 
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9em;
+    display: inline-block;
+  }
+  
+  
+  .actions button:nth-child(1) {
+    background: orange;
+  }
+  .actions button:nth-child(2) {
+    background: rgb(240, 88, 12);
+  }
+  .actions button:nth-child(3) {
+    background: #d11a2a;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tr {
+      margin-bottom: 15px;
+      background: #2b2b2b;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  
+    td {
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      color: orange;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
