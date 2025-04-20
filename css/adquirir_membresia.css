@@ -1,0 +1,111 @@
+body {
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+  }
+  
+  h2 {
+    text-align: center;
+    color: yellow;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color:gold;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: gold;
+  }
+  select {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .boton-personalizado {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Letras blancas */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .boton-personalizado:hover {
+    color: white; /* Letras naranjas al pasar el mouse */
+  }
+  
+  .volver-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .volver-link:hover {
+    color: orange;
+  }
+  .btn-pagar {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: color 0.3s;
+  }
+  
+  .btn-pagar:hover {
+    color: orange;
+  }
+  
+  
+ 
