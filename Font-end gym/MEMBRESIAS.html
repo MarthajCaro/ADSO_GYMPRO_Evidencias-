@@ -1,0 +1,165 @@
+
+<html>
+        <head>
+            <title>Panel de Membresías</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #000;
+                    color: white;
+                }
+                .header {
+                    background-color: #ff5722;
+                    color: white;
+                    padding: 15px;
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                .container {
+                    padding: 20px;
+                    background-color: #000;
+                    color: white;
+                }
+                .subtitle {
+                    margin-bottom: 15px;
+                    font-size: 18px;
+                    color: white;
+                }
+                .search-box {
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 20px;
+                    border-radius: 20px;
+                    border: 1px solid #ddd;
+                    background-color: #333;
+                    color: white;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    color: white;
+                }
+                th {
+                    background-color: #ff5722;
+                    color: white;
+                    padding: 10px;
+                    text-align: left;
+                }
+                td {
+                    padding: 10px;
+                    border-bottom: 1px solid #333;
+                    color: white !important; /* Forzar color blanco */
+                }
+                tr:nth-child(even) {
+                    background-color: #111;
+                }
+                tr:nth-child(odd) {
+                    background-color: #000;
+                }
+                .action-btn {
+                    margin-right: 5px;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-size: 12px;
+                }
+                .edit-btn {
+                    background-color: #2196F3;
+                    color: white;
+                }
+                .disable-btn {
+                    background-color: #f44336;
+                    color: white;
+                }
+                .enable-btn {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+                .create-btn {
+                    background-color: #ff5722;
+                    color: white;
+                    padding: 10px 20px;
+                    font-size: 14px;
+                    margin-top: 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    float: right;
+                }
+                .action-cell {
+                    white-space: nowrap;
+                }
+                /* Asegurar que todo texto sea blanco */
+                * {
+                    color: white;
+                }
+                table td, table th, .subtitle, .header, .container, body {
+                    color: white !important;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                Membresías
+            </div>
+            
+            <div class="container">
+                <div class="subtitle">Tipos de membresías disponibles</div>
+                
+                <input type="text" class="search-box" placeholder="🔍 Buscar por tipo o duración">
+                
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Tipo de Membresía</th>
+                        <th>Duración</th>
+                        <th>Precio</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Membresía Básica</td>
+                        <td>3 meses</td>
+                        <td>$300.000</td>
+                        <td>Activa</td>
+                        <td class="action-cell">
+                            <button class="action-btn edit-btn">Editar</button>
+                            <button class="action-btn disable-btn">Inhabilitar</button>
+                            <button class="action-btn enable-btn">Habilitar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Membresía Estándar</td>
+                        <td>6 meses</td>
+                        <td>$550.000</td>
+                        <td>Activa</td>
+                        <td class="action-cell">
+                            <button class="action-btn edit-btn">Editar</button>
+                            <button class="action-btn disable-btn">Inhabilitar</button>
+                            <button class="action-btn enable-btn">Habilitar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Membresía Premium</td>
+                        <td>12 meses</td>
+                        <td>$1.000.000</td>
+                        <td>Activa</td>
+                        <td class="action-cell">
+                            <button class="action-btn edit-btn">Editar</button>
+                            <button class="action-btn disable-btn">Inhabilitar</button>
+                            <button class="action-btn enable-btn">Habilitar</button>
+                        </td>
+                    </tr>
+                </table>
+                
+                <button class="create-btn">Crear Nueva Membresía</button>
+            </div>
+        </body>
+        </html>
