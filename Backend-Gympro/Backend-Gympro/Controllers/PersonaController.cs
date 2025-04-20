@@ -35,13 +35,13 @@ namespace Backend_Gympro.Controllers
         public async Task<IActionResult> Create(Persona persona)
         {
             await _personaService.AddPersonaAsync(persona);
-            return CreatedAtAction(nameof(GetById), new { id = persona.id }, persona);
+            return CreatedAtAction(nameof(GetById), new { id = persona.Id }, persona);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id,Persona persona)
         {
-            if (id != persona.id) return BadRequest("El ID no coincide.");
+            if (id != persona.Id) return BadRequest("El ID no coincide.");
             await _personaService.UpdatePersonaAsync(persona);
             return NoContent();
         }

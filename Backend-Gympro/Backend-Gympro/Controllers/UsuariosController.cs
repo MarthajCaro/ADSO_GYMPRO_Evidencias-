@@ -1,5 +1,7 @@
-﻿using Backend_Gympro.Application.Services;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -51,6 +53,24 @@ namespace Backend_Gympro.Controllers
         {
             await _usuarioService.DeleteUsuarioAsync(id);
             return NoContent();
+        }
+
+        [HttpPost("login")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        {
+            var usuario = await _usuarioService.ValidarCredencialesAsync(dto);
+            if (usuario == null) return Unauthorized("Credenciales inválidas.");
+
+            var token = _usuarioService.GenerateJwtToken(usuario);
+
+            return Ok(new { token, usuario });
+        }
+        [HttpPost("olvidar-contrasena")]
+        public async Task<IActionResult> OlvidarContrasena([FromBody] OlvidarContraseñaDto dto)
+        {
+            var resultado = await _usuarioService.OlvidarContraseñaAsync(dto.Correo);
+            return Ok(resultado);
         }
     }
 }

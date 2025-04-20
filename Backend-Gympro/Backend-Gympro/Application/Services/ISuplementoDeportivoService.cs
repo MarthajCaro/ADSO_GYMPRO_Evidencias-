@@ -9,5 +9,7 @@ namespace Backend_Gympro.Application.Services
         Task AddSuplementoAsync(SuplementoDeportivo suplemento);
         Task UpdateSuplementoAsync(SuplementoDeportivo suplemento);
         Task DeleteSuplementoAsync(int id);
+        Task<List<SuplementoDeportivo>> GetSuplementosByUserIdAsync(int userId);
+        Task<bool> CambiarEstado(int id, bool nuevoEstado);
     }
 }

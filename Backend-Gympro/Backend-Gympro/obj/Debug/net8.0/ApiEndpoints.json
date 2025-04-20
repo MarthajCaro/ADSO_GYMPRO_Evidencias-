@@ -237,6 +237,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend_Gympro.Controllers.InscripcionController",
+    "Method": "GetInscritosPorEntrenador",
+    "RelativePath": "api/Inscripcion/ObtenerClasesEntrenador",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend_Gympro.Controllers.MembresiaController",
     "Method": "GetAll",
     "RelativePath": "api/Membresia",
@@ -468,6 +478,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.NotificacionController",
+    "Method": "EnviarCorreo",
+    "RelativePath": "api/Notificacion/enviar-correo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Backend_Gympro.Application.DTOs.FormularioContactoDto",
         "IsRequired": true
       }
     ],
@@ -790,6 +816,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend_Gympro.Controllers.SuplementoDeportivoController",
+    "Method": "CambiarEstado",
+    "RelativePath": "api/SuplementoDeportivo/cambiar-estado/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "nuevoEstado",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.SuplementoDeportivoController",
+    "Method": "GetSuplementosByUserId",
+    "RelativePath": "api/SuplementoDeportivo/ObtenerSuplementosVendedor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend_Gympro.Controllers.TipoMembresiaController",
     "Method": "GetAll",
     "RelativePath": "api/TipoMembresia",
@@ -942,6 +999,38 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
+    "Method": "Login",
+    "RelativePath": "api/Usuarios/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Backend_Gympro.Application.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
+    "Method": "OlvidarContrasena",
+    "RelativePath": "api/Usuarios/olvidar-contrasena",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Backend_Gympro.Application.DTOs.OlvidarContrase\u00F1aDto",
         "IsRequired": true
       }
     ],

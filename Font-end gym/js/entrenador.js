@@ -1,59 +1,97 @@
-// Datos simulados como si vinieran del backend
-const estudiantesInscritos = [
-    { id: 1, nombre: "Juan Pérez", edad: 25, correo: "juanp@mail.com", clase: "Crossfit" },
-    { id: 2, nombre: "María Gómez", edad: 30, correo: "mariag@mail.com", clase: "Zumba" },
-    { id: 3, nombre: "Carlos Ruiz", edad: 28, correo: "carlosr@mail.com", clase: "Funcional" },
-    { id: 4, nombre: "Laura Torres", edad: 22, correo: "laurat@mail.com", clase: "Yoga" },
-    { id: 5, nombre: "Andrés Mendoza", edad: 34, correo: "andresm@mail.com", clase: "Boxeo" },
-    { id: 6, nombre: "Camila Ramírez", edad: 27, correo: "camilar@mail.com", clase: "Funcional" },
-    { id: 7, nombre: "Luis Felipe", edad: 29, correo: "luisf@mail.com", clase: "Spinning" },
-    { id: 8, nombre: "Valentina López", edad: 24, correo: "valel@mail.com", clase: "Crossfit" },
-    { id: 9, nombre: "Esteban Díaz", edad: 31, correo: "esteband@mail.com", clase: "HIIT" },
-    { id: 10, nombre: "Daniela Silva", edad: 26, correo: "danis@mail.com", clase: "Yoga" }
-  ];
-  
-  // Referencia a la tabla en el HTML
-  const tabla = document.getElementById("students-table-body");
-  const buscador = document.getElementById("buscador");
+const token = localStorage.getItem('token');
 
-  // Renderizar los datos en la tabla
-  function renderTabla(estudiantes) {
-    tabla.innerHTML = "";
-  
-    estudiantes.forEach((estudiante, index) => {
-      const fila = document.createElement("tr");
-  
-      fila.innerHTML = `
-        <td>${index + 1}</td>
-        <td>${estudiante.nombre}</td>
-        <td>${estudiante.edad}</td>
-        <td>${estudiante.correo}</td>
-        <td>${estudiante.clase}</td>
-      `;
-  
-      tabla.appendChild(fila);
-    });
+// Si no hay token, redirige al login
+if (!token) {
+  window.location.href = 'login.html'; // cambia esto por tu ruta al login
+}
+
+ // Cargar nombre del usuario desde localStorage
+ const nombreGuardado = localStorage.getItem("nombreUsuario");
+ if (nombreGuardado) {
+   document.getElementById("nombreUsuario").textContent = nombreGuardado;
+ }
+
+document.getElementById("cerrarSesion").addEventListener("click", function () {
+  // Borra todo del localStorage (o solo lo necesario)
+  localStorage.removeItem("token");
+  localStorage.removeItem("usuario");
+  localStorage.removeItem("rol");
+
+  localStorage.clear();
+  // Redirige al login
+  window.location.href = "login.html";
+});
+
+
+fetch('http://localhost:5003/api/Inscripcion/ObtenerClasesEntrenador', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`
   }
-  function filtrarTbla(valor){
-    const filtro = valor.toLowerCase();
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('No autorizado o error en la petición');
+  }
+  return response.json();
+})
+.then(data => {
+  const tbody = document.querySelector('#tablaEntrenamientos tbody');
+  tbody.innerHTML = '';
 
-    const filtrados = estudiantesInscritos.filter(e =>
-        e.nombre.toLowerCase().includes(filtro) ||
-        e.correo.toLowerCase().includes(filtro) ||
-        e.clase.toLowerCase().includes(filtro)
-    );
-
-    renderTabla(filtrados);
+  if (data.length === 0) {
+    const fila = document.createElement('tr');
+    fila.innerHTML = `
+      <td colspan="6" style="text-align:center; color:gray;">No hay clases disponibles.</td>
+    `;
+    tbody.appendChild(fila);
+    return;
   }
 
+  let enumeracion = 1;  // Inicializamos la numeración
 
-
-  // Ejecutar al cargar la página
-  window.addEventListener("DOMContentLoaded", () => {
-    renderTabla(estudiantesInscritos);
-
-    buscador.addEventListener("input", (e) => {
-        filtrarTbla(e.target.value);
-    });
-
+  data.forEach(entrenamiento => {
+    const fila = document.createElement('tr');
+    fila.innerHTML = `
+      <td>${enumeracion}</td>
+      <td>${entrenamiento.nombre} ${entrenamiento.apellido}</td>
+      <td>${entrenamiento.correo}</td>
+      <td>${entrenamiento.edad}</td>
+      <td>${entrenamiento.nombreClase}</td>
+      <td>${entrenamiento.duracion} minutos</td>
+    `;
+    tbody.appendChild(fila);
   });
+})
+.catch(error => {
+  const tbody = document.querySelector('#tablaEntrenamientos tbody');
+  tbody.innerHTML = '';
+  const fila = document.createElement('tr');
+  fila.innerHTML = `
+    <td colspan="6" style="text-align:center; color:red;">Error al cargar las clases: ${error.message}</td>
+  `;
+  tbody.appendChild(fila);
+});
+
+
+// Funcion para filtrar la tabla
+function filtrarTabla() {
+  const input = document.getElementById('buscador');
+  const filter = input.value.toLowerCase();  // Convertimos a minúsculas para hacer la búsqueda insensible a mayúsculas/minúsculas
+  const rows = document.querySelectorAll('#tablaEntrenamientos tbody tr');
+  
+  rows.forEach(row => {
+    // Accedemos a las celdas de la fila
+    const nombreEstudiante= row.cells[1].textContent.toLowerCase();
+    const nombreClase  = row.cells[4].textContent.toLowerCase();
+    const correo  = row.cells[2].textContent.toLowerCase();
+    
+    // Si el texto de búsqueda coincide con alguna columna (nombre de la clase o entrenador)
+    if (nombreClase.includes(filter) || nombreEstudiante.includes(filter) | correo.includes(filter)) {
+      row.style.display = '';  // Mostrar la fila si coincide
+    } else {
+      row.style.display = 'none';  // Ocultar la fila si no coincide
+    }
+  });
+}

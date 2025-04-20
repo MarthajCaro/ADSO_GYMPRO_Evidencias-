@@ -5,7 +5,8 @@
         public int id { get; set; }
         public string? usuario { get; set; }
         public string? contrasena { get; set; }
-        public int id_persona { get; set; }
-        public int id_rol { get; set; }
+        public int PersonaId { get; set; }
+        public int RolId { get; set; }
+        public Persona Persona { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Backend_Gympro.Domain.Entidades;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Domain.Entidades;
 
 namespace Backend_Gympro.Application.Services
 {
@@ -9,5 +10,8 @@ namespace Backend_Gympro.Application.Services
         Task AddUsuarioAsync(Usuarios usuario);
         Task UpdateUsuarioAsync(Usuarios usuario);
         Task DeleteUsuarioAsync(int id);
+        Task<Usuarios> ValidarCredencialesAsync(LoginDto dto);
+        Task<string> OlvidarContraseñaAsync(string correo);
+        string GenerateJwtToken(Usuarios usuario);
     }
 }

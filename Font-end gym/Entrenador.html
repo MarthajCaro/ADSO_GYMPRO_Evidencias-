@@ -4,13 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Panel del Entrenador</title>
-  <link rel="stylesheet" href="entrenador.css" />
+  <link rel="stylesheet" href="css/entrenador.css" />
 </head>
 <body>
 
   <header>
     <h1>Panel del Entrenador</h1>
+    <div id="userInfo">
+      Hola <span id="nombreUsuario">Usuario</span>
+      <button id="cerrarSesion">Cerrar sesión</button>
+    </div>
   </header>
+
 
   <main>
     <section class="table-section">
@@ -22,17 +27,19 @@
           id="buscador" 
           placeholder="Buscar por nombre, correo o clase..." 
           class="buscador"
+          onkeyup="filtrarTabla()"
         />
       </div>
       
-      <table>
+      <table id="tablaEntrenamientos">
         <thead>
           <tr>
             <th>No.</th>
             <th>Nombre</th>
-            <th>Edad</th>
             <th>Correo</th>
+            <th>Edad</th>
             <th>Clase</th>
+            <th>Duracion</th>
           </tr>
         </thead>
         <tbody id="students-table-body">
@@ -42,6 +49,6 @@
     </section>
   </main>
 
-  <script src="entrenador.js"></script>
+  <script src="js/entrenador.js"></script>
 </body>
 </html>

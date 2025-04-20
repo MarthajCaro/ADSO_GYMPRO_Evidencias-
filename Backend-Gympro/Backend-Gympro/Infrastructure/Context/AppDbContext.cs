@@ -35,6 +35,9 @@ namespace Backend_Gympro.Infrastructure.Context
             modelBuilder.Entity<SuplementoDeportivo>().ToTable("suplemento_deportivo");
             modelBuilder.Entity<TipoMembresia>().ToTable("tipo_membresia");
             modelBuilder.Entity<Usuarios>().ToTable("usuarios");
+            /*modelBuilder.Entity<Usuarios>().HasOne(u => u.Persona)
+                                .WithMany()
+                                .HasForeignKey(u => u.PersonaId);*/
         }
     }
 }

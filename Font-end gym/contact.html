@@ -10,12 +10,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Free Gym Website Template | Contact :: w3layouts</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/contact.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <script src="js/jquery.min.js"></script>
+<script src="js/contact.js"></script>
 <!-- grid-slider -->
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
@@ -77,14 +79,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       		 <div class="col-md-8 contact-top">
 			  <h3>Envianos un mensaje</h3>
 			  <p class="contact_msg">Tus comentarios son importantes para nosotros, escribenos.</p>
-			     <form method="post" action="contact-post.html">
+			     <form id="formularioContacto">
 					<div class="to">
-                     	<input type="text" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					 	<input type="text" class="text" value="Correo" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:20px">
-					 	<input type="text" class="text" value="Asunto" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left:20px">
+                     	<input type="text" id="nombre" placeholder="Nombre" class="text" required>
+					 	<input type="text" id="correo" placeholder="Correo" class="text" style="margin-left:20px" required>
+					 	<input type="text" id="asunto" placeholder="Asunto" class="text" style="margin-left:20px" required>
 					</div>
 					<div class="text">
-	                   <textarea value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+	                   <textarea id="mensaje" placeholder="Mensaje:" required ></textarea>
 	                </div>
 	                <div class="form-submit1">
 			           <input name="submit" type="submit" id="submit" value="Envia tu mensaje"><br>
@@ -347,5 +349,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		   <div class="clear"></div>
 		  </div>
 	     </div>
+
+		 <!-- Modal -->
+		<div id="modalCorreo" class="modal hidden">
+			<div class="modal-content">
+				<span class="close-btn" onclick="cerrarModal()">&times;</span>
+				<p>¡Tu mensaje fue enviado exitosamente! 📧</p>
+			</div>
+		</div>
 </body>
 </html>

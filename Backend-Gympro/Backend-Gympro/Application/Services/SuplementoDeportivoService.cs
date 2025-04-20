@@ -1,5 +1,6 @@
 ﻿using Backend_Gympro.Application.Interfaces;
 using Backend_Gympro.Domain.Entidades;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend_Gympro.Application.Services
 {
@@ -36,6 +37,16 @@ namespace Backend_Gympro.Application.Services
                 _repository.Delete(suplemento);
                 await _repository.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<SuplementoDeportivo>> GetSuplementosByUserIdAsync(int userId)
+        {
+            return await _repository.GetSuplementosByUserIdAsync(userId);
+        }
+
+        public async Task<bool> CambiarEstado(int id, bool nuevoEstado)
+        {
+            return await _repository.CambiarEstado(id, nuevoEstado);
         }
     }
 }

@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gestión de Suplementos</title>
-  <link rel="stylesheet" href="vendedor.css" />
+  <link rel="stylesheet" href="css/vendedor.css" />
 </head>
 <body>
 
   <header>
     <h1>Panel del Vendedor</h1>
+    <div id="userInfo">
+      Hola <span id="nombreUsuario">Usuario</span>
+      <button id="cerrarSesion">Cerrar sesión</button>
+    </div>
   </header>
 
   <main class="container">
@@ -19,17 +23,17 @@
       <form id="supplement-form">
         <input type="hidden" id="supplement-id" />
 
-        <label for="name">Nombre</label>
-        <input type="text" id="name" required />
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required />
 
-        <label for="stock">Stock</label>
-        <input type="number" id="stock" required />
+        <label for="tipo">Tipo</label>
+        <input type="text" id="tipo" required />
 
-        <label for="price">Precio</label>
-        <input type="number" id="price" required />
+        <label for="precio">Precio</label>
+        <input type="number" id="precio" required />
 
-        <label for="description">Descripción</label>
-        <textarea id="description" rows="3" required></textarea>
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" rows="3" required></textarea>
 
         <button type="submit">Guardar</button>
       </form>
@@ -43,7 +47,7 @@
           <tr>
             <th>Nombre</th>
             <th>Precio</th>
-            <th>Stock</th>
+            <th>Tipo</th>
             <th>Descripción</th>
             <th>Estado</th>
             <th>Acciones</th>
@@ -56,6 +60,13 @@
     </section>
   </main>
 
-  <script src="vendedor.js"></script>
+  <div id="successModal" class="hidden">
+  <div id="ModalContent">
+    <p id="successModalMessage">¡Mensaje de éxito!</p>
+    <button id="closeSuccessModal">Cerrar</button>
+  </div>
+</div>
+
+  <script src="js/vendedor.js"></script>
 </body>
 </html>

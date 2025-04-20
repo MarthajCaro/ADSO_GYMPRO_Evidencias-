@@ -1,4 +1,5 @@
-﻿using Backend_Gympro.Application.Interfaces;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Application.Interfaces;
 using Backend_Gympro.Domain.Entidades;
 
 namespace Backend_Gympro.Application.Services
@@ -37,6 +38,10 @@ namespace Backend_Gympro.Application.Services
                 _repository.Delete(inscripcion);
                 await _repository.SaveChangesAsync();
             }
+        }
+        public List<PersonaClaseDto> ObtenerInscritos(int entrenadorId)
+        {
+            return _repository.ObtenerInscritosPorEntrenador(entrenadorId);
         }
     }
 }

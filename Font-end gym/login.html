@@ -5,6 +5,7 @@
 	<title>Gympro | login </title>
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/login.css" rel='stylesheet' type='text/css' />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -12,6 +13,7 @@
 	<script
 		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/login.js"></script>
 </head>
 
 <body>
@@ -78,15 +80,22 @@
 					
 							<div class="form-ingreso">
 								<h3>Ingreso</h3>
-								<form action="login.php" method="POST">
-									<input type="email" name="correo" placeholder="Correo" required>
-									<input type="password" name="contrasena" placeholder="Contraseña" required>
+								<form method="POST" id="loginForm">
+									<input type="text" name="usuario" id="usuario" placeholder="Correo" required>
+									<input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
 									<div style="text-align: right; margin-top: 10px;">
-										<button type="submit">Iniciar sesión</button>
+										<button type="button" onclick="iniciarSesion()">Iniciar sesión</button>
 									</div>
 									<a href="recuperar.html">¿Olvidaste tu contraseña?</a>
 								</form>
 							</div>
+						</div>
+					</div>
+
+					<div id="miModal" class="modal" style="display:none;">
+						<div class="modal-content">
+						<span id="cerrarModal" style="cursor:pointer; float:right;">&times;</span>
+						<p id="mensajeModal"></p>
 						</div>
 					</div>
 					

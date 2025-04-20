@@ -68,3 +68,35 @@ p {
     color: #fff;
     text-decoration: underline;
 }
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+.modal-content {
+    background-color: #070707;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: white;
+  }
+
+.form-recuperar button {
+    background-color: orange;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    color: white;
+}

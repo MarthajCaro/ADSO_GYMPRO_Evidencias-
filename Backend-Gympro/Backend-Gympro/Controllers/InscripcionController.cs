@@ -1,5 +1,6 @@
 ﻿using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -51,6 +52,16 @@ namespace Backend_Gympro.Controllers
         {
             await _inscripcionService.DeleteInscripcionAsync(id);
             return NoContent();
+        }
+
+        [Authorize]
+        [HttpGet("ObtenerClasesEntrenador")]
+        public IActionResult GetInscritosPorEntrenador()
+        {
+            var entrenadorId = int.Parse(User.FindFirst("usuarioId").Value);
+
+            var lista = _inscripcionService.ObtenerInscritos(entrenadorId);
+            return Ok(lista);
         }
     }
 }
