@@ -5560,4 +5560,125 @@ body {
   .boton-membresia:hover {
 	color: orange;
   }
+
+  .nav-alineado {
+	display: flex;
+	flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+	align-items: center;
+	justify-content: flex-end; /* Mueve los elementos a la derecha */
+	gap: 15px;
+	margin-top: -20px;
+	max-width: 100%; /* Para que no se salga de la pantalla */
+	padding: 10px;
+	box-sizing: border-box;
+  }
+  
+  .menu-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 15px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	max-width: 100%;
+	margin-top: 10px;
+  }
+  
+  /* Dropdown */
+  .dropdown {
+	position: relative;
+  }
+  
+  .dropbtn {
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 10px 15px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {
+	background-color: #f1f1f1;
+  }
+  
+  /* Login Container */
+  .login-link-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+  }
+  
+  .login-pregunta {
+	color: white;
+	font-size: 16px;
+  }
+  
+  .login-boton {
+	background-color: white;
+	color: black;
+	padding: 8px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+  }
+  
+  .login-boton:hover {
+	background-color: #ddd;
+  }
+  
+  .nav {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 15px;
+  }
+  
+  .nav li {
+	position: relative;
+  }
+  
+  .nav .dropdown-content {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: white;
+	min-width: 200px;
+	z-index: 999;
+  }
+  
+  .nav .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  
+  .nav .dropbtn {
+	background-color: orange;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+  }
   

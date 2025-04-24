@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscripción a Clases</title>
+  <link rel="stylesheet" href="css/clases_disponibles.css"
+  >
+</head>
+<body>
+  <div class="form-container">
+    <h2>Inscripción a Clase</h2>
+
+    <form>
+      <label for="nombre-clase">Clase</label>
+      <input type="text" id="nombre-clase" name="clase" readonly>
+
+      <label for="horario">Selecciona un horario</label>
+      <select id="horario" name="horario" required>
+        <option value="">Seleccione un horario</option>
+      </select>
+
+      <button type="submit">Reservar Clase</button>
+    </form>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const claseSeleccionada = params.get('clase');
+    const nombreClaseInput = document.getElementById("nombre-clase");
+    const horarioSelect = document.getElementById("horario");
+
+    nombreClaseInput.value = claseSeleccionada;
+
+    const horariosPorClase = {
+      "Boxing": ["05:00 - 06:00", "12:00 - 15:45", "17:00 - 18:00", "18:00 - 20:00"],
+      "Spinning": ["06:00 - 07:00", "09:00 - 10:00", "16:00 - 17:30", "18:00 - 17:30"],
+      "Aerobicos": ["07:00 - 08:00"],
+      "Yoga": ["08:00 - 09:30", "10:00 - 11:00"],
+      "Crossfit": ["06:00 - 08:30", "09:00 - 11:25"],
+      "Cardio Fitness": ["10:00 - 11:30", "14:00 - 16:00", "17:00 - 18:00"],
+      "Gym Fitness": ["12:00 - 13:00", "14:00 - 16:15", "17:00 - 18:00"],
+      "Pilates": ["18:30 - 20:00", "19:00 - 20:30"]
+    };
+
+    if (claseSeleccionada && horariosPorClase[claseSeleccionada]) {
+      const horarios = horariosPorClase[claseSeleccionada];
+      horarios.forEach(horario => {
+        const option = document.createElement("option");
+        option.value = horario;
+        option.textContent = horario;
+        horarioSelect.appendChild(option);
+      });
+    } else {
+      const option = document.createElement("option");
+      option.textContent = "No hay horarios disponibles para esta clase.";
+      option.disabled = true;
+      horarioSelect.appendChild(option);
+    }
+  </script>
+</body>
+</html>
