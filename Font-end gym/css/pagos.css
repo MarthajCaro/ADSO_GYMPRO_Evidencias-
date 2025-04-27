@@ -1,188 +1,129 @@
+/* Estilo para el fondo general */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #000;
-  color: #fff;
-}
-.header {
-  background-color: rgb(240,88,12);
-  padding: 1rem;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-#userInfo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#cerrarSesion {
-  background-color: #d9534f;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#cerrarSesion:hover {
-  background-color: #c9302c;
-}
-
-#nombreUsuario {
-  font-weight: bold;
-}
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   
-  h1 {
+  /* Contenedor del formulario */
+  .form-container {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1000px;
     text-align: center;
-    color: orange;
+  }
+  
+  /* Título principal */
+  h1 {
+    color: rgb(240, 88, 12);
+    margin-bottom: 20px;
+  }
+  
+  /* Formulario de pago */
+  .formulario-pago {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
     margin-top: 20px;
   }
   
-  .tabla-contenedor {
-    margin: 30px auto;
-    width: 90%;
-    overflow-x: auto;
+  h2 {
+    color: rgb(240, 88, 12);
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo de los labels y campos de entrada */
+  label {
+    display: block;
+    color: white;
+    margin: 10px 0 5px;
+    font-size: 16px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: rgb(240, 88, 12);
+    outline: none;
+  }
+  
+  /* Estilo del botón de envío */
+  button {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgb(240, 88, 12);
+  }
+  
+  /* Estilo de la tabla */
+  .table-container {
+    width: 100%;
+    margin-top: 20px;
   }
   
   table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #1c1c1c;
   }
   
   th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid orange;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #333;
   }
   
   th {
     background-color: rgb(240, 88, 12);
-    color: white;
+    color: black;
   }
   
-  tr:nth-child(even) {
-    background-color: #2a2a2a;
+  td {
+    background-color: #333;
   }
-  
-  .estado-pagado {
-    color: lightgreen;
+  .btn-volver {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 25px;
+    text-decoration: none;
     font-weight: bold;
-  }
-  
-  .estado-pendiente {
-    color: red;
-    font-weight: bold;
-  }
-
-  .nav {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-  }
-  
-  .nav>li {
-    float: left;
-  }
-  
-  .nav li.active a, .nav li a:hover {
-    border: 1px orange;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -o-border-radius: 3px;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    background: #fff;
-    color: orange;
-  }
-  
-  .container {
-    padding: 20px;
-  }
-  
-  .menu {
-    background-color: black;
-    /* color: white; */
-    z-index: 9999;
-    width: 100%;
-    clear: both;
-  }
-  
-  @media (max-width: 1024px) {
-    .nav li a {
-        padding: 7px 15px;
-        margin-right: 3px;
-    }
-  }
-  
-  .nav li a {
-    display: block;
-    padding: 9px 20px;
-    color: #fff;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-right: 10px;
-    border: 1px black;
-  }
-  
-  .h_menu4{
-    float: right;
-  }
-  
-  .create-class-btn {
-    background-color: #FF6600;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  #aplicar-filtros {
-    background-color: #FF6600;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  #descargar-excel {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .custom-select {
-    padding: 10px 12px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #fff;
-    font-size: 14px;
-    color: #333;
-    appearance: none; /* Oculta la flecha por defecto */
-    background-image: url('data:image/svg+xml;base64,...'); /* Puedes meter un icono SVG de flecha */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
+    border: 2px solid white;
+    margin-top: 21px;
+    transition: color 0.3s ease;
+  }
+  
+  .btn-volver:hover {
+    color: orange;
   }
   

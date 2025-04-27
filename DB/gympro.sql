@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-04-2025 a las 02:02:49
+-- Tiempo de generación: 27-04-2025 a las 23:59:17
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -135,7 +135,6 @@ CREATE TABLE `membresia` (
   `precio` decimal(10,2) NOT NULL,
   `duracion_membresia_en_meses` int(11) NOT NULL,
   `descripcion` text DEFAULT NULL,
-  `id_pago` int(11) DEFAULT NULL,
   `id_tipo_membresia` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -143,12 +142,20 @@ CREATE TABLE `membresia` (
 -- Volcado de datos para la tabla `membresia`
 --
 
-INSERT INTO `membresia` (`id`, `precio`, `duracion_membresia_en_meses`, `descripcion`, `id_pago`, `id_tipo_membresia`) VALUES
-(1, 50.00, 1, 'Acceso básico al gimnasio', 1, 1),
-(2, 80.00, 3, 'Acceso a clases grupales', 2, 2),
-(3, 120.00, 6, 'Acceso a clases grupales y piscina', 3, 2),
-(4, 150.00, 12, 'Acceso a todas las instalaciones', 4, 1),
-(5, 200.00, 12, 'Acceso a todas las instalaciones y eventos especiales', 5, 2);
+INSERT INTO `membresia` (`id`, `precio`, `duracion_membresia_en_meses`, `descripcion`, `id_tipo_membresia`) VALUES
+(1, 50000.00, 1, 'Acceso básico al gimnasio', 1),
+(2, 240000.00, 3, 'Acceso a clases grupales', 2),
+(3, 400000.00, 6, 'Acceso a clases grupales y piscina', 2),
+(4, 500000.00, 12, 'Acceso a todas las instalaciones', 3),
+(5, 800000.00, 12, 'Acceso a todas las instalaciones y eventos especiales', 2),
+(7, 120000.00, 3, '15 dias', 5),
+(8, 120000.00, 3, 'Clases cada 15 dias', 5),
+(9, 40000.00, 1, 'Acceso básico al gimnasio', 1),
+(10, 40000.00, 1, 'Acceso básico al gimnasio', 1),
+(11, 600000.00, 12, 'Nueva membresia de promoción para acceso ilimitado por un menor precio y costo', 3),
+(12, 130000.00, 3, 'Clases cada 15 dias', 5),
+(13, 140000.00, 3, 'Clases cada 15 dias', 5),
+(14, 30000.00, 1, 'Acceso básico al gimnasio', 1);
 
 -- --------------------------------------------------------
 
@@ -1302,25 +1309,26 @@ CREATE TABLE `pago` (
   `fecha_pago` date NOT NULL,
   `fecha_vigencia` date DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL,
-  `id_metodo_pago` int(11) DEFAULT NULL
+  `id_metodo_pago` int(11) DEFAULT NULL,
+  `membresia_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `pago`
 --
 
-INSERT INTO `pago` (`id`, `precio`, `fecha_pago`, `fecha_vigencia`, `id_usuario`, `id_metodo_pago`) VALUES
-(1, 50000.00, '2023-10-01', '2024-10-01', 3, 1),
-(2, 70000.00, '2023-11-01', '2024-11-01', 5, 2),
-(3, 60000.00, '2023-09-01', '2024-09-01', 9, 3),
-(4, 80000.00, '2023-08-01', '2024-08-01', 6, 1),
-(5, 90000.00, '2023-12-01', '2024-12-01', 11, 2),
-(6, 50000.00, '2023-10-01', '2024-10-01', 3, 2),
-(7, 70000.00, '2023-11-01', '2024-11-01', 5, 3),
-(8, 60000.00, '2023-09-01', '2024-09-01', 9, 1),
-(9, 80000.00, '2023-08-01', '2024-08-01', 6, 1),
-(10, 90000.00, '2023-12-01', '2024-12-01', 11, 1),
-(11, 10000.00, '2025-04-01', '2025-06-01', 5, 3);
+INSERT INTO `pago` (`id`, `precio`, `fecha_pago`, `fecha_vigencia`, `id_usuario`, `id_metodo_pago`, `membresia_id`) VALUES
+(1, 50000.00, '2023-10-01', '2024-10-01', 3, 1, 4),
+(2, 70000.00, '2023-11-01', '2024-11-01', 5, 2, 4),
+(3, 60000.00, '2023-09-01', '2024-09-01', 9, 3, 5),
+(4, 80000.00, '2023-08-01', '2024-08-01', 6, 1, 5),
+(5, 90000.00, '2023-12-01', '2024-12-01', 11, 2, 4),
+(6, 50000.00, '2023-10-01', '2024-10-01', 3, 2, 4),
+(7, 70000.00, '2023-11-01', '2024-11-01', 5, 3, 5),
+(8, 60000.00, '2023-09-01', '2024-09-01', 9, 1, 5),
+(9, 80000.00, '2023-08-01', '2024-08-01', 6, 1, 4),
+(10, 90000.00, '2023-12-01', '2024-12-01', 11, 1, 5),
+(11, 10000.00, '2025-04-01', '2025-05-01', 5, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -1346,10 +1354,10 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`id`, `nombre`, `apellido`, `genero`, `fecha_nacimiento`, `telefono`, `correo`, `id_municipio`, `direccion`, `zip`) VALUES
-(1, 'Carlos', 'López', 'M', '1990-05-10', '3219876543', 'carlos.lopez@example.com', 3, 'Calle 45 #20-30', '111111'),
+(1, 'Carlos', 'López', 'M', '1990-05-10', '3219876543', 'paochik111@gmail.com', 3, 'Calle 45 #20-30', '111111'),
 (2, 'Ana', 'Martínez', 'F', '1985-07-20', '3107654321', 'ana.martinez@example.com', 1, 'Carrera 10 #15-40', '111112'),
 (3, 'María', 'Gómez', 'F', '1992-09-15', '3151234567', 'maria.gomez@example.com', 2, 'Avenida Siempre Viva #742', '111113'),
-(4, 'Pedro', 'Ramírez', 'M', '1988-11-23', '3123456789', 'pedro.ramirez@example.com', 3, 'Calle 12A #55-10', '111114'),
+(4, 'Pedro', 'Ramírez', 'M', '1987-11-23', '3123456789', 'pedro.ramirez@example.com', 107, 'Calle 12A #55-10', '111111'),
 (5, 'Laura', 'Torres', 'F', '1995-03-30', '3176543210', 'laura.torres@example.com', 2, 'Carrera 4A #66-22', '111115'),
 (6, 'Luis', 'Pérez', 'M', '1993-04-11', '3125556666', 'luis.perez@example.com', 1, 'Calle 80', '111116'),
 (7, 'Jorge', 'Rojas', 'M', '1989-02-01', '3105557777', 'jorge.rojas@example.com', 3, 'Carrera 10', '111117'),
@@ -1360,7 +1368,26 @@ INSERT INTO `persona` (`id`, `nombre`, `apellido`, `genero`, `fecha_nacimiento`,
 (12, 'Felipe', 'Diaz', 'M', '1992-12-18', '3105552020', 'felipe.diaz@example.com', 1, 'Avenida 26', '111122'),
 (13, 'Lorena', 'Ruiz', 'F', '1996-05-25', '3155553030', 'lorena.ruiz@example.com', 2, 'Carrera 66', '111123'),
 (14, 'Natalia', 'Vargas', 'F', '1990-09-09', '3195554040', 'natalia.vargas@example.com', 3, 'Calle 19', '111124'),
-(15, 'Raúl', 'Gomez', 'M', '2025-04-10', '3105555050', 'sfdsf', 2, 'strfdgdgdfing', '111124');
+(15, 'Raúl', 'Gomez', 'M', '2025-04-10', '3105555050', 'sfdsf', 2, 'strfdgdgdfing', '111124'),
+(16, 'Ana', 'Lopez', 'F', '1978-10-20', '3021144', 'xxxxxx@gmail.com', 107, 'Carrera 2', '112000'),
+(17, 'Carlos', 'Martinez', 'M', '1995-02-05', '7836329', 'carlos_martinez@gmail.com', 107, 'Calle 21', '112000'),
+(18, 'Claudia', 'Roa', 'F', '1990-11-15', '9298960', 'pao_roa@gmail.com', 107, 'Calle 52', '111100'),
+(19, 'Nelson', 'Bohorquez', 'M', '2003-03-30', '98774563', 'nelson_bohorquez@gmail.com', 674, 'Trasversal 9', '114420'),
+(20, 'Nelson', 'Bohorquez', 'M', '2003-03-30', '98774563', 'nelson_bohorquez1@gmail.com', 674, 'Trasversal 9', '114420'),
+(21, 'Billy', 'Cyrus', 'M', '1985-09-15', '657741', 'billyc@gmail.com', 81, 'Carrera 89', '1111111'),
+(22, 'Yennifer', 'Vargas', 'F', '1998-02-27', '3022476697', 'zabalaa.alejandraa@gmail.com', 88, 'Carrera 82 g # 60 a 59', '1112000'),
+(23, 'Yennifer', 'Zabala', 'F', '1995-10-20', '34234324', 'yenn@gmail.com', 323, 'carrera 82', '1111'),
+(24, 'Pedro', 'Rios', 'M', '2001-01-01', '3102222', 'pedrorios@gmail.com', 155, 'carrera 82', '11111'),
+(25, 'Carlos', 'Lara', 'M', '2010-10-10', '65554', 'carlos@gmail.com', 293, 'carrera 82', '1111'),
+(26, 'Carlos', 'Lara', 'M', '2010-10-10', '65554', 'carlos1@gmail.com', 293, 'carrera 82', '1111'),
+(27, 'ivon', 'vargas', 'F', '2003-02-01', '366555', 'ivon@gmail.com', 530, 'carrera 82', '1111'),
+(28, 'ivon', 'vargas', 'F', '2003-02-01', '366555', 'ivon1@gmail.com', 530, 'carrera 82', '1111'),
+(29, 'Ana', 'Leal', 'F', '2003-03-03', '6578878', 'analeal@gmail.com', 194, 'carrera 84', '11112'),
+(30, 'Esteban', 'Arevalo', 'M', '2006-08-18', '32000', 'estaban@gmail.com', 501, 'carrera 82', '1111'),
+(31, 'Felipe', 'Arevalo', 'M', '1978-08-18', '3200001', 'felipearevalo@gmail.com', 305, 'carrera 82', '11112'),
+(32, 'Santiago', 'Arevalo', 'M', '2000-06-23', '3200022', 'santiago@gmail.com', 1033, 'carrera 86 g 4', '11112'),
+(33, 'Andrea', 'Castillo', 'F', '2012-10-20', '7836329', 'andrea_castillo@gmail.com', 560, 'calle 2', '11222'),
+(34, 'Paola', 'Ramirez', 'F', '1991-01-01', '7836329', 'paoramirez@gmail.com', 107, 'carrera 86 g 5', '12222');
 
 -- --------------------------------------------------------
 
@@ -1381,7 +1408,7 @@ INSERT INTO `rol` (`id`, `nombre`) VALUES
 (1, 'Administrador'),
 (2, 'Entrenador'),
 (3, 'Cliente'),
-(4, 'Auxiliar');
+(4, 'Vendedor');
 
 -- --------------------------------------------------------
 
@@ -1395,17 +1422,30 @@ CREATE TABLE `suplemento_deportivo` (
   `tipo` varchar(50) NOT NULL,
   `descripcion` text DEFAULT NULL,
   `precio` decimal(10,2) NOT NULL,
-  `id_usuario` int(11) DEFAULT NULL
+  `id_usuario` int(11) DEFAULT NULL,
+  `estado` tinyint(4) DEFAULT 1,
+  `Stock` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `suplemento_deportivo`
 --
 
-INSERT INTO `suplemento_deportivo` (`id`, `nombre`, `tipo`, `descripcion`, `precio`, `id_usuario`) VALUES
-(1, 'Proteína Whey', 'Proteína', 'Suplemento de proteína avanzada', 45000.00, 3),
-(2, 'Creatina', 'Creatina', 'Vitaminas y minerales esenciales', 38000.00, 5),
-(3, 'Suplemento especial', 'Suplemento', 'Especial para recuperar el cuerpo', 50000.00, 6);
+INSERT INTO `suplemento_deportivo` (`id`, `nombre`, `tipo`, `descripcion`, `precio`, `id_usuario`, `estado`, `Stock`) VALUES
+(1, 'Proteína Whey', 'Proteína', 'Suplemento de proteína avanzada', 50000.00, 3, 1, 20),
+(2, 'Creatina', 'Creatina', 'Vitaminas y minerales esenciales', 38000.00, 3, 1, 0),
+(3, 'Suplemento especial', 'Suplemento', 'Especial para recuperar el cuerpo', 50000.00, 3, 1, 0),
+(4, 'Colageno', 'Suplemento', 'Ayuda a mantener la elasticidad y firmeza de la piel, fortalece los huesos y articulaciones, y contribuye a la salud de los tendones y músculos. También es importante para la cicatrización de heridas y la salud del cabello y las uñas', 42000.00, 3, 1, 0),
+(5, 'Colageno', 'Suplemento', 'Ayuda a mantener la elasticidad y firmeza de la piel, fortalece los huesos y articulaciones, y contribuye a la salud de los tendones y músculos. También es importante para la cicatrización de heridas y la salud del cabello y las uñas', 42000.00, 3, 1, 0),
+(6, 'Vitamita A', 'Suplemento', 'Esencial para la visión, el sistema inmunológico, la reproducción, el crecimiento y el desarrollo', 30000.00, 3, 1, 0),
+(7, 'Vitamia B', 'Suplemento', 'Ayudan a convertir los alimentos en energía, a producir glóbulos rojos y a mantener la salud del sistema nervioso', 40000.00, 3, 1, 0),
+(8, 'Vitamina C', 'Suplemento', 'Sirve para fortalecer el sistema inmunológico, actúa como antioxidante protegiendo las células, mejora la absorción de hierro y es esencial para la producción de colágeno, importante para la piel, huesos y tejido conectivo', 42000.00, 3, 1, 0),
+(9, 'Vitamina D', 'Suplemento', 'Es fundamental para la absorción de calcio y fósforo, esenciales para la salud ósea', 42000.00, 3, 1, 0),
+(10, 'Vitamina E', 'Suplemento', 'ayuda al cuerpo en muchas funciones, entre ellas, la visión, la reproducción, la salud de la piel, el cerebro y la sangre', 41000.00, 3, 1, 0),
+(11, 'Vitamina K', 'Suplemento', 'es un nutriente que ayuda a la coagulación de la sangre y a mantener huesos y tejidos saludables', 42000.00, 3, 1, 0),
+(12, 'Vitamina b12', 'Suplemento', 'Es esencial para la formación de glóbulos rojos, la función nerviosa y la producción de ADN', 41000.00, 3, 1, 0),
+(13, 'Citrato de magnesio', 'Suplemento', 'Es un suplemento utilizado para tratar el estreñimiento a corto plazo. Además, el magnesio, en forma de citrato, contribuye a la salud ósea, regula la función muscular y nerviosa, y participa en la producción de energía', 51000.00, 3, 1, 0),
+(14, 'Vitamina H', 'Suplemento', 'Suplemento importante', 35000.00, 3, 0, 50);
 
 -- --------------------------------------------------------
 
@@ -1424,11 +1464,11 @@ CREATE TABLE `tipo_membresia` (
 --
 
 INSERT INTO `tipo_membresia` (`id`, `nombre`, `estado`) VALUES
-(1, 'Membresia Basica', 'Activa'),
-(2, 'Membresia Premium', 'Activa'),
-(3, 'Membresia Oro', 'Activa'),
-(4, 'Membresia Plata', 'Activa'),
-(5, 'Membresia por quincenas', 'Activa');
+(1, 'Membresia Basica', 'Activo'),
+(2, 'Membresia Premium', 'Activo'),
+(3, 'Membresia Oro', 'Activo'),
+(4, 'Membresia Plata', 'Activo'),
+(5, 'Membresia por quincenas', 'Activo');
 
 -- --------------------------------------------------------
 
@@ -1440,30 +1480,39 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
   `contrasena` varchar(100) NOT NULL,
-  `id_persona` int(11) DEFAULT NULL,
-  `id_rol` int(11) DEFAULT NULL
+  `PersonaId` int(11) DEFAULT NULL,
+  `RolId` int(11) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `id_persona`, `id_rol`) VALUES
-(2, 'Carlos_López', 'password1', 1, 1),
-(3, 'Ana_Martínez', 'password2', 2, 2),
-(4, 'María_Gómez', 'password3', 3, 3),
-(5, 'Pedro_Ramírez', 'password4', 4, 1),
-(6, 'Laura_Torres', 'password5', 5, 2),
-(7, 'Luis_Pérez', 'password6', 6, 3),
-(8, 'Jorge_Rojas', 'password7', 7, 4),
-(9, 'Claudia_Lara', 'password8', 8, 1),
-(10, 'Sofia_Castro', 'password9', 9, 3),
-(11, 'Andrés_Mendoza', 'password10', 10, 2),
-(12, 'Juliana_Moreno', 'password11', 11, 3),
-(13, 'Felipe_Diaz', 'password12', 12, 4),
-(14, 'Lorena_Ruiz', 'password13', 13, 2),
-(15, 'Natalia_Vargas', 'password14', 14, 4),
-(16, 'carlos_baute', '123456', 1, 1);
+INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `PersonaId`, `RolId`, `estado`) VALUES
+(2, 'Carlos_López', 'password1', 1, 2, 1),
+(3, 'Ana_Martínez', 'password2', 2, 4, 1),
+(4, 'María_Gómez', 'password3', 3, 3, 1),
+(5, 'Pedro_Ramírez', 'password4', 4, 1, 1),
+(6, 'Laura_Torres', 'password5', 5, 2, 1),
+(7, 'Luis_Pérez', 'password6', 6, 3, 1),
+(8, 'Jorge_Rojas', 'password7', 7, 4, 1),
+(9, 'Claudia_Lara', 'password8', 8, 1, 1),
+(10, 'Sofia_Castro', 'password9', 9, 3, 1),
+(11, 'Andrés_Mendoza', 'password10', 10, 2, 1),
+(12, 'Juliana_Moreno', 'password11', 11, 3, 1),
+(13, 'Felipe_Diaz', 'password12', 12, 4, 1),
+(14, 'Lorena_Ruiz', 'password13', 13, 2, 1),
+(15, 'Natalia_Vargas', 'password14', 14, 4, 1),
+(16, 'carlos_baute', '123456', 1, 1, 1),
+(17, 'Billy_Cyrus', '12345', 21, 3, 1),
+(18, 'Yennifer_Vargas', '123456', 22, 3, 1),
+(21, 'Ana_Leal', '12345', 29, 3, 0),
+(22, 'Esteban_arevalo', '12345', 30, 2, 1),
+(23, 'Felipe_Arevalo', '12345', 31, 4, 1),
+(24, 'Santiago_Arevalo', '12345', 32, 4, 0),
+(25, 'Ana_Castillo', '12345', 33, 2, 1),
+(26, 'Paola_ramirez', '12345', 34, 2, 0);
 
 --
 -- Índices para tablas volcadas
@@ -1495,7 +1544,6 @@ ALTER TABLE `inscripcion`
 --
 ALTER TABLE `membresia`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_membresia_pago` (`id_pago`),
   ADD KEY `fk_membresia_tipo` (`id_tipo_membresia`);
 
 --
@@ -1517,14 +1565,16 @@ ALTER TABLE `municipio`
 ALTER TABLE `pago`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_pago_usuario` (`id_usuario`),
-  ADD KEY `fk_pago_metodo` (`id_metodo_pago`);
+  ADD KEY `fk_pago_metodo` (`id_metodo_pago`),
+  ADD KEY `fk_pago_membresia` (`membresia_id`);
 
 --
 -- Indices de la tabla `persona`
 --
 ALTER TABLE `persona`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `correo` (`correo`);
+  ADD UNIQUE KEY `correo` (`correo`),
+  ADD KEY `fk_persona_municipio` (`id_municipio`);
 
 --
 -- Indices de la tabla `rol`
@@ -1550,8 +1600,8 @@ ALTER TABLE `tipo_membresia`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_usuarios_rol` (`id_rol`),
-  ADD KEY `fk_usuarios_persona` (`id_persona`) USING BTREE;
+  ADD KEY `fk_usuarios_rol` (`RolId`),
+  ADD KEY `fk_usuarios_persona` (`PersonaId`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -1573,7 +1623,7 @@ ALTER TABLE `inscripcion`
 -- AUTO_INCREMENT de la tabla `membresia`
 --
 ALTER TABLE `membresia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `pago`
@@ -1582,16 +1632,22 @@ ALTER TABLE `pago`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT de la tabla `persona`
+--
+ALTER TABLE `persona`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
 -- AUTO_INCREMENT de la tabla `suplemento_deportivo`
 --
 ALTER TABLE `suplemento_deportivo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restricciones para tablas volcadas
@@ -1617,7 +1673,6 @@ ALTER TABLE `inscripcion`
 -- Filtros para la tabla `membresia`
 --
 ALTER TABLE `membresia`
-  ADD CONSTRAINT `fk_membresia_pago` FOREIGN KEY (`id_pago`) REFERENCES `pago` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_membresia_tipo` FOREIGN KEY (`id_tipo_membresia`) REFERENCES `tipo_membresia` (`id`);
 
 --
@@ -1630,15 +1685,29 @@ ALTER TABLE `municipio`
 -- Filtros para la tabla `pago`
 --
 ALTER TABLE `pago`
+  ADD CONSTRAINT `fk_pago_membresia` FOREIGN KEY (`membresia_id`) REFERENCES `membresia` (`id`),
   ADD CONSTRAINT `fk_pago_metodo` FOREIGN KEY (`id_metodo_pago`) REFERENCES `metodo_pago` (`id`),
   ADD CONSTRAINT `fk_pago_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `pago_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `persona`
+--
+ALTER TABLE `persona`
+  ADD CONSTRAINT `fk_persona_municipio` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`);
 
 --
 -- Filtros para la tabla `suplemento_deportivo`
 --
 ALTER TABLE `suplemento_deportivo`
   ADD CONSTRAINT `fk_suplemento_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `fk_usuarios_persona` FOREIGN KEY (`PersonaId`) REFERENCES `persona` (`id`),
+  ADD CONSTRAINT `fk_usuarios_rol` FOREIGN KEY (`RolId`) REFERENCES `rol` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
