@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fuMSaV/fpKg=",
+  "dgSpecHash": "x4u+u3EYRYM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj",
+  "projectFilePath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yenni\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\yenni\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -18,10 +18,11 @@ namespace Backend_Gympro.Application.Services
         {
             return await _repository.GetByIdAsync(id);
         }
-        public async Task AddPersonaAsync(Persona persona)
+        public async Task<int> AddPersonaAsync(Persona persona)
         {
             await _repository.AddAsync(persona);
             await _repository.SaveChangesAsync();
+            return persona.Id;
         }
         public async Task UpdatePersonaAsync(Persona persona)
         {
@@ -36,6 +37,10 @@ namespace Backend_Gympro.Application.Services
                 _repository.Delete(persona);
                 await _repository.SaveChangesAsync();
             }
+        }
+        public bool ExisteCorreo(string correo)
+        {
+            return _repository.ExisteCorreo(correo);
         }
     }
 }

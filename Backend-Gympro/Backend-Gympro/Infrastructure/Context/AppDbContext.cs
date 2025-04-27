@@ -35,9 +35,11 @@ namespace Backend_Gympro.Infrastructure.Context
             modelBuilder.Entity<SuplementoDeportivo>().ToTable("suplemento_deportivo");
             modelBuilder.Entity<TipoMembresia>().ToTable("tipo_membresia");
             modelBuilder.Entity<Usuarios>().ToTable("usuarios");
-            /*modelBuilder.Entity<Usuarios>().HasOne(u => u.Persona)
-                                .WithMany()
-                                .HasForeignKey(u => u.PersonaId);*/
+            modelBuilder.Entity<Membresia>()
+                                .HasOne(m => m.TipoMembresia)
+                                .WithMany()  // Si TipoMembresia tiene una relación de "uno a muchos", usa "WithMany"
+                                .HasForeignKey(m => m.id_tipo_membresia)
+                                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,10 +35,11 @@ namespace Backend_Gympro.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Persona persona)
         {
-            await _personaService.AddPersonaAsync(persona);
-            return CreatedAtAction(nameof(GetById), new { id = persona.Id }, persona);
+            var id = await _personaService.AddPersonaAsync(persona);
+            return Ok(id);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id,Persona persona)
         {

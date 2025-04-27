@@ -4,6 +4,7 @@ using Backend_Gympro.Domain.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend_Gympro.Controllers
 {
@@ -12,12 +13,15 @@ namespace Backend_Gympro.Controllers
     public class UsuariosController : Controller
     {
         private readonly IUsuarioService _usuarioService;
+        private readonly IPersonaService _personaService;
 
-        public UsuariosController(IUsuarioService usuarioService)
+        public UsuariosController(IUsuarioService usuarioService, IPersonaService personaService)
         {
             _usuarioService = usuarioService;
+            _personaService = personaService;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -33,13 +37,24 @@ namespace Backend_Gympro.Controllers
             return Ok(usuario);
         }
 
+        [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Create(Usuarios usuario)
+        public async Task<IActionResult> Create([FromBody] UsuarioDTO usuarioDto)
         {
-            await _usuarioService.AddUsuarioAsync(usuario);
-            return CreatedAtAction(nameof(GetById), new { id = usuario.id }, usuario);
+            var usuario = new Usuarios
+            {
+                usuario = usuarioDto.Usuario,
+                contrasena = usuarioDto.Contrasena,
+                PersonaId = usuarioDto.PersonaId,
+                RolId = usuarioDto.RolId,
+                estado = true // Por defecto, el usuario está activo
+            };
+
+            var id = await _usuarioService.AddUsuarioAsync(usuario);
+            return Ok(id);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Usuarios usuario)
         {
@@ -66,11 +81,64 @@ namespace Backend_Gympro.Controllers
 
             return Ok(new { token, usuario });
         }
+
         [HttpPost("olvidar-contrasena")]
         public async Task<IActionResult> OlvidarContrasena([FromBody] OlvidarContraseñaDto dto)
         {
             var resultado = await _usuarioService.OlvidarContraseñaAsync(dto.Correo);
             return Ok(resultado);
+        }
+
+        [HttpPost("validar")]
+        public IActionResult ValidarUsuarioCorreo([FromBody] UsuarioCorreoDTO datos)
+        {
+            bool existeUsuario = _usuarioService.ExisteUsuario(datos.Usuario);
+            bool existeCorreo = _personaService.ExisteCorreo(datos.Correo);
+
+            return Ok(new { usuarioExistente = existeUsuario, correoExistente = existeCorreo });
+        }
+
+        [Authorize]
+        [HttpGet("obtener-usuarios")]
+        public async Task<IActionResult> ObtenerUsuarios()
+        {
+            try
+            {
+                var usuarios = await _usuarioService.ObtenerUsuariosAsync();
+                return Ok(usuarios);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Error al obtener los usuarios: " + ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpGet("porPersona/{idPersona}")]
+        public async Task<IActionResult> ObtenerUsuarioPorPersona(int idPersona)
+        {
+            var usuario = await _usuarioService.ObtenerUsuarioPorPersona(idPersona);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(usuario);
+        }
+
+        [Authorize]
+        [HttpPut("porPersona/{idPersona}")]
+        public async Task<IActionResult> ActualizarUsuarioPorPersona(int idPersona, [FromBody] ActualizarUsuarioDTO usuarioActualizado)
+        {
+            var resultado = await _usuarioService.ActualizarUsuarioPorPersona(idPersona, usuarioActualizado);
+
+            if (!resultado)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
         }
     }
 }

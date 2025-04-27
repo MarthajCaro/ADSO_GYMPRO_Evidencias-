@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj": {}
+    "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj": {
+    "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj",
+        "projectUniqueName": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj",
         "projectName": "Backend-Gympro",
-        "projectPath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj",
+        "projectPath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Backend-Gympro.csproj",
         "packagesPath": "C:\\Users\\yenni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\Backend-Gympro\\Backend-Gympro\\obj\\",
+        "outputPath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

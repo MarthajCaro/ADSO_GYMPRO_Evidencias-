@@ -32,6 +32,7 @@ const form = document.getElementById("supplement-form");
 const nameInput = document.getElementById("nombre");
 const priceInput = document.getElementById("precio");
 const tipoInput = document.getElementById("tipo");
+const stockInput = document.getElementById("stock");
 const descriptionInput = document.getElementById("descripcion");
 const tableBody = document.getElementById("supplement-table-body");
 
@@ -42,6 +43,7 @@ form.addEventListener("submit", async (e) => {
     nombre: nameInput.value,
     tipo: tipoInput.value,
     descripcion: descriptionInput.value,
+    stock: stockInput.value,
     precio: parseFloat(priceInput.value),
     id_usuario: localStorage.getItem("idUsuario")
   };
@@ -117,6 +119,7 @@ function renderTable(supplements) {
       <td>${supplement.nombre}</td>
       <td>${formatCurrency(supplement.precio)}</td>
       <td>${supplement.tipo}</td>
+      <td>${supplement.stock}</td>
       <td>${supplement.descripcion}</td>
       <td>${supplement.estado ? "Activo" : "Inactivo"}</td>
       <td class="actions">

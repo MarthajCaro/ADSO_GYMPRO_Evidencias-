@@ -9,6 +9,6 @@
         public decimal precio { get; set; }
         public int id_usuario { get; set; }
         public bool estado { get; set; } = true;
-
+        public int Stock { get; set; }
     }
 }

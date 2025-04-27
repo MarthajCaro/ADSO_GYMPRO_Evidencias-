@@ -5,5 +5,6 @@ namespace Backend_Gympro.Application.Interfaces
 {
     public interface IMembresiaRepository : IGenericRepository<Membresia>
     {
+        Task<List<Membresia>> ObtenerConTipoAsync();
     }
 }

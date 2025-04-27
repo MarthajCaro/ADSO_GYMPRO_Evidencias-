@@ -22,7 +22,7 @@ async function iniciarSesion() {
       const rol = localStorage.getItem("rol");
 
       if (rol === "1") {
-          document.getElementById("adminMenu").style.display = "block";
+        window.location.href = "administrador.html";
       } else if (rol === "2") {
         window.location.href = "entrenador.html";
       } else if (rol === "3") {

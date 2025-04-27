@@ -1,9 +1,11 @@
 ﻿using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend_Gympro.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ClaseController : Controller

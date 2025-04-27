@@ -411,17 +411,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Membresia"
+                "$ref": "#/components/schemas/TipoMembresiaDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Membresia"
+                "$ref": "#/components/schemas/TipoMembresiaDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Membresia"
+                "$ref": "#/components/schemas/TipoMembresiaDto"
               }
             }
           }
@@ -474,17 +474,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Membresia"
+                "$ref": "#/components/schemas/TipoMembresiaDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Membresia"
+                "$ref": "#/components/schemas/TipoMembresiaDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Membresia"
+                "$ref": "#/components/schemas/TipoMembresiaDto"
               }
             }
           }
@@ -509,6 +509,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Membresia/consultar-membresias": {
+      "get": {
+        "tags": [
+          "Membresia"
         ],
         "responses": {
           "200": {
@@ -915,6 +927,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pago/clientes-membresia": {
+      "get": {
+        "tags": [
+          "Pago"
         ],
         "responses": {
           "200": {
@@ -1496,17 +1520,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuarios"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuarios"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Usuarios"
+                "$ref": "#/components/schemas/UsuarioDTO"
               }
             }
           }
@@ -1664,6 +1688,112 @@
         }
       }
     },
+    "/api/Usuarios/validar": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioCorreoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioCorreoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioCorreoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/obtener-usuarios": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/porPersona/{idPersona}": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "name": "idPersona",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "name": "idPersona",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -1706,6 +1836,19 @@
   },
   "components": {
     "schemas": {
+      "ActualizarUsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "rolId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Clase": {
         "type": "object",
         "properties": {
@@ -1827,13 +1970,12 @@
             "type": "string",
             "nullable": true
           },
-          "id_pago": {
-            "type": "integer",
-            "format": "int32"
-          },
           "id_tipo_membresia": {
             "type": "integer",
             "format": "int32"
+          },
+          "tipoMembresia": {
+            "$ref": "#/components/schemas/TipoMembresia"
           }
         },
         "additionalProperties": false
@@ -1914,6 +2056,13 @@
           "id_metodo_pago": {
             "type": "integer",
             "format": "int32"
+          },
+          "membresia_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "membresia": {
+            "$ref": "#/components/schemas/Membresia"
           }
         },
         "additionalProperties": false
@@ -2006,6 +2155,10 @@
           },
           "estado": {
             "type": "boolean"
+          },
+          "stock": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -2024,6 +2177,68 @@
           "estado": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoMembresiaDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "duracion_Membresia_En_Meses": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_Tipo_Membresia": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioCorreoDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "contrasena": {
+            "type": "string",
+            "nullable": true
+          },
+          "personaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rolId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -2053,6 +2268,12 @@
           },
           "persona": {
             "$ref": "#/components/schemas/Persona"
+          },
+          "rol": {
+            "$ref": "#/components/schemas/Rol"
+          },
+          "estado": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

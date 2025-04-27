@@ -1,4 +1,5 @@
-﻿using Backend_Gympro.Application.Interfaces;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Application.Interfaces;
 using Backend_Gympro.Domain.Entidades;
 
 namespace Backend_Gympro.Application.Services
@@ -37,6 +38,20 @@ namespace Backend_Gympro.Application.Services
                 _repository.Delete(membresia);
                 await _repository.SaveChangesAsync();
             }
+        }
+        public async Task<List<MembresiaDto>> ObtenerMembresiasAsync()
+        {
+            var membresias = await _repository.ObtenerConTipoAsync();
+
+            return membresias.Select(m => new MembresiaDto
+            {
+                Id = m.id,
+                Descripcion = m.descripcion,
+                Precio = m.Precio,
+                DuracionMeses = m.duracion_membresia_en_meses,
+                TipoMembresiaNombre = m.TipoMembresia?.nombre,
+                Estado = m.TipoMembresia?.estado
+            }).ToList();
         }
     }
 }

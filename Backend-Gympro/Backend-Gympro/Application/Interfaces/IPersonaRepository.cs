@@ -5,5 +5,6 @@ namespace Backend_Gympro.Application.Interfaces
 {
     public interface IPersonaRepository : IGenericRepository<Persona>
     {
+        bool ExisteCorreo(string correo);
     }
 }

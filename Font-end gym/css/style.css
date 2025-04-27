@@ -5481,3 +5481,7 @@ body {
 	margin-bottom: 4px;
 	display: block;
 }
+
+#errorLabel{
+	color: red;
+}

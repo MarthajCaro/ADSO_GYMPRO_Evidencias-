@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+.header {
+  background-color: rgb(240,88,12);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#cerrarSesion {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cerrarSesion:hover {
+  background-color: #c9302c;
+}
+
+#nombreUsuario {
+  font-weight: bold;
+}
+.container {
+  padding: 20px;
+}
+.title {
+  margin-bottom: 20px;
+}
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.search-container {
+  width: 70%;
+}
+.search-box {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background-color: #FF6600;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+tr:nth-child(even) {
+  background-color: #111;
+}
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-edit {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn-update {
+  background-color: #2196F3;
+  color: white;
+}
+
+.nav {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.nav>li {
+  float: left;
+}
+
+.nav li.active a, .nav li a:hover {
+  border: 1px orange;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: orange;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu {
+  background-color: black;
+  /* color: white; */
+  z-index: 9999;
+  width: 100%;
+  clear: both;
+}
+
+@media (max-width: 1024px) {
+  .nav li a {
+      padding: 7px 15px;
+      margin-right: 3px;
+  }
+}
+
+.nav li a {
+  display: block;
+  padding: 9px 20px;
+  color: #fff;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-right: 10px;
+  border: 1px black;
+}
+
+.h_menu4{
+  float: right;
+}
+
+.create-class-btn {
+  background-color: #FF6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+

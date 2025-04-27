@@ -8,5 +8,9 @@ namespace Backend_Gympro.Application.Interfaces
     {
         Task<Usuarios> GetByCredentialsAsync(string usuario, string contraseña);
         Task<Usuarios?> GetByCorreoAsync(string correo);
+        bool ExisteUsuario(string usuario);
+        Task<List<UsuarioConsultaDTO>> ObtenerUsuariosAsync();
+        Task<Usuarios> ObtenerUsuarioPorPersona(int idPersona);
+        Task<bool> ActualizarUsuarioPorPersona(int idPersona, ActualizarUsuarioDTO usuarioActualizado);
     }
 }

@@ -5,6 +5,7 @@
 	<title>Gympro | Registro </title>
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/registro-usuario.css" rel='stylesheet' type='text/css' />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -65,7 +66,7 @@
 				<!-- Este formulario debe ir dentro del <body> de tu archivo HTML principal -->
 
 				<div class="form-container">
-					<form action="registro.php" method="POST" class="form-registro">
+					<form method="POST" id="formularioRegistro" class="form-registro">
 						<h2>Registro de clientes</h2>
 
 						<div class="form-group">
@@ -98,7 +99,7 @@
 
 						<div class="form-group">
 							<label>Teléfono:</label>
-							<input type="text" id="telefono" name="telefono">
+							<input type="number" id="telefono" name="telefono" required>
 						</div>
 
 						<div class="form-group">
@@ -108,40 +109,48 @@
 
 						<div class="form-group">
 							<label>Departamento:</label>
-							<select id="departamento">
+							<select id="departamento" required>
 								<option value="">Selecciona una opción</option>
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label>Municipio:</label>
-							<select id="municipio">
+							<select id="municipio" required>
 								<option value="">Selecciona una opción</option>
 							</select>
 						</div>
 
 						<div class="form-group">
 							<label>Dirección:</label>
-							<input type="text" id="direccion" name="direccion">
+							<input type="text" id="direccion" name="direccion" required>
 						</div>
 
 						<div class="form-group">
 							<label>ZIP:</label>
-							<input type="text" id="zip" name="zip">
+							<input type="text" id="zip" name="zip" required>
 						</div>
 
 						<div class="form-group">
 							<label>Contraseña:</label>
-							<input type="password" id="contrasena" name="contrasena">
+							<input type="password" id="contrasena" name="contrasena" required>
 						</div>
 
 						<div class="form-group">
 							<label>Confirmar contraseña:</label>
-							<input type="password" id="confirmar_contrasena" name="confirmar_contrasena">
+							<input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>						
 						</div>
 
-						<input type="submit" value="Registrar">
+						<label id="errorLabel"></label>
+						<input type="submit" value="Registrar" id="btnRegistrar">
 					</form>
+				</div>
+
+				<div id="miModal" class="modal">
+					<div class="modal-contenido">
+					  <span id="cerrarModal" class="cerrar">&times;</span>
+					  <p id="mensajeModal"></p>
+					</div>
 				</div>
 
 				<!-- Footer-->

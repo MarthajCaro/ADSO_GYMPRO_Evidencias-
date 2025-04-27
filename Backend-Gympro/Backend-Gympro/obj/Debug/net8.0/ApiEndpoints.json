@@ -265,8 +265,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "membresia",
-        "Type": "Backend_Gympro.Domain.Entidades.Membresia",
+        "Name": "dto",
+        "Type": "Backend_Gympro.Application.DTOs.TipoMembresiaDto",
         "IsRequired": true
       }
     ],
@@ -302,8 +302,8 @@
         "IsRequired": true
       },
       {
-        "Name": "membresia",
-        "Type": "Backend_Gympro.Domain.Entidades.Membresia",
+        "Name": "dto",
+        "Type": "Backend_Gympro.Application.DTOs.TipoMembresiaDto",
         "IsRequired": true
       }
     ],
@@ -323,6 +323,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.MembresiaController",
+    "Method": "GetMembresias",
+    "RelativePath": "api/Membresia/consultar-membresias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -576,6 +586,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.PagoController",
+    "Method": "GetClientesConMembresia",
+    "RelativePath": "api/Pago/clientes-membresia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -944,8 +964,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "Backend_Gympro.Domain.Entidades.Usuarios",
+        "Name": "usuarioDto",
+        "Type": "Backend_Gympro.Application.DTOs.UsuarioDTO",
         "IsRequired": true
       }
     ],
@@ -1022,6 +1042,16 @@
   },
   {
     "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
+    "Method": "ObtenerUsuarios",
+    "RelativePath": "api/Usuarios/obtener-usuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
     "Method": "OlvidarContrasena",
     "RelativePath": "api/Usuarios/olvidar-contrasena",
     "HttpMethod": "POST",
@@ -1031,6 +1061,59 @@
       {
         "Name": "dto",
         "Type": "Backend_Gympro.Application.DTOs.OlvidarContrase\u00F1aDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
+    "Method": "ObtenerUsuarioPorPersona",
+    "RelativePath": "api/Usuarios/porPersona/{idPersona}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPersona",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
+    "Method": "ActualizarUsuarioPorPersona",
+    "RelativePath": "api/Usuarios/porPersona/{idPersona}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPersona",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuarioActualizado",
+        "Type": "Backend_Gympro.Application.DTOs.ActualizarUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
+    "Method": "ValidarUsuarioCorreo",
+    "RelativePath": "api/Usuarios/validar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "datos",
+        "Type": "Backend_Gympro.Application.DTOs.UsuarioCorreoDTO",
         "IsRequired": true
       }
     ],

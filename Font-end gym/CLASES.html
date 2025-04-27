@@ -1,185 +1,135 @@
-<html>
-    <html lang="es">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Panel de Clases</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                    background-color: #000;
-                    color: #fff;
-                }
-                .header {
-                    background-color: #FF6600;
-                    color: white;
-                    padding: 15px 0;
-                    text-align: center;
-                    font-size: 24px;
-                    font-weight: bold;
-                }
-                .container {
-                    padding: 20px;
-                }
-                .title {
-                    margin-bottom: 20px;
-                }
-                .top-controls {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 20px;
-                }
-                .search-container {
-                    width: 70%;
-                }
-                .search-box {
-                    width: 100%;
-                    padding: 10px;
-                    border-radius: 20px;
-                    border: 1px solid #333;
-                    background-color: #222;
-                    color: #fff;
-                }
-                .create-class-btn {
-                    background-color: #FF6600;
-                    color: white;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    font-weight: bold;
-                    font-size: 16px;
-                    cursor: pointer;
-                }
-                table {
-                    width: 100%;
-                    border-collapse: collapse;
-                }
-                th {
-                    background-color: #FF6600;
-                    color: white;
-                    padding: 10px;
-                    text-align: left;
-                }
-                td {
-                    padding: 10px;
-                    border-bottom: 1px solid #333;
-                }
-                tr:nth-child(even) {
-                    background-color: #111;
-                }
-                .btn {
-                    padding: 5px 10px;
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    font-weight: bold;
-                }
-                .btn-edit {
-                    background-color: #4CAF50;
-                    color: white;
-                }
-                .btn-update {
-                    background-color: #2196F3;
-                    color: white;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="header">
-                Panel de Clases
-            </div>
-            
-            <div class="container">
-                <h2 class="title">Lista de Clases Disponibles</h2>
-                
-                <div class="top-controls">
-                    <div class="search-container">
-                        <input type="text" class="search-box" placeholder="Buscar clases">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del clases</title>
+    <link href="css/clase.css" rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <!-- Empezar header_bottom -->
+	<div class="header-bottom">
+		<div class="container-header">
+			<div class="header-bottom_left">
+                <div class="header">
+                    Panel del Administrador
+                    <div id="userInfo">
+                        Hola <span id="nombreUsuario">Usuario</span>
+                        <button id="cerrarSesion">Cerrar sesión</button>
                     </div>
-                    <button class="create-class-btn">CREAR CLASE</button>
                 </div>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Clase</th>
-                            <th>Minutos</th>
-                            <th>Activa</th>
-                            <th>Editar</th>
-                            <th>Actualizar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Yoga</td>
-                            <td>60 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Crossfit</td>
-                            <td>45 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Kick Boxing</td>
-                            <td>60 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Spinning</td>
-                            <td>45 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Aeróbicos</td>
-                            <td>50 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Cardio Fitness</td>
-                            <td>55 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Pilates</td>
-                            <td>60 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Clases de recuperación básica</td>
-                            <td>60 minutos</td>
-                            <td>Sí</td>
-                            <td><button class="btn btn-edit">Editar</button></td>
-                            <td><button class="btn btn-update">Actualizar</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+			</div>
+		</div>
+	</div>
+
+    <!-- EMCABEZADO MENU -->
+	<div class="menu">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<div class="h_menu4"><!-- start h_menu4 -->
+				<ul class="nav">
+					<li><a href="administrador.html">Usuarios</a></li>
+					<li><a href="membresia.html">Membresias</a></li>
+					<li class="active"><a href="clases.html">Clases</a></li>
+					<li><a href="suplementos.html">Suplementos</a></li>
+					<li><a href="pagos.html">Pagos</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div><!-- end h_menu4 -->
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- end menu -->
+    
+    <div class="container">
+        <h2 class="title">Lista de Clases Disponibles</h2>        
+        <div class="top-controls">
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Buscar clases">
             </div>
-        </body>
-        </html>
+            <button class="create-class-btn">CREAR CLASE</button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Clase</th>
+                    <th>Minutos</th>
+                    <th>Activa</th>
+                    <th>Editar</th>
+                    <th>Actualizar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Yoga</td>
+                    <td>60 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Crossfit</td>
+                    <td>45 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Kick Boxing</td>
+                    <td>60 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Spinning</td>
+                    <td>45 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Aeróbicos</td>
+                    <td>50 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Cardio Fitness</td>
+                    <td>55 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Pilates</td>
+                    <td>60 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Clases de recuperación básica</td>
+                    <td>60 minutos</td>
+                    <td>Sí</td>
+                    <td><button class="btn btn-edit">Editar</button></td>
+                    <td><button class="btn btn-update">Actualizar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

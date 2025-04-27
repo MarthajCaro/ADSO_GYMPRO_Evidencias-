@@ -29,10 +29,11 @@ namespace Backend_Gympro.Application.Services
         {
             return await _repository.GetByIdAsync(id);
         }
-        public async Task AddUsuarioAsync(Usuarios usuario)
+        public async Task<int> AddUsuarioAsync(Usuarios usuario)
         {
             await _repository.AddAsync(usuario);
             await _repository.SaveChangesAsync();
+            return usuario.id;
         }
         public async Task UpdateUsuarioAsync(Usuarios usuario)
         {
@@ -65,7 +66,7 @@ namespace Backend_Gympro.Application.Services
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
+                expires: DateTime.UtcNow.AddHours(8),
                 signingCredentials: creds
             );
 
@@ -95,6 +96,26 @@ namespace Backend_Gympro.Application.Services
             await _emailService.SendEmailAsync(correo, subject, body);
 
             return "Se ha enviado un correo con instrucciones para restablecer la contraseña.";
+        }
+
+        public bool ExisteUsuario(string usuario)
+        {
+            return _repository.ExisteUsuario(usuario);
+        }
+
+        public async Task<List<UsuarioConsultaDTO>> ObtenerUsuariosAsync()
+        {
+            return await _repository.ObtenerUsuariosAsync();
+        }
+
+        public async Task<Usuarios> ObtenerUsuarioPorPersona(int idPersona)
+        {
+            return await _repository.ObtenerUsuarioPorPersona(idPersona);
+        }
+
+        public async Task<bool> ActualizarUsuarioPorPersona(int idPersona, ActualizarUsuarioDTO usuarioActualizado)
+        {
+            return await _repository.ActualizarUsuarioPorPersona(idPersona, usuarioActualizado);
         }
     }
 }

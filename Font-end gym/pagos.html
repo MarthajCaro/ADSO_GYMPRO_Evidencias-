@@ -3,16 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <title>Pagos de Membresías</title>
-  <link rel="stylesheet" href="pagos.css">
+  <link rel="stylesheet" href="css/pagos.css">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
 </head>
 <body>
-  <h1>Pagos de Membresías</h1>
+   <!-- Empezar header_bottom -->
+	<div class="header-bottom">
+		<div class="container-header">
+			<div class="header-bottom_left">
+          <div class="header">
+              Panel del Administrador
+              <div id="userInfo">
+                  Hola <span id="nombreUsuario">Usuario</span>
+                  <button id="cerrarSesion">Cerrar sesión</button>
+              </div>
+          </div>
+			</div>
+		</div>
+	</div>
+
+    <!-- EMCABEZADO MENU -->
+	<div class="menu">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<div class="h_menu4"><!-- start h_menu4 -->
+				<ul class="nav">
+					<li><a href="administrador.html">Usuarios</a></li>
+					<li><a href="membresia.html">Membresias</a></li>
+					<li><a href="clases.html">Clases</a></li>
+					<li><a href="suplementos.html">Suplementos</a></li>
+					<li class="active"><a href="pagos.html">Pagos</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div><!-- end h_menu4 -->
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- end menu -->
+
+<div class="container">
+  <h2>Pagos de Membresías</h2>
+
+  <div id="filtros" style="margin-bottom: 20px;">
+    <label>Estado:
+      <select id="filtro-estado" class="custom-select">
+        <option value="">Todos</option>
+        <option value="Activo">Activo</option>
+        <option value="Vencido">Vencido</option>
+      </select>
+    </label>
+  
+    <button id="aplicar-filtros">Aplicar filtros</button>
+    <button id="descargar-excel">Descargar Excel</button>
+  </div>
   <div class="tabla-contenedor">
     <table>
       <thead>
         <tr>
           <th>Cliente</th>
-          <th>Plan</th>
+          <th>Membresia</th>
+          <th>Descripción</th>
           <th>Vencimiento</th>
           <th>Monto</th>
           <th>Estado</th>
@@ -23,7 +75,8 @@
       </tbody>
     </table>
   </div>
+</div>
 
-  <script src="pagos.js"></script>
+<script src="js/pagos.js"></script>
 </body>
 </html>

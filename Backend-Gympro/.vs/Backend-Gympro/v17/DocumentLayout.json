@@ -1,12 +1,89 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T00:40:52.838Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonaController.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\PersonaController.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\PersonaController.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\PersonaController.cs",
+              "RelativeToolTip": "Backend-Gympro\\Controllers\\PersonaController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T21:16:15.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T00:31:20.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Backend-Gympro\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAIwHMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:15:30.096Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,7 +1,10 @@
-﻿namespace Backend_Gympro.Domain.Entidades
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Backend_Gympro.Domain.Entidades
 {
     public class Persona
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string? nombre { get; set; }
         public string? apellido { get; set; }

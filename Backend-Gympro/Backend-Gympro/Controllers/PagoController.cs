@@ -1,10 +1,12 @@
 ﻿using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend_Gympro.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PagoController : Controller
@@ -52,5 +54,13 @@ namespace Backend_Gympro.Controllers
             await _pagoService.DeletePagoAsync(id);
             return NoContent();
         }
+
+        [HttpGet("clientes-membresia")]
+        public async Task<IActionResult> GetClientesConMembresia()
+        {
+            var result = await _pagoService.ObtenerClientesConMembresiaAsync();
+            return Ok(result);
+        }
+
     }
 }

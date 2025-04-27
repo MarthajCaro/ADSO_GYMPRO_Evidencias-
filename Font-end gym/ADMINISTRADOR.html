@@ -4,213 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel del Administrador</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-        }
-        .header {
-            background-color: #FF6600;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .container {
-            padding: 20px;
-        }
-        .title {
-            margin-bottom: 20px;
-        }
-        .top-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .search-container {
-            width: 70%;
-        }
-        .search-box {
-            width: 100%;
-            padding: 10px;
-            border-radius: 20px;
-            border: 1px solid #333;
-            background-color: #222;
-            color: #fff;
-        }
-        .create-user-btn {
-            background-color: #FF6600;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th {
-            background-color: #FF6600;
-            color: white;
-            padding: 10px;
-            text-align: left;
-        }
-        td {
-            padding: 10px;
-            border-bottom: 1px solid #333;
-        }
-        tr:nth-child(even) {
-            background-color: #111;
-        }
-        .btn {
-            padding: 5px 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-right: 5px;
-        }
-        .btn-view {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .btn-enable {
-            background-color: #2196F3;
-            color: white;
-        }
-        .btn-disable {
-            background-color: #f44336;
-            color: white;
-        }
-        .btn-update {
-            background-color: #FF9800;
-            color: white;
-        }
-        .action-buttons {
-            white-space: nowrap;
-        }
-    </style>
+    <link href="css/adiministrador.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
-    <div class="header">
-        Panel del Administrador
-    </div>
-    
+    <!-- Empezar header_bottom -->
+	<div class="header-bottom">
+		<div class="container-header">
+			<div class="header-bottom_left">
+                <div class="header">
+                    Panel del Administrador
+                    <div id="userInfo">
+                        Hola <span id="nombreUsuario">Usuario</span>
+                        <button id="cerrarSesion">Cerrar sesión</button>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+
+    <!-- EMCABEZADO MENU -->
+	<div class="menu">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<div class="h_menu4"><!-- start h_menu4 -->
+				<ul class="nav">
+					<li class="active"><a href="administrador.html">Usuarios</a></li>
+					<li><a href="membresia.html">Membresias</a></li>
+					<li><a href="clases.html">Clases</a></li>
+					<li><a href="suplementos.html">Suplementos</a></li>
+					<li><a href="pagos.html">Pagos</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div><!-- end h_menu4 -->
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- end menu -->
+
     <div class="container">
-        <h2 class="title">Lista de Usuarios</h2>
-        
+        <h2 class="title">Lista de Usuarios</h2>      
         <div class="top-controls">
             <div class="search-container">
                 <input type="text" class="search-box" placeholder="Buscar usuarios">
             </div>
-            <button class="create-user-btn">CREAR USUARIO</button>
+            <button id="btnAgregarUsuario" class="create-user-btn">CREAR USUARIO</button>
         </div>
         
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Usuario</th>
+                    <th>Nombre</th>
                     <th>Correo</th>
-                    <th>Contraseña</th>
-                    <th>Fecha de nacimiento</th>
-                    <th>Edad</th>
-                    <th>Identificación</th>
+                    <th>Edad</th>      
                     <th>Rol</th>
+                    <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>admin1</td>
-                    <td>admin1@ejemplo.com</td>
-                    <td>••••••••</td>
-                    <td>15/05/1985</td>
-                    <td>39</td>
-                    <td>12345678A</td>
-                    <td>Administrador</td>
-                    <td class="action-buttons">
-                        <button class="btn btn-view">Ver</button>
-                        <button class="btn btn-enable">Habilitar</button>
-                        <button class="btn btn-disable">Inhabilitar</button>
-                        <button class="btn btn-update">Actualizar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>instructor1</td>
-                    <td>instructor1@ejemplo.com</td>
-                    <td>••••••••</td>
-                    <td>22/08/1990</td>
-                    <td>34</td>
-                    <td>23456789B</td>
-                    <td>Instructor</td>
-                    <td class="action-buttons">
-                        <button class="btn btn-view">Ver</button>
-                        <button class="btn btn-enable">Habilitar</button>
-                        <button class="btn btn-disable">Inhabilitar</button>
-                        <button class="btn btn-update">Actualizar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>recepcion1</td>
-                    <td>recepcion1@ejemplo.com</td>
-                    <td>••••••••</td>
-                    <td>10/03/1992</td>
-                    <td>33</td>
-                    <td>34567890C</td>
-                    <td>Recepción</td>
-                    <td class="action-buttons">
-                        <button class="btn btn-view">Ver</button>
-                        <button class="btn btn-enable">Habilitar</button>
-                        <button class="btn btn-disable">Inhabilitar</button>
-                        <button class="btn btn-update">Actualizar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>gerente1</td>
-                    <td>gerente1@ejemplo.com</td>
-                    <td>••••••••</td>
-                    <td>05/12/1980</td>
-                    <td>44</td>
-                    <td>45678901D</td>
-                    <td>Gerente</td>
-                    <td class="action-buttons">
-                        <button class="btn btn-view">Ver</button>
-                        <button class="btn btn-enable">Habilitar</button>
-                        <button class="btn btn-disable">Inhabilitar</button>
-                        <button class="btn btn-update">Actualizar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>soporte1</td>
-                    <td>soporte1@ejemplo.com</td>
-                    <td>••••••••</td>
-                    <td>18/07/1995</td>
-                    <td>29</td>
-                    <td>56789012E</td>
-                    <td>Soporte</td>
-                    <td class="action-buttons">
-                        <button class="btn btn-view">Ver</button>
-                        <button class="btn btn-enable">Habilitar</button>
-                        <button class="btn btn-disable">Inhabilitar</button>
-                        <button class="btn btn-update">Actualizar</button>
-                    </td>
-                </tr>
+            <tbody id="tabla-usuarios">
+
             </tbody>
         </table>
     </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="form-container">
+                <form id="formUsuario" method="POST" class="form-registro">
+                    <h2>Registro Staff</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Género:</label>
+                            <select id="genero" name="genero" required>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Fecha de nacimiento:</label>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Teléfono:</label>
+                            <input type="text" id="telefono" name="telefono">
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>ZIP:</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                    </div>
+    
+                    <!-- Nuevo campo Usuario -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Usuario:</label>
+                            <input type="text" id="usuario" name="usuario" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cargo:</label>
+                            <select name="cargo" id="cargo" required>
+                                <option value="">Seleccione un cargo</option>
+                                <option value="1">Administrador</option>
+                                <option value="2">Entrenador</option>
+                                <option value="4">Vendedor</option>
+                            </select>
+                        </div>                   
+                    </div>
+
+                    <!-- Nuevos campos para Departamento y Municipio -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Departamento:</label>
+                            <select name="departamento" id="departamento" required>
+                                <option value="">Selecciona un departamento</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Municipio:</label>
+                            <select name="municipio" id="municipio" required>
+                                <option value="">Seleccione un Municipio</option>
+                                <!-- Puedes agregar municipios dependiendo del departamento -->
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="form-row" id="usuarioContrasena">
+                        <div class="form-group">
+                            <label>Contraseña:</label>
+                            <input type="password" id="contrasena" name="contrasena" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirmar contraseña:</label>
+                            <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="campoEstado" style="display: none;">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                          <option value="true">Activo</option>
+                          <option value="false">Inactivo</option>
+                        </select>
+                    </div>
+                    <label id="errorLabel"></label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="submit" value="Guardar">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="cancel-btn" onclick="closeModal()">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+          <span id="cerrarModal" class="cerrar">&times;</span>
+          <p id="mensajeModal"></p>
+        </div>
+    </div>
+
+    <script src="js/administrador.js"></script>
 </body>
 </html>
