@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagos de Membresías</title>
+  <link rel="stylesheet" href="css/pagos.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Pagos de Membresías</h1>
+    <div class="tabla-contenedor">
+      
+        <tbody id="tabla-pagos">
+          <!-- Aquí se cargan los datos dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Formulario de pago -->
+    <div class="formulario-pago">
+      <h2>Realizar Pago</h2>
+      <form action="#" method="POST">
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu nombre de usuario" required>
+        <label for="tipo_membresia">Tipo de membresía</label>
+<select id="tipo_membresia" name="tipo_membresia" required>
+  <option value="">Seleccione una opción</option>
+  <option value="1">Membresía Básica</option>
+  <option value="2">Membresía Premium</option>
+  <option value="3">Membresía Oro</option>
+  <option value="4">Membresía Plata</option>
+  <option value="5">Membresía por quincenas</option>
+</select>
+
+                
+        <label for="vencimiento">Fecha de Vencimiento:</label>
+        <input type="date" id="vencimiento" name="vencimiento" required>
+        
+        <label for="monto">Monto:</label>
+        <input type="number" id="monto" name="monto" placeholder="Ingresa el monto" required>
+        
+        <label for="metodo_pago">Método de Pago:</label>
+        <select id="metodo_pago" name="metodo_pago" required>
+          <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+          <option value="pse">PSE: Nequi, Daviplata, PayPal</option>
+          <option value="efectivo">Efectivo</option>
+        </select>
+        
+        <!-- Opciones adicionales para tarjeta -->
+        <div id="opciones_tarjeta" style="display: none;">
+          <label for="tipo_tarjeta">Tipo de Tarjeta:</label>
+          <select id="tipo_tarjeta" name="tipo_tarjeta">
+            <option value="credito">Crédito</option>
+            <option value="debito">Débito</option>
+          </select>
+        </div>
+
+        <!-- Opciones adicionales para PSE -->
+        <div id="opciones_pse" style="display: none;">
+          <label for="tipo_pse">Método de PSE:</label>
+          <select id="tipo_pse" name="tipo_pse">
+            <option value="nequi">Nequi</option>
+            <option value="daviplata">Daviplata</option>
+            <option value="paypal">PayPal</option>
+          </select>
+        </div>
+
+        <button type="submit">Pagar</button>
+        <h1></h1>
+        <a href="pricing.html" class="btn-volver">Volver</a>
+
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    // Mostrar u ocultar la opción de tipo de tarjeta dependiendo del método de pago seleccionado
+    document.getElementById('metodo_pago').addEventListener('change', function() {
+      var metodoPago = this.value;
+      var opcionesTarjeta = document.getElementById('opciones_tarjeta');
+      var opcionesPse = document.getElementById('opciones_pse');
+      
+      // Mostrar u ocultar las opciones de tarjeta
+      if (metodoPago === 'tarjeta') {
+        opcionesTarjeta.style.display = 'block';  // Mostrar opciones de tipo de tarjeta
+        opcionesPse.style.display = 'none';      // Ocultar opciones de PSE
+      } else if (metodoPago === 'pse') {
+        opcionesTarjeta.style.display = 'none';  // Ocultar opciones de tipo de tarjeta
+        opcionesPse.style.display = 'block';     // Mostrar opciones de PSE
+      } else {
+        opcionesTarjeta.style.display = 'none';  // Ocultar opciones de tipo de tarjeta
+        opcionesPse.style.display = 'none';      // Ocultar opciones de PSE
+      }
+    });
+  </script>
+
+  <script src="pagos.js"></script>
+</body>
+</html>
