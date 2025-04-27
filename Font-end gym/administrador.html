@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel del Administrador</title>
+    <link href="css/adiministrador.css" rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <!-- Empezar header_bottom -->
+	<div class="header-bottom">
+		<div class="container-header">
+			<div class="header-bottom_left">
+                <div class="header">
+                    Panel del Administrador
+                    <div id="userInfo">
+                        Hola <span id="nombreUsuario">Usuario</span>
+                        <button id="cerrarSesion">Cerrar sesión</button>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+
+    <!-- EMCABEZADO MENU -->
+	<div class="menu">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<div class="h_menu4"><!-- start h_menu4 -->
+				<ul class="nav">
+					<li class="active"><a href="administrador.html">Usuarios</a></li>
+					<li><a href="membresia.html">Membresias</a></li>
+					<li><a href="clases.html">Clases</a></li>
+					<li><a href="suplementos.html">Suplementos</a></li>
+					<li><a href="pagos.html">Pagos</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div><!-- end h_menu4 -->
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- end menu -->
+
+    <div class="container">
+        <h2 class="title">Lista de Usuarios</h2>      
+        <div class="top-controls">
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Buscar usuarios">
+            </div>
+            <button id="btnAgregarUsuario" class="create-user-btn">CREAR USUARIO</button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Edad</th>      
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-usuarios">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="form-container">
+                <form id="formUsuario" method="POST" class="form-registro">
+                    <h2>Registro Staff</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Género:</label>
+                            <select id="genero" name="genero" required>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Fecha de nacimiento:</label>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Teléfono:</label>
+                            <input type="text" id="telefono" name="telefono">
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>ZIP:</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                    </div>
+    
+                    <!-- Nuevo campo Usuario -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Usuario:</label>
+                            <input type="text" id="usuario" name="usuario" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cargo:</label>
+                            <select name="cargo" id="cargo" required>
+                                <option value="">Seleccione un cargo</option>
+                                <option value="1">Administrador</option>
+                                <option value="2">Entrenador</option>
+                                <option value="4">Vendedor</option>
+                            </select>
+                        </div>                   
+                    </div>
+
+                    <!-- Nuevos campos para Departamento y Municipio -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Departamento:</label>
+                            <select name="departamento" id="departamento" required>
+                                <option value="">Selecciona un departamento</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Municipio:</label>
+                            <select name="municipio" id="municipio" required>
+                                <option value="">Seleccione un Municipio</option>
+                                <!-- Puedes agregar municipios dependiendo del departamento -->
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="form-row" id="usuarioContrasena">
+                        <div class="form-group">
+                            <label>Contraseña:</label>
+                            <input type="password" id="contrasena" name="contrasena" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirmar contraseña:</label>
+                            <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="campoEstado" style="display: none;">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                          <option value="true">Activo</option>
+                          <option value="false">Inactivo</option>
+                        </select>
+                    </div>
+                    <label id="errorLabel"></label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="submit" value="Guardar">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="cancel-btn" onclick="closeModal()">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+          <span id="cerrarModal" class="cerrar">&times;</span>
+          <p id="mensajeModal"></p>
+        </div>
+    </div>
+
+    <script src="js/administrador.js"></script>
+</body>
+</html>
