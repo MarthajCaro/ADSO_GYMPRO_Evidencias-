@@ -9,5 +9,7 @@
         public string? Usuario { get; set; }
         public string? Rol { get; set; }
         public bool Estado { get; set; }
+
+        public int IdUsuario { get; set; }
     }
 }

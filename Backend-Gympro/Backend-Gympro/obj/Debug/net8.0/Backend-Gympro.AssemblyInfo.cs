@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Backend-Gympro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7484282e8820fe2484af6acc1fd4c1578ba6ebfe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a3350359c5d0f181ab170423a0b9fe14a58e19a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Backend-Gympro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Backend-Gympro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -44,7 +44,8 @@ namespace Backend_Gympro.Application.Interfaces
                 Correo = u.Persona.correo,
                 Usuario = u.usuario,  
                 Rol = u.Rol.nombre,
-                Estado = u.estado
+                Estado = u.estado,
+                IdUsuario = u.id
             })
             .ToListAsync();
 
