@@ -22,6 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //grid-slider -->
 <!---calender-style---->
 <link rel="stylesheet" href="css/jquery-ui.css" />
+<link rel="stylesheet" href="css/classes.css" />
 <!---//calender-style---->	
 </head>
 <body>
@@ -69,6 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   <li><a href="blog.html">Blog</a></li>
 			   <li><a href="pricing.html">Precios</a></li>
 			   <li><a href="contact.html">Contactanos</a></li>
+			   <li id="cerrar-sesion" style="display: none;"><a id="cerrarSesion">Cerrar sesión</a></li>
 			 </ul>
 			  <script type="text/javascript" src="js/nav.js"></script>
 		  </div><!-- end h_menu4 -->
@@ -77,158 +79,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</div>
 	<div class="main">
        <div class="about_banner_img"><img src="images/class_img.jpg" class="img-responsive" alt=""/></div>
-		 <div class="about_banner_wrap">
-      	    <h1 class="m_11">Clases</h1>
-      	</div>
+		<div>
+			<div class="about_banner_wrap">
+				<h1 class="m_11">Clases</h1>
+			 </div>
+			</div>
+		</div> 	
 		<div class="border"> </div> 
 		 <div class="container">
 		   <div class="classes_wrapper">
 		 	<div class="row class_box">
- 			  <div class="col-md-6">
-				<div class="class_left">
-					<a href="single_class_kik.html"><img src="images/c7.jpg" class="img-responsive" alt=""/ title="continue"></a>
-				</div>
-				<div class="class_right">
-					<h3>Kik Boxing</h3>
-					<p>Combina técnicas de boxeo y artes marciales.</p>
-					<div class="class_img">
-					  <img src="images/pic4.jpg" alt=""/>
-					  <div class="class_desc">
-					  	<h4>Entrenador</h4>
-					  	<h5>Carlos Ramírez</h5>
-					  	<p>Entrenador certificado</p>
-					  </div>
-					    <div class="clear"></div>
-					     <ul class="buttons_class">
-					  	 <li class="btn5"><a href="single_class_kik.html">Leer mas</a></li>	
-			            <div class="clear"></div>
-			         </ul>
-					</div>
-				</div>
-				<div class="clear"></div>
-			  </div>	
-			   <div class="col-md-6">
-				<div class="class_left">
-					<a href="single_class_spinngs.html"><img src="images/c1.jpg" class="img-responsive" alt=""/ title="continue"></a>
-				</div>
-				<div class="class_right1">
-					<h3>Spinning</h3>
-					<p>Súbete a la bicicleta y prepárate para un entrenamiento al ritmo de la música.</p>
-					<div class="class_img">
-					  <img src="images/pic54.jpg" alt=""/>
-					  <div class="class_desc1">
-					  	<h4>Entrenador</h4>
-					  	<h5>Laura Herrera</h5>
-					  	<p>Entrenador certificado</p>
-					  </div>
-					   <div class="clear"></div>
-					   <ul class="buttons_class">
-					  	 <li class="btn7"><a href="single_class_spinngs.html">Leer mas</a></li>	
-			            <div class="clear"></div>
-			           </ul>
-					</div>
-				  </div>
-			    </div>
-			  <div class="clear"></div>
-			 </div>	
-			 <div class="row class_box">
- 			   <div class="col-md-6">
-				<div class="class_left">
-					<a href="single_class_cross.html"><img src="images/c6.jpg" class="img-responsive" alt=""/ title="continue"></a>
-				</div>
-				<div class="class_right">
-					<h3>Crossfit</h3>
-					<p>Un entrenamiento de alta intensidad. ¡Desafía tus límites!</p>
-					<div class="class_img">
-					  <img src="images/pic5.jpg" alt=""/>
-					  <div class="class_desc">
-					  	<h4>Entrenador</h4>
-					  	<h5>Juan Torres</h5>
-					  	<p>Entrenador certificado</p>
-					  </div>
-					    <div class="clear"></div>
-					     <ul class="buttons_class">
-					  	 <li class="btn5"><a href="single_class_cross.html">Leer mas</a></li>	
-			            <div class="clear"></div>
-			         </ul>
-					</div>
-				</div>
-				<div class="clear"></div>
-			  </div>	
-			   <div class="col-md-6">
-				<div class="class_left">
-					<a href="single_class_aero.html"><img src="images/c5.jpg" class="img-responsive" alt=""/ title="continue"></a>
-				</div>
-				<div class="class_right1">
-					<h3>Aerobicos</h3>
-					<p>Entrenamiento dinámico al ritmo de la música</p>
-					<div class="class_img">
-					  <img src="images/pic44.jpg" alt=""/>
-					  <div class="class_desc1">
-					  	<h4>Entrenador</h4>
-					  	<h5>Diego Martínez</h5>
-					  	<p>Entrenador certificado</p>
-					  </div>
-					   <div class="clear"></div>
-					   <ul class="buttons_class">
-					  	 <li class="btn7"><a href="single_class_aero.html">Leer mas</a></li>	
-			            <div class="clear"></div>
-			           </ul>
-					</div>
-				 </div>
-			    </div>
-			   <div class="clear"></div>
-			 </div>	
-			 <div class="row class_box1">
- 			  <div class="col-md-6">
-				<div class="class_left">
-					<a href="single_class_cardio.html"><img src="images/c3.jpg"  class="img-responsive" alt=""/ title="continue"></a>
-				</div>
-				<div class="class_right">
-					<h3>Cardio Fitness</h3>
-					<p>Sesiones diseñadas para elevar tu frecuencia cardíaca.</p>
-					<div class="class_img">
-					  <img src="images/pic66.jpg" alt=""/>
-					  <div class="class_desc">
-					  	<h4>Entrenador</h4>
-					  	<h5>María Gómez</h5>
-					  	<p>Entrenador certificado</p>
-					  </div>
-					    <div class="clear"></div>
-					     <ul class="buttons_class">
-					  	 <li class="btn5"><a href="single_class_cardio.html">leer mas</a></li>	
-			            <div class="clear"></div>
-			         </ul>
-					</div>
-				  </div>
-				<div class="clear"></div>
-			  </div>	
-			   <div class="col-md-6">
-				<div class="class_left">
-					<a href="single_class.html"><img src="images/c4.jpg" class="img-responsive"  alt=""/ title="continue"></a>
-				</div>
-				<div class="class_right1">
-					<h3>Pilates</h3>
-					<p>La flexibilidad y la fuerza vienen con cada movimiento consciente.</p>
-					<div class="class_img">
-					  <img src="images/pic55.jpg" alt=""/>
-					  <div class="class_desc1">
-					  	<h4>Entrenador</h4>
-					  	<h5>Elena Rodríguez</h5>
-					  	<p>Entrenador certificado.</p>
-					  </div>
-					   <div class="clear"></div>
-					   <ul class="buttons_class">
-					  	 <li class="btn7"><a href="single_class.html">Leer mas</a></li>	
-			            <div class="clear"></div>
-			           </ul>
-					</div>
-				</div>
-			   </div>
-			   <div class="clear"></div>
-			 </div>	
-			<div class="clear"></div> 	   		
-		   </div>
+				<div class="clases-container">
+					<!-- Repite este bloque para cada clase -->
+				  </div>		
+		    </div>
 		   <div class="row classes_bottom">
 			<div class="col-md-8">
 				<h3 class="m_2">Todas las Clases</h3>
@@ -386,13 +250,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="btn4">
 									<a href="login.html">Acesso</a>
 								</div>
-								<div class="p-ww">
-									<form>
-										<input class="date" id="datepicker" type="text" value="  Calendario"
-											onfocus="this.value = '';"
-											onblur="if (this.value == '') {this.value = 'View Calender';}">
-									</form>
-								</div>
 								<div class="clear"></div>
 								<!---strat-date-piker---->
 								<script src="js/jquery-ui.js"></script>
@@ -545,5 +402,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		   <div class="clear"></div>
 		  </div>
 	     </div>
+	<!-- Modal -->
+	<div id="modalInscripcion" class="modal">
+		<div class="modal-content">
+		<span class="close">&times;</span>
+		<h2>Inscripción</h2>
+		<div id="modal-body">
+			<!-- Contenido que cambia según el estado del usuario -->
+		</div>
+		</div>
+  	</div> 
+	<!-- Modal de confirmación de inscripción -->
+	<div id="modalConfirmacion" class="modal">
+		<div class="modal-content">
+		<span class="close" onclick="cerrarModalConfirmacion()">&times;</span>
+		<div id="modalConfirmacionBody">
+			<!-- Aquí se insertará el mensaje de confirmación -->
+		</div>
+		</div>
+  	</div>
+<script type="text/javascript" src="js/classes.js"></script>
 </body>
 </html>

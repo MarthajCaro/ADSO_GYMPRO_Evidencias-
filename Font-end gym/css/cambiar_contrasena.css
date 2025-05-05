@@ -23,9 +23,9 @@ h2 {
     color: #ffa500;
 }
 
-input[type="email"],
+input[type="text"],
 input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 8px 0 16px;
     border: none;
@@ -59,4 +59,29 @@ button:hover {
 
 .volver-link:hover {
     color: #ffa500;
+}
+
+.modal { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-contenido { 
+    background-color: black; 
+    margin: 15% auto; 
+    padding: 20px; 
+    border-radius: 8px; 
+    width: 80%; 
+    max-width: 400px; 
+}
+
+.cerrar { 
+    float: right; 
+    font-size: 28px; 
+    cursor: pointer; 
 }

@@ -1,166 +1,253 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
-    line-height: 1.6;
-    padding: 20px;
-  }
-  
-  /* Títulos */
-  header h1 {
-    color: rgb(240, 88, 12);
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    color: orange;
-    margin-bottom: 10px;
-  }
-  
-  /* Contenedor general */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+/* Títulos */
+header {
+  background-color: rgb(240,88,12);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+#userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#cerrarSesion {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cerrarSesion:hover {
+  background-color: #c9302c;
+}
+
+#nombreUsuario {
+  font-weight: bold;
+}
+
+h2 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+/* Contenedor general */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Formulario */
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #2b2b2b;
+  color: white;
+}
+
+form button {
+  background: rgb(240, 88, 12);
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #ff6a00;
+}
+
+/* Tabla */
+.table-section {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  background: rgb(240, 88, 12);
+  color: white;
+}
+
+.actions button {
+  margin: 5px 5px 0 0; 
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9em;
+  display: inline-block;
+}
+
+
+.actions button:nth-child(1) {
+  background: orange;
+}
+.actions button:nth-child(2) {
+  background: rgb(240, 88, 12);
+}
+.actions button:nth-child(3) {
+  background: #d11a2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 1000px;
-    margin: auto;
+    padding: 10px;
   }
-  
-  /* Formulario */
-  .form-section {
-    background: #1c1c1c;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  form label {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
   }
-  
-  form input,
-  form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 5px;
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
     background: #2b2b2b;
-    color: white;
-  }
-  
-  form button {
-    background: rgb(240, 88, 12);
-    color: white;
-    padding: 10px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-  
-  form button:hover {
-    background: #ff6a00;
-  }
-  
-  /* Tabla */
-  .table-section {
-    background: #1c1c1c;
-    padding: 20px;
     border-radius: 10px;
-    overflow-x: auto;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    color: white;
-  }
-  
-  table th,
-  table td {
     padding: 10px;
+  }
+
+  td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    color: orange;
+    font-weight: bold;
     text-align: left;
-    border-bottom: 1px solid #333;
   }
-  
-  th {
-    background: rgb(240, 88, 12);
-    color: white;
-  }
-  
-  .actions button {
-    margin: 5px 5px 0 0; 
-    padding: 5px 8px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    font-size: 0.9em;
-    display: inline-block;
-  }
-  
-  
-  .actions button:nth-child(1) {
-    background: orange;
-  }
-  .actions button:nth-child(2) {
-    background: rgb(240, 88, 12);
-  }
-  .actions button:nth-child(3) {
-    background: #d11a2a;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-      display: block;
-    }
-  
-    thead {
-      display: none;
-    }
-  
-    tr {
-      margin-bottom: 15px;
-      background: #2b2b2b;
-      border-radius: 10px;
-      padding: 10px;
-    }
-  
-    td {
-      text-align: right;
-      position: relative;
-      padding-left: 50%;
-    }
-  
-    td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      color: orange;
-      font-weight: bold;
-      text-align: left;
-    }
-  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+#successModal{
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 1000;
+}
+
+#ModalContent{
+  background-color: #1c1c1c; 
+  padding: 20px; 
+  border-radius: 10px;
+}
+
+#closeSuccessModal{
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: black;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+#abrirModalCrear{
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: orange;
+}

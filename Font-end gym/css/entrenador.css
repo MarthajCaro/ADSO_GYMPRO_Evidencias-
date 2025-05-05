@@ -9,6 +9,33 @@ body {
     background-color: rgb(240,88,12);
     padding: 1rem;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #cerrarSesion {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #cerrarSesion:hover {
+    background-color: #c9302c;
+  }
+  
+  #nombreUsuario {
+    font-weight: bold;
   }
   
   h1, h2 {

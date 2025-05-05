@@ -1,65 +1,315 @@
 body {
-    background-color: #000; /* fondo negro */
-    font-family: 'Open Sans', sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+.header {
+  background-color: rgb(240,88,12);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#cerrarSesion {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cerrarSesion:hover {
+  background-color: #c9302c;
+}
+
+#nombreUsuario {
+  font-weight: bold;
+}
+.container {
+  padding: 20px;
+}
+.title {
+  margin-bottom: 20px;
+}
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.search-container {
+  width: 70%;
+}
+.search-box {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+th {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  color: white !important; /* Forzar color blanco */
+}
+tr:nth-child(even) {
+  background-color: #111;
+}
+tr:nth-child(odd) {
+  background-color: #000;
+}
+.action-btn {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.edit-btn {
+  background-color: #2196F3;
+  color: white;
+}
+.disable-btn {
+  background-color: #f44336;
+  color: white;
+}
+.enable-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+.create-btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+.action-cell {
+  white-space: nowrap;
+}
+/* Asegurar que todo texto sea blanco */
+* {
+  color: white;
+}
+table td, table th, .subtitle, .header, .container, body {
+  color: white !important;
+}
+
+.nav {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.nav>li {
+  float: left;
+}
+
+.nav li.active a, .nav li a:hover {
+  border: 1px orange;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: orange;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu {
+  background-color: black;
+  /* color: white; */
+  z-index: 9999;
+  width: 100%;
+  clear: both;
+}
+
+@media (max-width: 1024px) {
+  .nav li a {
+      padding: 7px 15px;
+      margin-right: 3px;
   }
-  
-  .form-container {
-    background-color: #1a1a1a;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #ffc107;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ffc107;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input,
-  select {
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #333;
-    color: white;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #ffc107;
-    color: black;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #e0a800;
-  }
-  
-  
+}
+
+.nav li a {
+  display: block;
+  padding: 9px 20px;
+  color: #fff;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-right: 10px;
+  border: 1px black;
+}
+
+.h_menu4{
+  float: right;
+}
+
+.actions {
+  background: orange;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btnCerrarModal{
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+#btnGuardar{
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+input{
+  border-radius: 4px;
+  padding: 10px 12px;
+  color: #333;
+}
+
+textarea{
+  border-radius: 4px;
+  padding: 10px 12px;
+  color: #333;
+}
+
+#tipoMembresiaSelect{
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  appearance: none; /* Oculta la flecha por defecto */
+  background-image: url('data:image/svg+xml;base64,...'); /* Puedes meter un icono SVG de flecha */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.option{
+  color: #333;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #070707;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px; /* Opcional: para que no sea gigante */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.botones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.botones button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.botones button#cerrarModal {
+  background-color: #f44336;
+}

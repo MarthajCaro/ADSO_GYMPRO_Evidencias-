@@ -14,7 +14,7 @@ if (!token) {
 document.getElementById("cerrarSesion").addEventListener("click", function () {
   // Borra todo del localStorage (o solo lo necesario)
   localStorage.removeItem("token");
-  localStorage.removeItem("usuario");
+  localStorage.removeItem("nombreUsuario");
   localStorage.removeItem("rol");
 
   localStorage.clear();

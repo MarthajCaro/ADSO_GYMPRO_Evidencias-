@@ -1,4 +1,5 @@
 const token = localStorage.getItem('token');
+const modal = document.getElementById("modalFormulario");
 
 // Si no hay token, redirige al login
 if (!token) {
@@ -70,6 +71,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     showSuccessModal("¡Suplemento actualizado correctamente!");
+    modal.classList.add("hidden"); 
     editingId = null;
 
   } else {
@@ -91,6 +93,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     showSuccessModal("¡Suplemento creado exitosamente!");
+    modal.classList.add("hidden"); 
   }
 
   form.reset();
@@ -161,9 +164,12 @@ async function editSupplement(id) {
   nameInput.value = supplement.nombre;
   priceInput.value = supplement.precio;
   tipoInput.value = supplement.tipo;
+  stockInput.value = supplement.stock;
   descriptionInput.value = supplement.descripcion;
 
   editingId = id; // Esto le indica al submit que va a actualizar y no crear
+  document.getElementById("tituloModal").textContent = "Editar Suplemento";
+  modal.classList.remove("hidden");
 }
 
 function toggleSupplement(id, currentStatus) {
@@ -202,3 +208,17 @@ document.getElementById("closeSuccessModal").onclick = () => {
   const modal = document.getElementById("successModal");
   modal.classList.add("hidden");
 };
+
+const abrirModalBtn = document.getElementById("abrirModalCrear");
+const cerrarModalBtn = document.getElementById("cerrarModal");
+
+abrirModalBtn.addEventListener("click", () => {
+  document.getElementById("tituloModal").textContent = "Crear Suplemento";
+  form.reset();
+  editingId = null;
+  modal.classList.remove("hidden");
+});
+
+cerrarModalBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});

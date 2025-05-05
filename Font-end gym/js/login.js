@@ -26,7 +26,7 @@ async function iniciarSesion() {
       } else if (rol === "2") {
         window.location.href = "entrenador.html";
       } else if (rol === "3") {
-        document.getElementById("adminMenu").style.display = "none";
+        window.location.href = "pricing.html";
       } else if (rol === "4") {
         window.location.href = "vendedor.html";
       }

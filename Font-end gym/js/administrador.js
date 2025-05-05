@@ -11,7 +11,7 @@ if (!token) {
    document.getElementById("nombreUsuario").textContent = nombreGuardado;
  }
 
-let modoFormulario = "registro"; // o "edicion"
+let modoFormulario = "registro";
 
 document.getElementById("cerrarSesion").addEventListener("click", function () {
   // Borra todo del localStorage (o solo lo necesario)

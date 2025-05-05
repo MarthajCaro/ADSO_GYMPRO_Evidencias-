@@ -10,6 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Free Gym Website Template | PRECIOS :: w3layouts</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/oferta-membresias.css" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -20,6 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
 <!-- //grid-slider -->
 <!-- Add fancyBox main JS and CSS files -->
 		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
@@ -78,6 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   <li><a href="blog.html">Blog</a></li>
 			   <li class="active"><a href="pricing.html">Precios</a></li>
 			   <li><a href="contact.html">Contactanos</a></li>
+			   <li id="cerrar-sesion" style="display: none;"><a id="cerrarSesion">Cerrar sesión</a></li>
 			 </ul>
 			  <script type="text/javascript" src="js/nav.js"></script>
 		  </div><!-- end h_menu4 -->
@@ -92,125 +95,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       	    <h1 class="m_11">Precios</h1>
       	 </div>
       	<div class="border"> </div>
-      	  <div class="container">
+      	  <div class="container" id="membresias-container">
       		<div class="row price_plans">
 		 		<h3 class="m_2">Precios y planes</h3>
 		 		<div class="price_plans_box">
 		 	 <div class="col-md-3">
 		 		<ul class="price1">
-		 			<h4>Un dia de entrenamiento</h4>
-		 			<h3>Gratis</h3>
-		 			<ul class="price_list">
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Una sesion de entrenamiento totalmente personalizada</a></p>
-						<a class="popup-with-zoom-anim" href="#small-dialog"><li class="price_but">COMPRA AHORA</li></a>
-						<!-----pop-up-grid---->
-								 <div id="small-dialog" class="mfp-hide">
-									<div class="pop_up">
-									 	<div class="payment-online-form-left">
-											<form>
-												<h4><span class="shipping"> </span>Carrito</h4>
-												<ul>
-													<li><input class="text-box-dark" type="text" value="Primer nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Frist Name';}"></li>
-													<li><input class="text-box-dark" type="text" value="Segundo nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></li>
-												</ul>
-												<ul>
-													<li><input class="text-box-dark" type="text" value="Correo" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"></li>
-													<li><input class="text-box-dark" type="text" value="Nombre de compañia" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Company Name';}"></li>
-												</ul>
-												<ul>
-													<li><input class="text-box-dark" type="text" value="Telefono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}"></li>
-													<li><input class="text-box-dark" type="text" value="Dirección" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}"></li>
-													<div class="clear"> </div>
-												</ul>
-												<div class="clear"> </div>
-											<ul class="payment-type">
-												<h4><span class="payment"> </span> Metodo de pagos</h4>
-												<li>
-													<span class="col_checkbox">
-													<input id="3" class="css-checkbox1" type="checkbox">
-													<label for="3" name="demo_lbl_1" class="css-label1"> </label>
-													<a class="visa" href="#"> </a>
-													</span>
-												</li>
-												<li>
-													<span class="col_checkbox">
-														<input id="4" class="css-checkbox2" type="checkbox">
-														<label for="4" name="demo_lbl_2" class="css-label2"> </label>
-														<a class="paypal" href="#"> </a>
-													</span>
-												</li>
-												<div class="clear"> </div>
-											</ul>
-												<ul>
-													<li><input class="text-box-dark" type="text" value="Numero de tarjeta" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Card Number';}"></li>
-													<li><input class="text-box-dark" type="text" value="Numbre en tarjeta" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name on card';}"></li>
-													<div class="clear"> </div>
-												</ul>
-												<ul>
-													<li><input class="text-box-light hasDatepicker" type="text" id="datepicker" value="Fecha expiración" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Expiration Date';}"><em class="pay-date"> </em></li>
-													<li><input class="text-box-dark" type="text" value="Codigo de seguridad" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Security Code';}"></li>
-													<div class="clear"> </div>
-												</ul>
-												<ul class="payment-sendbtns">
-													<li><input type="reset" value="Cancelar"></li>
-													<li><input type="submit" value="Continuar"></li>
-												</ul>
-												<div class="clear"> </div>
-											</form>
-										</div>
-						  			</div>
-								</div>
-								<!-----pop-up-grid---->
-						<div class="clear"></div>
-					</ul>
+		 	 </div>
+		 	 <div class="col-md-3">
+		 		<ul class="price1">
+		 		
 		 		</ul>
 		 	 </div>
 		 	 <div class="col-md-3">
 		 		<ul class="price1">
-		 			<h4>3 meses de menbresia</h4>
-		 			<h2 class="m_25">$300.000<small></h2>
-		 			<ul class="price_list">
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Entrena 3 meses ilimitadamente</a></p>
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Incribete a las clases grupales que desees</a></p>
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Agendate tus clases cuando quieras</a></p>
-						<a class="popup-with-zoom-anim" href="#small-dialog"><li class="price_but">COMPRA AHORA</li></a>
-						<div class="clear"></div>
-					</ul>
-		 		</ul>
-		 	 </div>
-		 	 <div class="col-md-3">
-		 		<ul class="price2">
-		 			<h4>6 meses de membresia</h4>
-		 			<h2 class="m_26">$550.000<small></small></h2>
-		 			<ul class="price_list1">
-						<p><img src="images/tick1.png" alt="" align="middle" width="16" height="14"/><a href="#">Entrena 3 meses ilimitadamente</a></p>
-						<p><img src="images/tick1.png" alt="" align="middle" width="16" height="14"/><a href="#">Incribete a las clases grupales que desees</a></p>
-						<p><img src="images/tick1.png" alt="" align="middle" width="16" height="14"/><a href="#">Agendate tus clases cuando quieras</a></p>
-						<p><img src="images/tick1.png" alt="" align="middle" width="16" height="14"/><a href="#">Recibe valoracion especial por los entrenadores</a></p>
-						<a class="popup-with-zoom-anim" href="#small-dialog"><li class="price_but1">COMPRA AHORA</li></a>
-						<div class="clear"></div>
-					</ul>
+		
 		 		</ul>
 		 	</div>
 		 	<div class="col-md-3">
 		 		<ul class="price1">
-		 			<h4>12 meses de membresia</h4>
-		 			<h2 class="m_25">$1.000.000<small></small></h2>
-		 			<ul class="price_list">
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Entrena 3 meses ilimitadamente</a></p>
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Incribete a las clases grupales que desees</a></p>
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Agendate tus clases cuando quieras</a></p>
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Recibe valoracion especial por los entrenadores</a></p>
-						<p><img src="images/tick.png" alt="" align="middle" width="16" height="14"/><a href="#">Recibe plan nutricional todos los meses</a></p>
-						<a class="popup-with-zoom-anim" href="#small-dialog"><li class="price_but">COMPRA AHORA</li></a>
-						<div class="clear"></div>
-					</ul>
+		 			
 		 		</ul>
 		 	 </div>
      		<div class="clear"></div>
      	    </div>
      	  </div>
       	</div>
+	</br>
       	<ul class="price_question">
 		   <div class="container">
 		 	 <li class="question_left"><h4>Tienes alguna duda?</h4><p>Comunicate inmediatamente</p></li>
@@ -504,5 +415,99 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		   <div class="clear"></div>
 		  </div>
 	     </div>
+
+		 <!-- Modal para inicio de sesión o registro -->
+		<div id="modal-inicio-registro" class="modal">
+			<div class="modal-content">
+			<span class="cerrar">&times;</span>
+			<h3>¡Hola! Necesitas una cuenta</h3>
+			<p>Inicia sesión o regístrate para continuar con la compra.</p>
+			<button onclick="window.location.href='login.html'">Iniciar sesión</button>
+			<button onclick="window.location.href='register.html'">Registrarme</button>
+			</div>
+		</div>
+
+		<div id="modal-membresia-vigente" class="modal">
+			<div class="modal-content">
+			  <span class="close" onclick="cerrarModalMembresia()">&times;</span>
+			  <p>✨ Ya tienes una membresía vigente. No necesitas adquirir una nueva, ¡Sigue disfrutando de nuestros servicios!</p>
+			</div>
+		</div>
+		
+		<!-- Modal para proceso de pago -->
+		<div id="modal-pago" class="modal">
+			<div class="modal-content">
+			<span class="cerrar">&times;</span>
+			<!-- Formulario de pago -->
+			<div class="formulario-pago" id="payment-form">
+				<h2>Realizar Pago</h2>
+				<form action="#" method="POST">
+				  <label for="usuario">Nombre de Usuario:</label>
+				  <input type="text" id="usuario" name="usuario" required>
+				  <label for="tipo_membresia">Tipo de membresía</label>
+				  <select id="tipo_membresia" name="tipo_membresia" required>
+				  </select>
+		  
+						  
+				  <label for="vencimiento">Fecha de Vencimiento:</label>
+				  <input type="date" id="vencimiento" name="vencimiento" required>
+				  
+				  <label for="monto">Monto:</label>
+				  <input type="number" id="monto" name="monto" placeholder="Ingresa el monto" required>
+				  
+				  <label for="metodo_pago">Método de Pago:</label>
+				  <select id="metodo_pago" name="metodo_pago" required>
+				  </select>
+				  
+				  <!-- Opciones adicionales para tarjeta -->
+				  <div id="opciones_tarjeta" style="display: none;">
+					<label for="tipo_tarjeta">Tipo de Tarjeta:</label>
+					<select id="tipo_tarjeta" name="tipo_tarjeta">
+					  <option value="credito">Crédito</option>
+					  <option value="debito">Débito</option>
+					</select>
+				  </div>
+		  
+				  <!-- Opciones adicionales para PSE -->
+				  <div id="opciones_pse" style="display: none;">
+					<label for="tipo_pse">Método de PSE:</label>
+					<select id="tipo_pse" name="tipo_pse">
+					  <option value="nequi">Nequi</option>
+					  <option value="daviplata">Daviplata</option>
+					  <option value="paypal">PayPal</option>
+					</select>
+				  </div>
+
+				  <button type="button" id="botonPagar">Pagar</button>
+				</form>
+			  </div>
+		</div>
+		<!-- Modal de Pago Activo -->
+		<div id="modal-pago-activo" class="modal">
+			<div class="modal-content">
+				<h2>Ya tienes un pago activo</h2>
+				<p>No puedes realizar otro pago hasta que tu pago actual haya vencido.</p>
+				<button id="cerrar-modal-exito">Aceptar</button>
+			</div>
+		</div>
+		
+		<!-- Modal de Éxito -->
+		<div id="modal-exito" class="modal">
+			<div class="modal-content">
+				<h2>¡Pago registrado con éxito!</h2>
+				<p>Tu pago ha sido procesado correctamente.</p>
+				<button id="cerrar-modal-activo">Volver</button>
+			</div>
+		</div>
+		
+		<!-- Modal de Error -->
+		<div id="modal-error" class="modal">
+			<div class="modal-content">
+			<span class="close" onclick="document.getElementById('modal-error').style.display='none'">&times;</span>
+			<h2>¡Hubo un error!</h2>
+			<p>No pudimos procesar tu pago. Por favor, intenta nuevamente.</p>
+			</div>
+		</div>
 </body>
+<script type="text/javascript" src="js/oferta-membresias.js"></script>
 </html>

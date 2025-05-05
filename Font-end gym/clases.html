@@ -49,87 +49,104 @@
             <div class="search-container">
                 <input type="text" class="search-box" placeholder="Buscar clases">
             </div>
-            <button class="create-class-btn">CREAR CLASE</button>
+            <button class="create-class-btn" id="bntAgregarClase">CREAR CLASE</button>
         </div>
         
         <table>
             <thead>
                 <tr>
-                    <th>No.</th>
                     <th>Clase</th>
-                    <th>Minutos</th>
-                    <th>Activa</th>
-                    <th>Editar</th>
-                    <th>Actualizar</th>
+                    <th>Descripción</th>
+                    <th>Duración</th>
+                    <th>Día</th>              
+                    <th>Hora</th>
+                    <th>Estado</th>
+                    <th>Instructor</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Yoga</td>
-                    <td>60 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Crossfit</td>
-                    <td>45 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Kick Boxing</td>
-                    <td>60 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Spinning</td>
-                    <td>45 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Aeróbicos</td>
-                    <td>50 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Cardio Fitness</td>
-                    <td>55 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Pilates</td>
-                    <td>60 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Clases de recuperación básica</td>
-                    <td>60 minutos</td>
-                    <td>Sí</td>
-                    <td><button class="btn btn-edit">Editar</button></td>
-                    <td><button class="btn btn-update">Actualizar</button></td>
-                </tr>
+            <tbody id="tabla-clases">
+                
             </tbody>
         </table>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="form-container">
+                    <form id="formClase" method="POST" class="form-registro">
+                        <h2>Clase</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label>Descripcion:</label>
+                                <input type="text" id="descripcion" name="descripcion" required>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Día:</label>
+                                <select id="dia" name="dia" required>
+                                    <option value="Lunes">Lunes</option>
+                                    <option value="Martes">Martes</option>
+                                    <option value="Miercoles">Miercoles</option>
+                                    <option value="Jueves">Jueves</option>
+                                    <option value="Viernes">Viernes</option>
+                                    <option value="Sabado">Sabado</option>
+                                    <option value="Domingo">Domingo</option>
+                                </select>
+                            </div>
+        
+                            <div class="form-group">
+                                <label>Hora:</label>
+                                <input type="time" id="hora" name="hora" required>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Duración en minutos:</label>
+                                <input type="number" id="duracion" name="duracion" min="30" max="180" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label>Entrenador:</label>
+                                <select id="usuario" name="usuario" required>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="campoEstado" style="display: none;">
+                            <label for="estado">Estado</label>
+                            <select id="estado" name="estado">
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="submit" value="Guardar">
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="cancel-btn" onclick="closeModal()">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+            <span id="cerrarModal" class="cerrar">&times;</span>
+            <p id="mensajeModal"></p>
+            </div>
+        </div>
     </div>
+    <script src="js/clases.js"></script>
 </body>
 </html>

@@ -96,18 +96,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- Contenedor de navegación alineado en una fila -->
 					<div class="menu-container">
 					<!-- Dropdown REGISTRO -->
-					<li class="dropdown">
+					<li class="dropdown" id="registro-dropdown">
 						<a href="#" class="dropbtn">REGISTRO</a>
 						<ul class="dropdown-content">
 						  <li><a href="register.html">Registro de Clientes</a></li>
-						  <li><a href="registro_staff.html">Registro de Staff</a></li>
 						  <li><a href="login.html">¿Ya estás registrado? Ingresar</a></li>
-						  <li><a href="cambiar_contrasena.html">Cambiar Contraseña</a></li>
 						</ul>
-					  </li>
-					</ul>
-				  </div>
-  </div>
+					</li>
+					<li id="cerrar-sesion" style="display: none;">
+						<a id="cerrarSesion">Cerrar sesión</a>
+					</li>
+				</ul>
+			</div>
+  		</div>
   
 					  </div>
 					  
@@ -757,5 +758,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 </body>
-
+<script type="text/javascript" src="js/index.js"></script>
 </html>

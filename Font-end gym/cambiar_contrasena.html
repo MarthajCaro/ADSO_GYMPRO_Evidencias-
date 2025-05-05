@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <title>Cambiar Contraseña</title>
     <link rel="stylesheet" href="css/cambiar_contrasena.css"> <!-- Archivo CSS externo -->
+    <script src="js/cambiar_contrasena.js"></script>
 </head>
 <body>
 
     <div class="form-container">
         <h2>Cambiar Contraseña</h2>
-        <form action="#" method="POST">
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <input type="password" name="new-password" placeholder="Nueva contraseña" required>
-            <input type="password" name="confirm-password" placeholder="Confirmar contraseña" required>
+        <form id="formCambio">
+            <input type="text" id="usuario" placeholder="Usuario" required>
+            <input type="password" id="new-password" placeholder="Nueva contraseña" required>
+            <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
             <button type="submit">Cambiar Contraseña</button>
         </form>
 
         <a class="volver-link" href="index.html">← Volver</a>
     </div>
+
+    <div id="modalMensaje" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <p id="mensajeModal"></p>
+        </div>
+    </div>
+      
 
 </body>
 </html>
