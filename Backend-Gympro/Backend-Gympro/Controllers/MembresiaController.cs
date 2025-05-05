@@ -80,5 +80,17 @@ namespace Backend_Gympro.Controllers
             var lista = await _membresiaService.ObtenerMembresiasAsync();
             return Ok(lista);
         }
+
+        [HttpGet("publico/membresias")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ObtenerMembresiasPublicas()
+        {
+            var lista = await _membresiaService.ObtenerMembresiasAsync();
+            var activosOrdenados = lista
+                    .Where(m => m.Estado == "Activo")
+                    .OrderBy(m => m.DuracionMeses)
+                    .ToList();
+            return Ok(activosOrdenados);
+        }
     }
 }

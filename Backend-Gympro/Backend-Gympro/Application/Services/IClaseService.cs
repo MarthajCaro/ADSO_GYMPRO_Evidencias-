@@ -1,4 +1,5 @@
-﻿using Backend_Gympro.Domain.Entidades;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Domain.Entidades;
 
 namespace Backend_Gympro.Application.Services
 {
@@ -9,5 +10,6 @@ namespace Backend_Gympro.Application.Services
         Task AddClaseAsync(Clase clase);
         Task UpdateClaseAsync(Clase clase);
         Task DeleteClaseAsync(int id);
+        Task<List<ClaseConEntrenadorDto>> ObtenerClasesConEntrenadorAsync();
     }
 }

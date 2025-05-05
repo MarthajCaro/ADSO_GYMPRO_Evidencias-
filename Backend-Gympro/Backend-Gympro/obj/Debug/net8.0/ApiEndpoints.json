@@ -18,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "clase",
-        "Type": "Backend_Gympro.Domain.Entidades.Clase",
+        "Name": "claseDto",
+        "Type": "Backend_Gympro.Application.DTOs.ClaseDOT",
         "IsRequired": true
       }
     ],
@@ -55,8 +55,8 @@
         "IsRequired": true
       },
       {
-        "Name": "clase",
-        "Type": "Backend_Gympro.Domain.Entidades.Clase",
+        "Name": "claseDto",
+        "Type": "Backend_Gympro.Application.DTOs.ClaseDOT",
         "IsRequired": true
       }
     ],
@@ -76,6 +76,26 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ClaseController",
+    "Method": "ObtenerClasesConEntrenador",
+    "RelativePath": "api/Clase/con-entrenador",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ClaseController",
+    "Method": "ObtenerClasesPublicas",
+    "RelativePath": "api/Clase/publico/clases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -336,6 +356,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend_Gympro.Controllers.MembresiaController",
+    "Method": "ObtenerMembresiasPublicas",
+    "RelativePath": "api/Membresia/publico/membresias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend_Gympro.Controllers.MetodoPagoController",
     "Method": "GetAll",
     "RelativePath": "api/MetodoPago",
@@ -528,8 +558,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pago",
-        "Type": "Backend_Gympro.Domain.Entidades.Pago",
+        "Name": "pagoDto",
+        "Type": "Backend_Gympro.Application.DTOs.PagoDto",
         "IsRequired": true
       }
     ],
@@ -596,6 +626,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.PagoController",
+    "Method": "GetPagosPorUsuario",
+    "RelativePath": "api/Pago/usuario/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -1019,6 +1065,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.UsuariosController",
+    "Method": "CambiarContrasena",
+    "RelativePath": "api/Usuarios/cambiar-contrasena",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Backend_Gympro.Application.DTOs.CambioContrasenaDTO",
         "IsRequired": true
       }
     ],

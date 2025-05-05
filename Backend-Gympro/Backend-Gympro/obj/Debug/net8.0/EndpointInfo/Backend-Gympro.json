@@ -24,21 +24,33 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Clase"
+                "$ref": "#/components/schemas/ClaseDOT"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Clase"
+                "$ref": "#/components/schemas/ClaseDOT"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Clase"
+                "$ref": "#/components/schemas/ClaseDOT"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Clase/publico/clases": {
+      "get": {
+        "tags": [
+          "Clase"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -87,17 +99,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Clase"
+                "$ref": "#/components/schemas/ClaseDOT"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Clase"
+                "$ref": "#/components/schemas/ClaseDOT"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Clase"
+                "$ref": "#/components/schemas/ClaseDOT"
               }
             }
           }
@@ -122,6 +134,18 @@
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Clase/con-entrenador": {
+      "get": {
+        "tags": [
+          "Clase"
         ],
         "responses": {
           "200": {
@@ -529,6 +553,18 @@
         }
       }
     },
+    "/api/Membresia/publico/membresias": {
+      "get": {
+        "tags": [
+          "Membresia"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/MetodoPago": {
       "get": {
         "tags": [
@@ -829,17 +865,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Pago"
+                "$ref": "#/components/schemas/PagoDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Pago"
+                "$ref": "#/components/schemas/PagoDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Pago"
+                "$ref": "#/components/schemas/PagoDto"
               }
             }
           }
@@ -939,6 +975,29 @@
       "get": {
         "tags": [
           "Pago"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Pago/usuario/{idUsuario}": {
+      "get": {
+        "tags": [
+          "Pago"
+        ],
+        "parameters": [
+          {
+            "name": "idUsuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -1794,6 +1853,37 @@
         }
       }
     },
+    "/api/Usuarios/cambiar-contrasena": {
+      "put": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CambioContrasenaDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CambioContrasenaDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CambioContrasenaDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -1849,7 +1939,21 @@
         },
         "additionalProperties": false
       },
-      "Clase": {
+      "CambioContrasenaDTO": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "nuevaContrasena": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClaseDOT": {
         "type": "object",
         "properties": {
           "id": {
@@ -2068,12 +2172,42 @@
             "type": "integer",
             "format": "int32"
           },
-          "membresia_id": {
+          "membresiaId": {
             "type": "integer",
             "format": "int32"
           },
           "membresia": {
             "$ref": "#/components/schemas/Membresia"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PagoDto": {
+        "type": "object",
+        "properties": {
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "fechaPago": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaVigencia": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idMetodoPago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "membresia_id": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

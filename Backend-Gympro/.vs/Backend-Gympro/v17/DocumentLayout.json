@@ -3,32 +3,124 @@
   "WorkspaceRootPath": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\domain\\entidades\\clase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\domain\\entidades\\clase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\metodopagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\metodopagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\services\\membresiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\services\\membresiaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\usuarioconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\usuarioconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\services\\isuplementodeportivoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\services\\isuplementodeportivoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\actualizarusuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\actualizarusuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\pagodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\pagodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\clientemembresiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\clientemembresiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\membresiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\membresiadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\departamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\departamentocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\services\\departamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\services\\departamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\services\\idepartamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\services\\idepartamentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\departamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\departamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\idepartamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\idepartamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\domain\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\domain\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\claserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\claserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\iclaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\iclaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\clasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\clasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\iusuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\usuariocorreodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\usuariocorreodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\usuariosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\services\\claseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\services\\claseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\domain\\entidades\\clase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\domain\\entidades\\clase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\controllers\\pagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\controllers\\pagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\interfaces\\pagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\interfaces\\pagorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|c:\\users\\yenni\\onedrive\\documentos\\github\\adso_gympro_evidencias-\\backend-gympro\\backend-gympro\\application\\dtos\\personaclasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20870AB7-CF40-424D-9A75-AEB12AD062D4}|Backend-Gympro\\Backend-Gympro.csproj|solutionrelative:backend-gympro\\application\\dtos\\personaclasedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,93 +130,395 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUsuariosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
-              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
-              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
-              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\IUsuariosRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T00:40:52.838Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClaseController.cs",
-              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\ClaseController.cs",
-              "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\ClaseController.cs",
-              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\ClaseController.cs",
-              "RelativeToolTip": "Backend-Gympro\\Controllers\\ClaseController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAADwvywAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T23:40:24.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Clase.cs",
-              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Domain\\Entidades\\Clase.cs",
-              "RelativeDocumentMoniker": "Backend-Gympro\\Domain\\Entidades\\Clase.cs",
-              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Domain\\Entidades\\Clase.cs",
-              "RelativeToolTip": "Backend-Gympro\\Domain\\Entidades\\Clase.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T23:18:25.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PersonaController.cs",
-              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\PersonaController.cs",
-              "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\PersonaController.cs",
-              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\PersonaController.cs",
-              "RelativeToolTip": "Backend-Gympro\\Controllers\\PersonaController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAwwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T21:16:15.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuariosRepository.cs",
-              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
-              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
-              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
-              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwC8AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T00:31:20.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioConsultaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\UsuarioConsultaDTO.cs",
-              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\UsuarioConsultaDTO.cs",
-              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\UsuarioConsultaDTO.cs",
-              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\UsuarioConsultaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T01:19:09.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 20,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\UsuariosController.cs",
               "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "Backend-Gympro\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGoAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAA0wE8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T21:15:30.096Z"
+              "WhenOpened": "2025-05-04T18:58:23.592Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwEgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T19:01:43.756Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ISuplementoDeportivoService.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\ISuplementoDeportivoService.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Services\\ISuplementoDeportivoService.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\ISuplementoDeportivoService.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Services\\ISuplementoDeportivoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:30:15.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MetodoPagoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\MetodoPagoRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\MetodoPagoRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\MetodoPagoRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\MetodoPagoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:29:05.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MembresiaService.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\MembresiaService.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Services\\MembresiaService.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\MembresiaService.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Services\\MembresiaService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:28:49.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClienteMembresiaDto.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\ClienteMembresiaDto.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\ClienteMembresiaDto.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\ClienteMembresiaDto.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\ClienteMembresiaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:27:50.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ActualizarUsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\ActualizarUsuarioDTO.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\ActualizarUsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\ActualizarUsuarioDTO.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\ActualizarUsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:27:46.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PagoDto.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\PagoDto.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\PagoDto.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\PagoDto.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\PagoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T20:42:03.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Infrastructure\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:25:46.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Backend-Gympro\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:22:23.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MembresiaDto.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\MembresiaDto.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\MembresiaDto.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\MembresiaDto.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\MembresiaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:22:54.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Program.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Program.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Program.cs",
+              "RelativeToolTip": "Backend-Gympro\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T20:37:49.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DepartamentoController.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\DepartamentoController.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\DepartamentoController.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\DepartamentoController.cs",
+              "RelativeToolTip": "Backend-Gympro\\Controllers\\DepartamentoController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:04:15.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\appsettings.json",
+              "RelativeDocumentMoniker": "Backend-Gympro\\appsettings.json",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\appsettings.json",
+              "RelativeToolTip": "Backend-Gympro\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-04T19:09:31.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:19:15.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DepartamentoService.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\DepartamentoService.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Services\\DepartamentoService.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\DepartamentoService.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Services\\DepartamentoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:54:57.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IDepartamentoService.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\IDepartamentoService.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Services\\IDepartamentoService.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\IDepartamentoService.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Services\\IDepartamentoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:54:51.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DepartamentoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\DepartamentoRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\DepartamentoRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\DepartamentoRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\DepartamentoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:52:14.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IDepartamentoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IDepartamentoRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\IDepartamentoRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IDepartamentoRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\IDepartamentoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:52:10.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Domain\\Entidades\\Usuarios.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Domain\\Entidades\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Domain\\Entidades\\Usuarios.cs",
+              "RelativeToolTip": "Backend-Gympro\\Domain\\Entidades\\Usuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:51:00.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IClaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IClaseRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\IClaseRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\IClaseRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\IClaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T22:45:17.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\ClaseRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\ClaseRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\ClaseRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\ClaseRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T22:45:29.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:22:47.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UsuarioCorreoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\UsuarioCorreoDTO.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\UsuarioCorreoDTO.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\UsuarioCorreoDTO.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\UsuarioCorreoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:22:45.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UsuariosRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\UsuariosRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBkAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T19:02:44.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ClaseService.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\ClaseService.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Services\\ClaseService.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Services\\ClaseService.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Services\\ClaseService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T22:51:00.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Clase.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Domain\\Entidades\\Clase.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Domain\\Entidades\\Clase.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Domain\\Entidades\\Clase.cs",
+              "RelativeToolTip": "Backend-Gympro\\Domain\\Entidades\\Clase.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T22:46:37.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PersonaClaseDto.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\PersonaClaseDto.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\DTOs\\PersonaClaseDto.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\DTOs\\PersonaClaseDto.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\DTOs\\PersonaClaseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T20:45:57.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PagoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\PagoRepository.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Application\\Interfaces\\PagoRepository.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Application\\Interfaces\\PagoRepository.cs",
+              "RelativeToolTip": "Backend-Gympro\\Application\\Interfaces\\PagoRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIA8wBYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T20:41:01.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PagoController.cs",
+              "DocumentMoniker": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\PagoController.cs",
+              "RelativeDocumentMoniker": "Backend-Gympro\\Controllers\\PagoController.cs",
+              "ToolTip": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\Controllers\\PagoController.cs",
+              "RelativeToolTip": "Backend-Gympro\\Controllers\\PagoController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T19:09:25.189Z"
             }
           ]
         }

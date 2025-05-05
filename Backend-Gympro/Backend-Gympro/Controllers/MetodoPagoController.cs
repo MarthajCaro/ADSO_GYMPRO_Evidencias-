@@ -1,10 +1,12 @@
 ﻿using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend_Gympro.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class MetodoPagoController : Controller
@@ -20,7 +22,11 @@ namespace Backend_Gympro.Controllers
         public async Task<IActionResult> GetAll()
         {
             var metodopagos = await _metodopagoService.GetAllMetodoPagosAsync();
-            return Ok(metodopagos);
+
+            var metodosActivos = metodopagos
+                    .Where(m => m.estado == "Activo")
+                    .ToList();
+            return Ok(metodosActivos);
         }
 
         [HttpGet("{id}")]

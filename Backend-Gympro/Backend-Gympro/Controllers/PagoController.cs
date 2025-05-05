@@ -1,8 +1,10 @@
-﻿using Backend_Gympro.Application.Services;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend_Gympro.Controllers
 {
@@ -34,8 +36,19 @@ namespace Backend_Gympro.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Pago pago)
+        public async Task<IActionResult> Create(PagoDto pagoDto)
         {
+            // Mapea el DTO al modelo de pago
+            var pago = new Pago
+            {
+                precio = pagoDto.Precio,
+                fecha_pago = pagoDto.FechaPago,
+                fecha_vigencia = pagoDto.FechaVigencia,
+                id_usuario = pagoDto.IdUsuario,
+                id_metodo_pago = pagoDto.IdMetodoPago,
+                MembresiaId = pagoDto.membresia_id
+            };
+
             await _pagoService.AddPagoAsync(pago);
             return CreatedAtAction(nameof(GetById), new { id = pago.id }, pago);
         }
@@ -62,5 +75,20 @@ namespace Backend_Gympro.Controllers
             return Ok(result);
         }
 
+        [HttpGet("usuario/{idUsuario}")]
+        public async Task<IActionResult> GetPagosPorUsuario(int idUsuario)
+        {
+            var pagos = await _pagoService.GetAllPagosAsync();
+
+            var ultimoPago = pagos
+                .Where(p => p.id_usuario == idUsuario)
+                .OrderByDescending(p => p.fecha_pago)
+                .FirstOrDefault();
+
+            if (ultimoPago == null)
+                return NotFound();
+
+            return Ok(ultimoPago);
+        }
     }
 }

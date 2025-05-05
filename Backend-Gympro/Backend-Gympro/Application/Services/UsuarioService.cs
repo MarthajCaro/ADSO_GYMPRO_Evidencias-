@@ -86,7 +86,7 @@ namespace Backend_Gympro.Application.Services
                 return "No hay ninguna cuenta asociada a ese correo.";
 
             // URL del enlace de restablecimiento (este enlace sería parte de tu frontend)
-            var resetPasswordUrl = $"https://tudominio.com/reset-password?token";
+            var resetPasswordUrl = $"http://localhost/gympro/cambiar_contrasena.html";
 
             // Contenido del correo
             var subject = "Recuperación de Contraseña";
@@ -116,6 +116,15 @@ namespace Backend_Gympro.Application.Services
         public async Task<bool> ActualizarUsuarioPorPersona(int idPersona, ActualizarUsuarioDTO usuarioActualizado)
         {
             return await _repository.ActualizarUsuarioPorPersona(idPersona, usuarioActualizado);
+        }
+        public async Task CambiarContrasenaAsync(CambioContrasenaDTO dto)
+        {
+            var usuario = await _repository.ObtenerPorNombre(dto.Usuario);
+            if (usuario == null || !usuario.estado)
+                throw new InvalidOperationException("El usuario no existe o está inactivo.");
+
+            usuario.contrasena = dto.NuevaContrasena;
+            await UpdateUsuarioAsync(usuario);
         }
     }
 }

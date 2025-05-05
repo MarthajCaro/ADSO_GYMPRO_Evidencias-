@@ -17,5 +17,6 @@ namespace Backend_Gympro.Application.Services
         Task<List<UsuarioConsultaDTO>> ObtenerUsuariosAsync();
         Task<Usuarios> ObtenerUsuarioPorPersona(int idPersona);
         Task<bool> ActualizarUsuarioPorPersona(int idPersona, ActualizarUsuarioDTO usuarioActualizado);
+        Task CambiarContrasenaAsync(CambioContrasenaDTO dto);
     }
 }

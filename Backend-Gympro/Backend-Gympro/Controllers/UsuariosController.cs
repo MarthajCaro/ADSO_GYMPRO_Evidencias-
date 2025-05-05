@@ -140,5 +140,27 @@ namespace Backend_Gympro.Controllers
 
             return NoContent();
         }
+
+        [HttpPut("cambiar-contrasena")]
+        public async Task<IActionResult> CambiarContrasena([FromBody] CambioContrasenaDTO dto)
+        {
+            try
+            {
+                await _usuarioService.CambiarContrasenaAsync(dto);
+                return Ok("Contraseña cambiada exitosamente.");
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error interno: " + ex.Message);
+            }
+        }
     }
 }

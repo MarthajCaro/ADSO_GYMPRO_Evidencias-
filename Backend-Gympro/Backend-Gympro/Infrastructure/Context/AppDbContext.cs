@@ -40,6 +40,11 @@ namespace Backend_Gympro.Infrastructure.Context
                                 .WithMany()  // Si TipoMembresia tiene una relación de "uno a muchos", usa "WithMany"
                                 .HasForeignKey(m => m.id_tipo_membresia)
                                 .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Clase>()
+                        .HasOne(c => c.Usuario)
+                        .WithMany()
+                        .HasForeignKey(c => c.id_usuario) // Especificamos la propiedad que se usará como clave foránea
+                        .HasConstraintName("FK_Clase_Usuario");  // Nombre de la restricción (opcional)
         }
     }
 }

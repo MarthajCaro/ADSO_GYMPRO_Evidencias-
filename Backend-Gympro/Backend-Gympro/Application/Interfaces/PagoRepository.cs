@@ -20,7 +20,7 @@ namespace Backend_Gympro.Application.Interfaces
             var query = from usuario in _context.Usuarios
                         join persona in _context.Persona on usuario.PersonaId equals persona.Id
                         join pago in _context.Pago on usuario.id equals pago.id_usuario
-                        join membresia in _context.Membresia on pago.membresia_id equals membresia.id
+                        join membresia in _context.Membresia on pago.MembresiaId equals membresia.id
                         join tipoMembresia in _context.TipoMembresia on membresia.id_tipo_membresia equals tipoMembresia.id
                         select new ClienteMembresiaDto
                         {

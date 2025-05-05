@@ -1,4 +1,5 @@
-﻿using Backend_Gympro.Application.Interfaces;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Application.Interfaces;
 using Backend_Gympro.Domain.Entidades;
 
 namespace Backend_Gympro.Application.Services
@@ -42,6 +43,11 @@ namespace Backend_Gympro.Application.Services
                 _repository.Delete(clase);
                 await _repository.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<ClaseConEntrenadorDto>> ObtenerClasesConEntrenadorAsync()
+        {
+            return await _repository.ObtenerClasesConEntrenadorAsync();
         }
 
     }

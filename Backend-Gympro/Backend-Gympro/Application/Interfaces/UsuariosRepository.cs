@@ -74,5 +74,9 @@ namespace Backend_Gympro.Application.Interfaces
 
             return true;
         }
+        public async Task<Usuarios> ObtenerPorNombre(string nombreUsuario)
+        {
+            return await _context.Usuarios.FirstOrDefaultAsync(u => u.usuario == nombreUsuario);
+        }
     }
 }
