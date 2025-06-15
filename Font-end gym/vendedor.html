@@ -25,25 +25,41 @@
         <div class="modal-content">
           <h2 id="tituloModal">Crear / Actualizar Suplemento</h2>
           <form id="supplement-form">
-            <input type="hidden" id="supplement-id" />
-      
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" required />
-      
-            <label for="tipo">Tipo</label>
-            <input type="text" id="tipo" required />
-      
-            <label for="stock">Stock</label>
-            <input type="text" id="stock" required />
-      
-            <label for="precio">Precio</label>
-            <input type="number" id="precio" required />
-      
-            <label for="descripcion">Descripción</label>
-            <textarea id="descripcion" rows="3" required></textarea>
-      
-            <button type="submit">Guardar</button>
-            <button type="button" id="cerrarModal">Cancelar</button>
+              <div class="row">
+                <input type="hidden" id="supplement-id" />
+                
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" required />
+                </div>
+                
+                <div class="form-group">
+                  <label for="tipo">Tipo</label>
+                  <input type="text" id="tipo" required />
+                </div>
+              </div> 
+              <div class="row">
+                <div class="form-group">
+                  <label for="stock">Stock</label>
+                  <input type="text" id="stock" required />
+                </div>
+                
+                <div class="form-group">
+                  <label for="precio">Precio</label>
+                  <input type="number" id="precio" required />
+                </div> 
+              </div>
+              
+              <label for="descripcion">Descripción</label>
+              <textarea id="descripcion" rows="3" required></textarea>
+
+              <label for="foto">Foto:</label>
+              <input type="file" id="foto" name="foto" accept="image/*" required>
+              <img id="preview-img" src="" alt="Vista previa" style="width: 100px;">
+              
+              <button type="submit">Guardar</button>
+              <button type="button" id="cerrarModal">Cancelar</button>
+               
           </form>
         </div>
       </div>      
@@ -61,6 +77,7 @@
             <th>Stock</th>
             <th>Descripción</th>
             <th>Estado</th>
+            <th>Imagen</th>
             <th>Acciones</th>
           </tr>
         </thead>

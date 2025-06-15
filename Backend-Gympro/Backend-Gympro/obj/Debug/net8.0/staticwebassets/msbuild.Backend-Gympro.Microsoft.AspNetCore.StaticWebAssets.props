@@ -1,0 +1,490 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\019843f2-7411-40a4-ab6d-1d9f7d740656_images (2).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/019843f2-7411-40a4-ab6d-1d9f7d740656_images (2).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nfelu75e6y</Fingerprint>
+      <Integrity>U2ZLBPw3AIdGmCdLZnYZicwqndw6NwhgDj5gBCLovCg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\019843f2-7411-40a4-ab6d-1d9f7d740656_images (2).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\053ce94a-84f1-490c-b378-aade53aa33ea_images.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/053ce94a-84f1-490c-b378-aade53aa33ea_images.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>67ff38m3jr</Fingerprint>
+      <Integrity>TuItMIPuxTin/e/YfPgsV4pNl3FEdeQ7jq8ALmkoNKE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\053ce94a-84f1-490c-b378-aade53aa33ea_images.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\0c09a37d-41b7-4498-be8b-7e05bb6cb7f9_images (2).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/0c09a37d-41b7-4498-be8b-7e05bb6cb7f9_images (2).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nfelu75e6y</Fingerprint>
+      <Integrity>U2ZLBPw3AIdGmCdLZnYZicwqndw6NwhgDj5gBCLovCg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\0c09a37d-41b7-4498-be8b-7e05bb6cb7f9_images (2).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\0c6cc931-93b6-4281-8a36-39e5c0364416_images (3).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/0c6cc931-93b6-4281-8a36-39e5c0364416_images (3).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k3jrc1ftoh</Fingerprint>
+      <Integrity>kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\0c6cc931-93b6-4281-8a36-39e5c0364416_images (3).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\0eec4f21-3439-42bd-8c5a-3ef9627bcbbd_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/0eec4f21-3439-42bd-8c5a-3ef9627bcbbd_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>feid0frgnx</Fingerprint>
+      <Integrity>Z+rOGPnqy2dvk1Mw2BiFolo3yeBcRFgQaAVGnbOJkSc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\0eec4f21-3439-42bd-8c5a-3ef9627bcbbd_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\1d881428-158f-4c69-82d3-32cb982b601f_images.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/1d881428-158f-4c69-82d3-32cb982b601f_images.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>67ff38m3jr</Fingerprint>
+      <Integrity>TuItMIPuxTin/e/YfPgsV4pNl3FEdeQ7jq8ALmkoNKE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\1d881428-158f-4c69-82d3-32cb982b601f_images.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\24dd0ad1-c9de-4356-b3d7-3378635815a5_images.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/24dd0ad1-c9de-4356-b3d7-3378635815a5_images.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>67ff38m3jr</Fingerprint>
+      <Integrity>TuItMIPuxTin/e/YfPgsV4pNl3FEdeQ7jq8ALmkoNKE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\24dd0ad1-c9de-4356-b3d7-3378635815a5_images.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\335218e1-4df3-45f3-9abc-955c5e0c9d24_D_NQ_676098-MLU75735728915_042024-V.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/335218e1-4df3-45f3-9abc-955c5e0c9d24_D_NQ_676098-MLU75735728915_042024-V.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>l7msy873ti</Fingerprint>
+      <Integrity>cRH6Vw3odCQSI6BBBHEQchlSaYRMB1U45zgXJOH90e8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\335218e1-4df3-45f3-9abc-955c5e0c9d24_D_NQ_676098-MLU75735728915_042024-V.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\4621d30f-68d0-4d00-99f0-d683666e5fe6_D_NQ_NP_881760-MLU72613038759_112023-O.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/4621d30f-68d0-4d00-99f0-d683666e5fe6_D_NQ_NP_881760-MLU72613038759_112023-O.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cgpuvpebhp</Fingerprint>
+      <Integrity>XP/OsEMmdcZOByuP8HxTM04fziJmlourd2QmP8lGSAQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\4621d30f-68d0-4d00-99f0-d683666e5fe6_D_NQ_NP_881760-MLU72613038759_112023-O.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\49b62780-82d1-412c-9c5c-e0437af0459a_images (2).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/49b62780-82d1-412c-9c5c-e0437af0459a_images (2).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nfelu75e6y</Fingerprint>
+      <Integrity>U2ZLBPw3AIdGmCdLZnYZicwqndw6NwhgDj5gBCLovCg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\49b62780-82d1-412c-9c5c-e0437af0459a_images (2).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\4c5cc7cf-7595-4c37-87d0-0b80f92edf7d_D_NQ_676098-MLU75735728915_042024-V.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/4c5cc7cf-7595-4c37-87d0-0b80f92edf7d_D_NQ_676098-MLU75735728915_042024-V.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>l7msy873ti</Fingerprint>
+      <Integrity>cRH6Vw3odCQSI6BBBHEQchlSaYRMB1U45zgXJOH90e8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\4c5cc7cf-7595-4c37-87d0-0b80f92edf7d_D_NQ_676098-MLU75735728915_042024-V.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\5f4e10da-9789-47d3-9a46-ee65d5e2e17f_images.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/5f4e10da-9789-47d3-9a46-ee65d5e2e17f_images.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>67ff38m3jr</Fingerprint>
+      <Integrity>TuItMIPuxTin/e/YfPgsV4pNl3FEdeQ7jq8ALmkoNKE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\5f4e10da-9789-47d3-9a46-ee65d5e2e17f_images.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\843a48fb-bf14-4df2-81a4-7ab6759091bf_images.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/843a48fb-bf14-4df2-81a4-7ab6759091bf_images.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>67ff38m3jr</Fingerprint>
+      <Integrity>TuItMIPuxTin/e/YfPgsV4pNl3FEdeQ7jq8ALmkoNKE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\843a48fb-bf14-4df2-81a4-7ab6759091bf_images.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\8c0d0fc8-02f2-4e45-af70-2daee7e21f2f_images (2).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/8c0d0fc8-02f2-4e45-af70-2daee7e21f2f_images (2).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nfelu75e6y</Fingerprint>
+      <Integrity>U2ZLBPw3AIdGmCdLZnYZicwqndw6NwhgDj5gBCLovCg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\8c0d0fc8-02f2-4e45-af70-2daee7e21f2f_images (2).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\8ef11e70-5928-4d93-864c-9523c14dddef_D_NQ_NP_881760-MLU72613038759_112023-O.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/8ef11e70-5928-4d93-864c-9523c14dddef_D_NQ_NP_881760-MLU72613038759_112023-O.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>cgpuvpebhp</Fingerprint>
+      <Integrity>XP/OsEMmdcZOByuP8HxTM04fziJmlourd2QmP8lGSAQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\8ef11e70-5928-4d93-864c-9523c14dddef_D_NQ_NP_881760-MLU72613038759_112023-O.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\9c3fae61-dd71-41cc-b4f2-dc63ec6a0b05_images (3).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/9c3fae61-dd71-41cc-b4f2-dc63ec6a0b05_images (3).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k3jrc1ftoh</Fingerprint>
+      <Integrity>kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\9c3fae61-dd71-41cc-b4f2-dc63ec6a0b05_images (3).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\a76943e0-66a4-4458-a8af-8583cec754d7_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/a76943e0-66a4-4458-a8af-8583cec754d7_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>feid0frgnx</Fingerprint>
+      <Integrity>Z+rOGPnqy2dvk1Mw2BiFolo3yeBcRFgQaAVGnbOJkSc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\a76943e0-66a4-4458-a8af-8583cec754d7_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\bc598522-a975-458d-b784-26f8c0ba9156_images (3).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/bc598522-a975-458d-b784-26f8c0ba9156_images (3).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k3jrc1ftoh</Fingerprint>
+      <Integrity>kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\bc598522-a975-458d-b784-26f8c0ba9156_images (3).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\c4375d6b-636d-43e9-8885-3ed0b1dbe230_images (1).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/c4375d6b-636d-43e9-8885-3ed0b1dbe230_images (1).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3bp4ek5057</Fingerprint>
+      <Integrity>H0fLGAb/5qQ5JClksNg5Iq4kEDI4Nl8StVMS9bRwLAM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\c4375d6b-636d-43e9-8885-3ed0b1dbe230_images (1).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\cbf9c00f-2d00-4ed7-9109-f107c3f845c0_images (1).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/cbf9c00f-2d00-4ed7-9109-f107c3f845c0_images (1).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3bp4ek5057</Fingerprint>
+      <Integrity>H0fLGAb/5qQ5JClksNg5Iq4kEDI4Nl8StVMS9bRwLAM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\cbf9c00f-2d00-4ed7-9109-f107c3f845c0_images (1).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\ee5b2413-42a0-49b0-9c44-c64952feede1_images (1).jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/ee5b2413-42a0-49b0-9c44-c64952feede1_images (1).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3bp4ek5057</Fingerprint>
+      <Integrity>H0fLGAb/5qQ5JClksNg5Iq4kEDI4Nl8StVMS9bRwLAM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\ee5b2413-42a0-49b0-9c44-c64952feede1_images (1).jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\eef4aae9-a1ee-423c-a90e-bcc704ad0d72_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/eef4aae9-a1ee-423c-a90e-bcc704ad0d72_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>feid0frgnx</Fingerprint>
+      <Integrity>Z+rOGPnqy2dvk1Mw2BiFolo3yeBcRFgQaAVGnbOJkSc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\eef4aae9-a1ee-423c-a90e-bcc704ad0d72_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\f515e8b2-2ef8-44bb-97c9-5477ac94823e_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>suplementos/f515e8b2-2ef8-44bb-97c9-5477ac94823e_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>feid0frgnx</Fingerprint>
+      <Integrity>Z+rOGPnqy2dvk1Mw2BiFolo3yeBcRFgQaAVGnbOJkSc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\suplementos\f515e8b2-2ef8-44bb-97c9-5477ac94823e_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0ffd6813-baac-4eaa-9735-1e9ebfb02c62_Linda.PNG'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>uploads/0ffd6813-baac-4eaa-9735-1e9ebfb02c62_Linda.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>oh15xfroq9</Fingerprint>
+      <Integrity>zKPb00XX+HIGqDjs3Fq8hYy7euThxShBjvYQbdu6Nww=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0ffd6813-baac-4eaa-9735-1e9ebfb02c62_Linda.PNG'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>uploads/421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>idc5tjww9f</Fingerprint>
+      <Integrity>GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5fd7ef59-df9e-42e0-acaf-c30cebc8f609_SNK.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>uploads/5fd7ef59-df9e-42e0-acaf-c30cebc8f609_SNK.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>idc5tjww9f</Fingerprint>
+      <Integrity>GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5fd7ef59-df9e-42e0-acaf-c30cebc8f609_SNK.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\a2274b52-e953-4267-a158-c00a8edd1a36_ddd.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend-Gympro</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend-Gympro</BasePath>
+      <RelativePath>uploads/a2274b52-e953-4267-a158-c00a8edd1a36_ddd.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0st6x21vzv</Fingerprint>
+      <Integrity>QLXfghWxs4ZDZMPuRIL0qk4A3gV0N+thKYeuZIEGbXA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\a2274b52-e953-4267-a158-c00a8edd1a36_ddd.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

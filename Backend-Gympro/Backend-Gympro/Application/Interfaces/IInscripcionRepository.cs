@@ -7,5 +7,6 @@ namespace Backend_Gympro.Application.Interfaces
     public interface IInscripcionRepository : IGenericRepository<Inscripcion>
     {
         List<PersonaClaseDto> ObtenerInscritosPorEntrenador(int entrenadorId);
+        Task<List<ClasePorUsuarioDto>> ObtenerClasesPorUsuarioAsync(int usuario);
     }
 }

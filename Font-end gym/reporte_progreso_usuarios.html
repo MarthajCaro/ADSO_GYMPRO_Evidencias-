@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagos de Membresías</title>
+  <link rel="stylesheet" href="css/pagos.css">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+   <!-- Empezar header_bottom -->
+	<div class="header-bottom">
+		<div class="container-header">
+			<div class="header-bottom_left">
+          <div class="header">
+              Panel del Administrador
+              <div id="userInfo">
+                  Hola <span id="nombreUsuario">Usuario</span>
+                  <button id="cerrarSesion">Cerrar sesión</button>
+              </div>
+          </div>
+			</div>
+		</div>
+	</div>
+
+    <!-- EMCABEZADO MENU -->
+	<div class="menu">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="" /></a>
+			</div>
+			<div class="h_menu4"><!-- start h_menu4 -->
+				<ul class="nav">
+					<li><a href="administrador.html">Usuarios</a></li>
+					<li><a href="membresia.html">Membresias</a></li>
+					<li><a href="clases.html">Clases</a></li>
+					<li><a href="suplementos.html">Suplementos</a></li>
+					<li><a href="pagos.html">Pagos</a></li>
+          <li class="active"><a href="reporte_progreso_usuarios.html">Progreso usuarios</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div><!-- end h_menu4 -->
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- end menu -->
+
+<div class="container">
+  <h2>Reporte avance por usuario</h2>
+
+  <div id="filtros" style="margin-bottom: 20px;">
+    <button id="descargar-excel">Descargar Excel</button>
+  </div>
+
+  <div class="tabla-contenedor">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre usuario</th>
+          <th>Peso actual (kg)</th>
+          <th>Peso anterior (kg)</th>
+          <th>Variacion peso (kg)</th>
+          <th>Variacion medida cintura (cm)</th>
+          <th>Variacion medida pecho (cm)</th>
+          <th>Última fecha de registro</th>
+          <th>Foto</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-usuarios">
+        <!-- Aquí se cargan los datos dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <canvas id="graficaProgreso" width="200" height="200"></canvas>
+  <canvas id="graficaProgresoUsuario" width="200" height="200"></canvas>
+</div>
+
+<script src="js/reporte_progreso_usuarios.js"></script>
+</body>
+</html>

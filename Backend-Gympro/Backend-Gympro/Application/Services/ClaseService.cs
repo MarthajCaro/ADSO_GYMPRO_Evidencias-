@@ -49,6 +49,5 @@ namespace Backend_Gympro.Application.Services
         {
             return await _repository.ObtenerClasesConEntrenadorAsync();
         }
-
     }
 }

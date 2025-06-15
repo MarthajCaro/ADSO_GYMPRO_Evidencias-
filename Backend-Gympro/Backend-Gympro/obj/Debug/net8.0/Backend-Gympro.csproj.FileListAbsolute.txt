@@ -254,3 +254,4 @@ C:\Users\yenni\OneDrive\Documentos\GitHub\ADSO_GYMPRO_Evidencias-\Backend-Gympro
 C:\Users\yenni\OneDrive\Documentos\GitHub\ADSO_GYMPRO_Evidencias-\Backend-Gympro\Backend-Gympro\obj\Debug\net8.0\Backend-Gympro.pdb
 C:\Users\yenni\OneDrive\Documentos\GitHub\ADSO_GYMPRO_Evidencias-\Backend-Gympro\Backend-Gympro\obj\Debug\net8.0\Backend-Gympro.genruntimeconfig.cache
 C:\Users\yenni\OneDrive\Documentos\GitHub\ADSO_GYMPRO_Evidencias-\Backend-Gympro\Backend-Gympro\obj\Debug\net8.0\ref\Backend-Gympro.dll
+C:\Users\yenni\OneDrive\Documentos\GitHub\ADSO_GYMPRO_Evidencias-\Backend-Gympro\Backend-Gympro\bin\Debug\net8.0\Backend-Gympro.staticwebassets.runtime.json

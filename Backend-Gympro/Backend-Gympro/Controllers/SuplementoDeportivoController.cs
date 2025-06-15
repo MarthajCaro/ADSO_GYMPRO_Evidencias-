@@ -1,4 +1,5 @@
-﻿using Backend_Gympro.Application.Services;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -50,18 +51,94 @@ namespace Backend_Gympro.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(SuplementoDeportivo suplementodeportivo)
+        public async Task<IActionResult> Create([FromForm]  SuplementoDeportivoDto dto)
         {
-            await _suplementodeportivoService.AddSuplementoAsync(suplementodeportivo);
-            return CreatedAtAction(nameof(GetById), new { id = suplementodeportivo.id }, suplementodeportivo);
+            string rutaImagen = null;
+
+            if (dto.Foto != null && dto.Foto.Length > 0)
+            {
+                // Crear nombre único
+                var nombreArchivo = $"{Guid.NewGuid()}_{dto.Foto.FileName}";
+                var rutaCarpeta = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/suplementos");
+                var rutaCompleta = Path.Combine(rutaCarpeta, nombreArchivo);
+
+                // Asegurar carpeta
+                if (!Directory.Exists(rutaCarpeta))
+                    Directory.CreateDirectory(rutaCarpeta);
+
+                // Guardar la imagen
+                using (var stream = new FileStream(rutaCompleta, FileMode.Create))
+                {
+                    await dto.Foto.CopyToAsync(stream);
+                }
+
+                // Ruta que se guarda en la BD (pública)
+                rutaImagen = $"/suplementos/{nombreArchivo}";
+            }
+
+            var spl = new SuplementoDeportivo
+            {
+                nombre = dto.nombre,
+                tipo = dto.tipo,
+                descripcion = dto.descripcion,
+                precio = dto.precio,
+                id_usuario = dto.id_usuario,
+                UrlImagen = rutaImagen,
+                Stock = dto.stock
+            };
+
+            await _suplementodeportivoService.AddSuplementoAsync(spl);
+
+            //return Ok(new { mensaje = "Progreso guardado con éxito", spl });
+
+            return CreatedAtAction(nameof(GetById), new { id = spl.id }, spl);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, SuplementoDeportivo suplementodeportivo)
+        public async Task<IActionResult> Update(int id, [FromForm] SuplementoDeportivoDto dto)
         {
-            if (id != suplementodeportivo.id) return BadRequest("El ID no coincide.");
-            await _suplementodeportivoService.UpdateSuplementoAsync(suplementodeportivo);
-            return NoContent();
+            string rutaImagen = null;
+
+            if (id != dto.id) return BadRequest("El ID no coincide.");
+
+            // Si se envió una imagen nueva, actualiza
+            if (dto.Foto != null && dto.Foto.Length > 0)
+            {
+                // Crear nombre único
+                var nombreArchivo = $"{Guid.NewGuid()}_{dto.Foto.FileName}";
+                var rutaCarpeta = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/suplementos");
+                var rutaCompleta = Path.Combine(rutaCarpeta, nombreArchivo);
+
+                // Asegurar carpeta
+                if (!Directory.Exists(rutaCarpeta))
+                    Directory.CreateDirectory(rutaCarpeta);
+
+                // Guardar la imagen
+                using (var stream = new FileStream(rutaCompleta, FileMode.Create))
+                {
+                    await dto.Foto.CopyToAsync(stream);
+                }
+
+                // Ruta que se guarda en la BD (pública)
+                rutaImagen = $"/suplementos/{nombreArchivo}";
+            }
+
+
+                var spl = new SuplementoDeportivo
+                {
+                    id = dto.id,
+                    nombre = dto.nombre,
+                    tipo = dto.tipo,
+                    descripcion = dto.descripcion,
+                    precio = dto.precio,
+                    id_usuario = dto.id_usuario,
+                    UrlImagen = rutaImagen,
+                    Stock = dto.stock
+                };
+
+                await _suplementodeportivoService.UpdateSuplementoAsync(spl);
+                return NoContent();
+        
         }
 
         [HttpDelete("{id}")]

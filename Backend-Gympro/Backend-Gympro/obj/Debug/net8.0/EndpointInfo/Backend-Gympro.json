@@ -416,6 +416,28 @@
         }
       }
     },
+    "/api/Inscripcion/por-usuario": {
+      "get": {
+        "tags": [
+          "Inscripcion"
+        ],
+        "parameters": [
+          {
+            "name": "usuario",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Membresia": {
       "get": {
         "tags": [
@@ -1131,6 +1153,238 @@
         }
       }
     },
+    "/api/ProgresoFisico": {
+      "get": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProgresoFisico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProgresoFisico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProgresoFisico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ProgresoFisico/{id}": {
+      "get": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProgresoFisico"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProgresoFisico"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProgresoFisico"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ProgresoFisico/crear-con-imagen": {
+      "post": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "UsuarioId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Peso": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "MedidaCintura": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "MedidaPecho": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Fecha": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Observaciones": {
+                    "type": "string"
+                  },
+                  "Foto": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "UsuarioId": {
+                  "style": "form"
+                },
+                "Peso": {
+                  "style": "form"
+                },
+                "MedidaCintura": {
+                  "style": "form"
+                },
+                "MedidaPecho": {
+                  "style": "form"
+                },
+                "Fecha": {
+                  "style": "form"
+                },
+                "Observaciones": {
+                  "style": "form"
+                },
+                "Foto": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ProgresoFisico/por-usuario": {
+      "get": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ProgresoFisico/comparacion-todos": {
+      "get": {
+        "tags": [
+          "ProgresoFisico"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Rol": {
       "get": {
         "tags": [
@@ -1273,19 +1527,72 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/SuplementoDeportivo"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SuplementoDeportivo"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/SuplementoDeportivo"
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "tipo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "precio": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "id_usuario": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "estado": {
+                    "type": "boolean"
+                  },
+                  "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Foto": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "id": {
+                  "style": "form"
+                },
+                "nombre": {
+                  "style": "form"
+                },
+                "tipo": {
+                  "style": "form"
+                },
+                "descripcion": {
+                  "style": "form"
+                },
+                "precio": {
+                  "style": "form"
+                },
+                "id_usuario": {
+                  "style": "form"
+                },
+                "estado": {
+                  "style": "form"
+                },
+                "stock": {
+                  "style": "form"
+                },
+                "Foto": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -1348,19 +1655,72 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/SuplementoDeportivo"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/SuplementoDeportivo"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/SuplementoDeportivo"
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "nombre": {
+                    "type": "string"
+                  },
+                  "tipo": {
+                    "type": "string"
+                  },
+                  "descripcion": {
+                    "type": "string"
+                  },
+                  "precio": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "id_usuario": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "estado": {
+                    "type": "boolean"
+                  },
+                  "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Foto": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "id": {
+                  "style": "form"
+                },
+                "nombre": {
+                  "style": "form"
+                },
+                "tipo": {
+                  "style": "form"
+                },
+                "descripcion": {
+                  "style": "form"
+                },
+                "precio": {
+                  "style": "form"
+                },
+                "id_usuario": {
+                  "style": "form"
+                },
+                "estado": {
+                  "style": "form"
+                },
+                "stock": {
+                  "style": "form"
+                },
+                "Foto": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -1953,6 +2313,46 @@
         },
         "additionalProperties": false
       },
+      "Clase": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "duracion_en_minutos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dia": {
+            "type": "string",
+            "nullable": true
+          },
+          "hora": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "boolean"
+          },
+          "usuario": {
+            "$ref": "#/components/schemas/Usuarios"
+          }
+        },
+        "additionalProperties": false
+      },
       "ClaseDOT": {
         "type": "object",
         "properties": {
@@ -2048,6 +2448,9 @@
           "id_usuario": {
             "type": "integer",
             "format": "int32"
+          },
+          "clase": {
+            "$ref": "#/components/schemas/Clase"
           }
         },
         "additionalProperties": false
@@ -2257,6 +2660,49 @@
         },
         "additionalProperties": false
       },
+      "ProgresoFisico": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "peso": {
+            "type": "number",
+            "format": "double"
+          },
+          "medidaCintura": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "medidaPecho": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fotoProgresoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario": {
+            "$ref": "#/components/schemas/Usuarios"
+          }
+        },
+        "additionalProperties": false
+      },
       "Rol": {
         "type": "object",
         "properties": {
@@ -2267,43 +2713,6 @@
           "nombre": {
             "type": "string",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "SuplementoDeportivo": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "tipo": {
-            "type": "string",
-            "nullable": true
-          },
-          "descripcion": {
-            "type": "string",
-            "nullable": true
-          },
-          "precio": {
-            "type": "number",
-            "format": "double"
-          },
-          "id_usuario": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "estado": {
-            "type": "boolean"
-          },
-          "stock": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

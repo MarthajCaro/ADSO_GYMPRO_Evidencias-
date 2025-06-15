@@ -43,5 +43,9 @@ namespace Backend_Gympro.Application.Services
         {
             return _repository.ObtenerInscritosPorEntrenador(entrenadorId);
         }
+        public async Task<List<ClasePorUsuarioDto>> ObtenerClasesPorUsuarioAsync(int usuario)
+        {
+            return await _repository.ObtenerClasesPorUsuarioAsync(usuario);
+        }
     }
 }

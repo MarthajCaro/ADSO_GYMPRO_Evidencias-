@@ -29,38 +29,47 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 let editingId = null;
 
+const previewImg = document.getElementById("preview-img");
+
 const form = document.getElementById("supplement-form");
 const nameInput = document.getElementById("nombre");
 const priceInput = document.getElementById("precio");
 const tipoInput = document.getElementById("tipo");
 const stockInput = document.getElementById("stock");
 const descriptionInput = document.getElementById("descripcion");
+const fotoInput = document.getElementById("foto");
 const tableBody = document.getElementById("supplement-table-body");
+
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const supplement = {
-    nombre: nameInput.value,
-    tipo: tipoInput.value,
-    descripcion: descriptionInput.value,
-    stock: stockInput.value,
-    precio: parseFloat(priceInput.value),
-    id_usuario: localStorage.getItem("idUsuario")
-  };
+  const formData = new FormData();
+
+  formData.append("nombre", nameInput.value);
+  formData.append("tipo", tipoInput.value);
+  formData.append("descripcion", descriptionInput.value);
+  formData.append("stock", stockInput.value);
+  formData.append("precio", priceInput.value);
+  formData.append("id_usuario", localStorage.getItem("idUsuario"));
+  formData.append("Foto", fotoInput.files[0]); // ✅ Aquí capturas el archivo
+
+  if (!editingId && fotoInput.files.length === 0) {
+    alert("Por favor, selecciona una imagen para el suplemento.");
+    return;
+  }
 
   let response;
 
   if (editingId) {
     // Editar
-    supplement.id = editingId;
+    formData.append("Id", editingId);
     response = await fetch(`http://localhost:5003/api/SuplementoDeportivo/${editingId}`, {
       method: "PUT",
       headers: { 
-        "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`
       },
-      body: JSON.stringify(supplement),
+      body: formData,
     });
 
     if (!response.ok) {
@@ -79,10 +88,9 @@ form.addEventListener("submit", async (e) => {
     response = await fetch("http://localhost:5003/api/SuplementoDeportivo", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`
       },
-      body: JSON.stringify(supplement),
+      body: formData,
     });
 
     if (!response.ok) {
@@ -114,6 +122,7 @@ async function loadSupplements() {
 
 function renderTable(supplements) {
   tableBody.innerHTML = "";
+  const urlBase = "http://localhost:5003";
 
   supplements.forEach((supplement) => {
     const row = document.createElement("tr");
@@ -125,6 +134,7 @@ function renderTable(supplements) {
       <td>${supplement.stock}</td>
       <td>${supplement.descripcion}</td>
       <td>${supplement.estado ? "Activo" : "Inactivo"}</td>
+      <td><img src="${urlBase + supplement.urlImagen}" width="100" height="100"></td>
       <td class="actions">
         <button onclick="editSupplement(${supplement.id})">Editar</button>
         <button onclick="toggleSupplement(${supplement.id}, ${supplement.estado})">
@@ -166,6 +176,13 @@ async function editSupplement(id) {
   tipoInput.value = supplement.tipo;
   stockInput.value = supplement.stock;
   descriptionInput.value = supplement.descripcion;
+
+  if (supplement.urlImagen) {
+    previewImg.src = `http://localhost:5003${supplement.urlImagen}`; // Asegúrate de poner el dominio si es relativo
+    previewImg.style.display = "block";
+  } else {
+    previewImg.style.display = "none";
+  }
 
   editingId = id; // Esto le indica al submit que va a actualizar y no crear
   document.getElementById("tituloModal").textContent = "Editar Suplemento";
@@ -217,6 +234,7 @@ abrirModalBtn.addEventListener("click", () => {
   form.reset();
   editingId = null;
   modal.classList.remove("hidden");
+  previewImg.style.display = "none";
 });
 
 cerrarModalBtn.addEventListener("click", () => {

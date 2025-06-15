@@ -70,6 +70,8 @@ builder.Services.AddScoped<ITipoMembresiaRepository, TipoMembresiaRepository>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IUsuariosRepository, UsuariosRepository>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IProgresoFisicoService, ProgresoFisicoService>();
+builder.Services.AddScoped<IProgresoFisicoRepository, ProgresoFisicoRepository>();
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -153,6 +155,8 @@ app.Use(async (context, next) =>
     Console.WriteLine($"Token recibido: {token}");
     await next();
 });
+
+app.UseStaticFiles();
 
 app.UseCors("AllowAll");
 

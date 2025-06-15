@@ -7,5 +7,6 @@
         public string? estado { get; set; }
         public int id_clase { get; set; }
         public int id_usuario { get; set; }
+        public Clase Clase { get; set; }
     }
 }

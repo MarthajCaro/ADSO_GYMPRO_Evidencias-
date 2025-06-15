@@ -72,6 +72,7 @@ function renderizarTabla(data) {
 
   data.forEach(suplemento => {
     const row = document.createElement("tr");
+    const urlBase = "http://localhost:5003";
 
     row.innerHTML = `
       <td>${suplemento.nombre}</td>
@@ -82,6 +83,7 @@ function renderizarTabla(data) {
       <td style="color: ${suplemento.estado ? 'green' : 'red'}">
         ${suplemento.estado ? 'Activo' : 'Inactivo'}
       </td>
+      <td><img src="${urlBase + suplemento.urlImagen}" width="100" height="100"></td>
     `;
 
     tableBody.appendChild(row);
@@ -93,6 +95,7 @@ function renderizarTabla(data) {
 
   data.forEach(suplemento => {
     const row = document.createElement("tr");
+    const urlBase = "http://localhost:5003";
 
     row.innerHTML = `
         <tr>
@@ -104,6 +107,7 @@ function renderizarTabla(data) {
           <td style="color: ${suplemento.estado ? 'green' : 'red'}">
             ${suplemento.estado ? 'Activo' : 'Inactivo'}
           </td>
+          <td><img src="${urlBase + suplemento.urlImagen}" width="100" height="100"></td>
         </tr>`;
 
     tableBody.appendChild(row);

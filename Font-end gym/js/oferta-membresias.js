@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const usuario = localStorage.getItem("idUsuario");
   const cerrarSesion = document.getElementById("cerrar-sesion");
+  const clasesInscritas = document.getElementById("clases-inscritas");
+  const progreso = document.getElementById("progreso-personal");
 
   if (usuario) {
     if (cerrarSesion) cerrarSesion.style.display = "block";
+    if (clasesInscritas) clasesInscritas.style.display = "block";
+    if (progreso) progreso.style.display = "block";
+    
   } else {
     if (cerrarSesion) cerrarSesion.style.display = "none";
+    if (clasesInscritas) clasesInscritas.style.display = "none";
+    if (progreso) progreso.style.display = "none";
   }
 });
 

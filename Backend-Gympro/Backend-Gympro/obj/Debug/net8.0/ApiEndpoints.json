@@ -267,6 +267,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend_Gympro.Controllers.InscripcionController",
+    "Method": "ObtenerClasesPorUsuario",
+    "RelativePath": "api/Inscripcion/por-usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend_Gympro.Controllers.MembresiaController",
     "Method": "GetAll",
     "RelativePath": "api/Membresia",
@@ -724,6 +740,157 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProgresoFisico",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "Create",
+    "RelativePath": "api/ProgresoFisico",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "progresoFisico",
+        "Type": "Backend_Gympro.Domain.Entidades.ProgresoFisico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "GetById",
+    "RelativePath": "api/ProgresoFisico/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "Update",
+    "RelativePath": "api/ProgresoFisico/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "progresoFisico",
+        "Type": "Backend_Gympro.Domain.Entidades.ProgresoFisico",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "Delete",
+    "RelativePath": "api/ProgresoFisico/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "ObtenerComparaciones",
+    "RelativePath": "api/ProgresoFisico/comparacion-todos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "CrearConImagen",
+    "RelativePath": "api/ProgresoFisico/crear-con-imagen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UsuarioId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Peso",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "MedidaCintura",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MedidaPecho",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fecha",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Observaciones",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Foto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend_Gympro.Controllers.ProgresoFisicoController",
+    "Method": "ObtenerPorUsuario",
+    "RelativePath": "api/ProgresoFisico/por-usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend_Gympro.Controllers.RolController",
     "Method": "GetAll",
     "RelativePath": "api/Rol",
@@ -821,9 +988,49 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "suplementodeportivo",
-        "Type": "Backend_Gympro.Domain.Entidades.SuplementoDeportivo",
-        "IsRequired": true
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "precio",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "id_usuario",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Foto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -858,9 +1065,49 @@
         "IsRequired": true
       },
       {
-        "Name": "suplementodeportivo",
-        "Type": "Backend_Gympro.Domain.Entidades.SuplementoDeportivo",
-        "IsRequired": true
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "precio",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "id_usuario",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Foto",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

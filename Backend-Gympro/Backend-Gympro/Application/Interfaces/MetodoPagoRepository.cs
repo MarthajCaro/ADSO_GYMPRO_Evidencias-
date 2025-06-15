@@ -6,7 +6,8 @@ namespace Backend_Gympro.Application.Interfaces
 {
     public class MetodoPagoRepository : GenericRepository<MetodoPago>, IMetodoPagoRepository
     {
-        public MetodoPagoRepository(AppDbContext context) : base(context)
+        public MetodoPagoRepository(AppDbContext
+            context) : base(context)
         {
         }
     }

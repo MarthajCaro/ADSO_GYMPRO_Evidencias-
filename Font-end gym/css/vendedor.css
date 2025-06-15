@@ -78,6 +78,29 @@ form textarea {
   color: white;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 8px;
+  border-radius: 5px;
+}
+
 form button {
   background: rgb(240, 88, 12);
   color: white;

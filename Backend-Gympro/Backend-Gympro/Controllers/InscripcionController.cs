@@ -64,5 +64,12 @@ namespace Backend_Gympro.Controllers
             var lista = _inscripcionService.ObtenerInscritos(entrenadorId);
             return Ok(lista);
         }
+
+        [HttpGet("por-usuario")]
+        public async Task<IActionResult> ObtenerClasesPorUsuario(int usuario)
+        {
+            var clases = await _inscripcionService.ObtenerClasesPorUsuarioAsync(usuario);
+            return Ok(clases);
+        }
     }
 }

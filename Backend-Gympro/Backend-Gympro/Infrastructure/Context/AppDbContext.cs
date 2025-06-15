@@ -19,6 +19,7 @@ namespace Backend_Gympro.Infrastructure.Context
         public DbSet<SuplementoDeportivo> SuplementoDeportivo { get; set; }
         public DbSet<TipoMembresia> TipoMembresia { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<ProgresoFisico> ProgresoFisico { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +36,7 @@ namespace Backend_Gympro.Infrastructure.Context
             modelBuilder.Entity<SuplementoDeportivo>().ToTable("suplemento_deportivo");
             modelBuilder.Entity<TipoMembresia>().ToTable("tipo_membresia");
             modelBuilder.Entity<Usuarios>().ToTable("usuarios");
+            modelBuilder.Entity<ProgresoFisico>().ToTable("progresofisico");
             modelBuilder.Entity<Membresia>()
                                 .HasOne(m => m.TipoMembresia)
                                 .WithMany()  // Si TipoMembresia tiene una relación de "uno a muchos", usa "WithMany"
@@ -45,6 +47,11 @@ namespace Backend_Gympro.Infrastructure.Context
                         .WithMany()
                         .HasForeignKey(c => c.id_usuario) // Especificamos la propiedad que se usará como clave foránea
                         .HasConstraintName("FK_Clase_Usuario");  // Nombre de la restricción (opcional)
+            modelBuilder.Entity<Inscripcion>()
+                        .HasOne(c => c.Clase)
+                        .WithMany()
+                        .HasForeignKey(c => c.id_clase) // Especificamos la propiedad que se usará como clave foránea
+                        .HasConstraintName("FK_Inscripcion_Clase");  // Nombre de la restricción (opcional)
         }
     }
 }

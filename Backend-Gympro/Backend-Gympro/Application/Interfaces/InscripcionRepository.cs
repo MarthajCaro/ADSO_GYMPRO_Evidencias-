@@ -31,5 +31,24 @@ namespace Backend_Gympro.Application.Interfaces
                         Edad = EF.Functions.DateDiffYear(persona.fecha_nacimiento, DateTime.Now)
                     }).ToList();
         }
+        public async Task<List<ClasePorUsuarioDto>> ObtenerClasesPorUsuarioAsync(int usuarioId)
+        {
+            return await _context.Inscripcion
+                .Where(i => i.id_usuario == usuarioId)
+                .Include(i => i.Clase)
+                    .ThenInclude(c => c.Usuario) // Usuario que dicta la clase
+                        .ThenInclude(u => u.Persona)
+                .Select(i => new ClasePorUsuarioDto
+                {
+                    NombreClase = i.Clase.Nombre,
+                    Descripcion = i.Clase.descripcion,
+                    duracion = i.Clase.duracion_en_minutos,
+                    horario = i.Clase.Hora,
+                    NombreEntrenador = i.Clase.Usuario.Persona.nombre + " " + i.Clase.Usuario.Persona.apellido
+                })
+                .Distinct()
+                .ToListAsync();
+        }
+
     }
 }

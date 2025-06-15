@@ -11,5 +11,6 @@ namespace Backend_Gympro.Application.Services
         Task UpdateInscripcionAsync(Inscripcion inscripcion);
         Task DeleteInscripcionAsync(int id);
         List<PersonaClaseDto> ObtenerInscritos(int entrenadorId);
+        Task<List<ClasePorUsuarioDto>> ObtenerClasesPorUsuarioAsync(int usuario);
     }
 }
