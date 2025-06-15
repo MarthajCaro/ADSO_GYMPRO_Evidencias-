@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-04-2025 a las 23:59:17
+-- Tiempo de generación: 15-06-2025 a las 01:55:03
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,22 +32,29 @@ CREATE TABLE `clase` (
   `nombre` varchar(50) NOT NULL,
   `duracion_en_minutos` int(11) NOT NULL,
   `descripcion` text DEFAULT NULL,
-  `id_usuario` int(11) DEFAULT NULL
+  `id_usuario` int(11) DEFAULT NULL,
+  `Dia` varchar(10) DEFAULT NULL,
+  `Hora` varchar(10) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `clase`
 --
 
-INSERT INTO `clase` (`id`, `nombre`, `duracion_en_minutos`, `descripcion`, `id_usuario`) VALUES
-(1, 'Yoga', 60, 'Clase de relajación y estiramiento', 2),
-(2, 'Crossfit', 45, 'Entrenamiento de alta intensidad', 6),
-(4, 'Kik Boxing', 60, 'Clase de entrenamiento de combate y acondicionamiento físico', 5),
-(5, 'Spinning', 45, 'Clase de resistencia cardiovascular en bicicleta estática', 8),
-(6, 'Aerobicos', 50, 'Ejercicio cardiovascular con música para mejorar la condición física', 6),
-(7, 'Cardio Fitness', 55, 'Entrenamiento enfocado en mejorar la salud cardiovascular y resistencia', 4),
-(8, 'Pilates', 60, 'Entrenamiento de fuerza, flexibilidad y control de respiración', 12),
-(9, 'Clases de recuperación fisica', 60, 'Clases de recuperacion fisica', 2);
+INSERT INTO `clase` (`id`, `nombre`, `duracion_en_minutos`, `descripcion`, `id_usuario`, `Dia`, `Hora`, `estado`) VALUES
+(1, 'Yoga', 60, 'Clase de relajación y estiramiento', 2, 'Miercoles', '09:00', 1),
+(2, 'Crossfit', 45, 'Entrenamiento de alta intensidad', 6, 'Viernes', '10:00', 1),
+(4, 'Kik Boxing', 60, 'Clase de entrenamiento de combate y acondicionamiento físico', 26, 'Domingo', '11:00', 1),
+(5, 'Spinning', 45, 'Clase de resistencia cardiovascular en bicicleta estática', 25, 'Viernes', '15:00', 1),
+(6, 'Aerobicos', 50, 'Ejercicio cardiovascular con música para mejorar la condición física', 6, 'Sabado', '17:00', 1),
+(7, 'Cardio Fitness', 55, 'Entrenamiento enfocado en mejorar la salud cardiovascular y resistencia', 11, 'Martes', '14:00', 1),
+(8, 'Pilates', 60, 'Entrenamiento de fuerza, flexibilidad y control de respiración', 22, 'Domingo', '07:00', 1),
+(9, 'Clases de recuperación fisica', 60, 'Clases de recuperacion fisica', 2, 'Sabado', '17:00', 1),
+(14, 'Clase Champeta zumba', 60, 'Clase con canciones unicamente de champeta', 2, 'Lunes', '12:00', 0),
+(15, 'Clase de zumba pop', 60, 'Clase con canciones unicamente pop', 6, 'Lunes', '10:00', 0),
+(16, 'Clase Champeta salsa', 120, 'Clase con canciones unicamente de salsa', 11, 'Jueves', '07:00', 0),
+(17, 'Clase Core', 60, 'Es una clase de fitness que se enfoca en fortalecer y tonificar los músculos del centro del cuerpo, incluyendo los abdominales, la espalda baja y los músculos de la pelvis', 5, 'Lunes', '08:00', 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +129,18 @@ INSERT INTO `inscripcion` (`id`, `fecha_inscripcion`, `estado`, `id_clase`, `id_
 (2, '2024-09-15', 'Inactivo', 2, 5),
 (3, '2024-08-12', 'Pendiente', 1, 9),
 (4, '2024-07-22', 'Cancelado', 2, 11),
-(5, '2024-06-10', 'Activo', 1, 6);
+(5, '2024-06-10', 'Activo', 1, 6),
+(88, '2025-05-02', 'Activo', 1, 7),
+(89, '2025-05-02', 'Activo', 2, 7),
+(90, '2025-05-02', 'Activo', 4, 7),
+(91, '2025-05-02', 'Activo', 17, 17),
+(92, '2025-05-03', 'Activo', 2, 28),
+(93, '2025-05-04', 'Activo', 17, 7),
+(94, '2025-05-04', 'Activo', 2, 7),
+(95, '2025-05-04', 'Activo', 5, 7),
+(96, '2025-05-04', 'Activo', 7, 21),
+(97, '2025-05-04', 'Activo', 4, 21),
+(98, '2025-05-21', 'Activo', 9, 4);
 
 -- --------------------------------------------------------
 
@@ -143,19 +161,12 @@ CREATE TABLE `membresia` (
 --
 
 INSERT INTO `membresia` (`id`, `precio`, `duracion_membresia_en_meses`, `descripcion`, `id_tipo_membresia`) VALUES
-(1, 50000.00, 1, 'Acceso básico al gimnasio', 1),
-(2, 240000.00, 3, 'Acceso a clases grupales', 2),
-(3, 400000.00, 6, 'Acceso a clases grupales y piscina', 2),
-(4, 500000.00, 12, 'Acceso a todas las instalaciones', 3),
-(5, 800000.00, 12, 'Acceso a todas las instalaciones y eventos especiales', 2),
-(7, 120000.00, 3, '15 dias', 5),
-(8, 120000.00, 3, 'Clases cada 15 dias', 5),
-(9, 40000.00, 1, 'Acceso básico al gimnasio', 1),
-(10, 40000.00, 1, 'Acceso básico al gimnasio', 1),
-(11, 600000.00, 12, 'Nueva membresia de promoción para acceso ilimitado por un menor precio y costo', 3),
-(12, 130000.00, 3, 'Clases cada 15 dias', 5),
-(13, 140000.00, 3, 'Clases cada 15 dias', 5),
-(14, 30000.00, 1, 'Acceso básico al gimnasio', 1);
+(1, 80000.00, 1, 'Acceso básico al gimnasio', 1),
+(2, 300000.00, 3, 'Acceso a clases grupales', 2),
+(3, 550000.00, 6, 'Acceso a clases grupales y piscina', 3),
+(4, 900000.00, 12, 'Acceso a todas las instalaciones', 4),
+(5, 450000.00, 6, 'Promocion: Acceso a todas las instalaciones y eventos especiales', 5),
+(15, 750000.00, 12, 'Promocion: Si eres afilio en la caja de compensacion compensar, accede a esta membresia con un descuento', 4);
 
 -- --------------------------------------------------------
 
@@ -174,9 +185,9 @@ CREATE TABLE `metodo_pago` (
 --
 
 INSERT INTO `metodo_pago` (`id`, `nombre`, `estado`) VALUES
-(1, 'Debito automatico', 'Activa'),
-(2, 'Tarjeta credito', 'Activa'),
-(3, 'Tarjeta debito', 'Activa');
+(1, 'PSE', 'Activo'),
+(2, 'Tarjeta credito o debito', 'Activo'),
+(3, 'Bancolombia', 'Activo');
 
 -- --------------------------------------------------------
 
@@ -1328,7 +1339,20 @@ INSERT INTO `pago` (`id`, `precio`, `fecha_pago`, `fecha_vigencia`, `id_usuario`
 (8, 60000.00, '2023-09-01', '2024-09-01', 9, 1, 5),
 (9, 80000.00, '2023-08-01', '2024-08-01', 6, 1, 4),
 (10, 90000.00, '2023-12-01', '2024-12-01', 11, 1, 5),
-(11, 10000.00, '2025-04-01', '2025-05-01', 5, 3, 1);
+(11, 10000.00, '2025-04-01', '2025-05-01', 5, 3, 1),
+(12, 80000.00, '2025-05-01', '2025-06-01', 10, 1, 1),
+(14, 80000.00, '2025-05-01', '2025-05-01', 10, 1, 1),
+(15, 300000.00, '2025-05-01', '2025-08-01', 10, 2, 2),
+(16, 550000.00, '2025-05-01', '2025-11-01', 10, 3, 3),
+(17, 550000.00, '2025-05-01', '2025-11-01', 10, 1, 3),
+(18, 550000.00, '2025-05-01', '2025-11-01', 10, 2, 3),
+(19, 450000.00, '2025-05-01', '2025-11-01', 7, 3, 5),
+(20, 80000.00, '2025-05-01', '2025-06-01', 7, 1, 1),
+(21, 550000.00, '2025-05-01', '2025-11-01', 7, 1, 3),
+(22, 300000.00, '2025-05-02', '2025-08-02', 17, 2, 2),
+(23, 550000.00, '2025-05-03', '2025-11-03', 28, 1, 3),
+(24, 550000.00, '2025-05-04', '2025-11-04', 21, 1, 3),
+(25, 300000.00, '2025-05-21', '2025-08-21', 4, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1357,11 +1381,11 @@ INSERT INTO `persona` (`id`, `nombre`, `apellido`, `genero`, `fecha_nacimiento`,
 (1, 'Carlos', 'López', 'M', '1990-05-10', '3219876543', 'paochik111@gmail.com', 3, 'Calle 45 #20-30', '111111'),
 (2, 'Ana', 'Martínez', 'F', '1985-07-20', '3107654321', 'ana.martinez@example.com', 1, 'Carrera 10 #15-40', '111112'),
 (3, 'María', 'Gómez', 'F', '1992-09-15', '3151234567', 'maria.gomez@example.com', 2, 'Avenida Siempre Viva #742', '111113'),
-(4, 'Pedro', 'Ramírez', 'M', '1987-11-23', '3123456789', 'pedro.ramirez@example.com', 107, 'Calle 12A #55-10', '111111'),
+(4, 'Nelson Mauricio', 'Velasquez', 'M', '1995-05-05', '78363529', 'nelsonv@example.com', 462, 'Carrera 82 g', '111111'),
 (5, 'Laura', 'Torres', 'F', '1995-03-30', '3176543210', 'laura.torres@example.com', 2, 'Carrera 4A #66-22', '111115'),
 (6, 'Luis', 'Pérez', 'M', '1993-04-11', '3125556666', 'luis.perez@example.com', 1, 'Calle 80', '111116'),
 (7, 'Jorge', 'Rojas', 'M', '1989-02-01', '3105557777', 'jorge.rojas@example.com', 3, 'Carrera 10', '111117'),
-(8, 'Claudia', 'Lara', 'F', '1986-06-19', '3135558888', 'claudia.lara@example.com', 2, 'Calle 50', '111118'),
+(8, 'Claudia', 'Rasputia', 'F', '1986-06-19', '3135558888', 'claudia.lara@example.com', 2, 'Calle 50', '111118'),
 (9, 'Sofia', 'Castro', 'F', '1994-08-25', '3225559999', 'sofia.castro@example.com', 3, 'Avenida 68', '111119'),
 (10, 'Andrés', 'Mendoza', 'M', '1991-10-12', '3165550000', 'andres.mendoza@example.com', 1, 'Carrera 13', '111120'),
 (11, 'Juliana', 'Moreno', 'F', '1997-01-05', '3145551010', 'juliana.moreno@example.com', 3, 'Calle 7', '111121'),
@@ -1387,7 +1411,36 @@ INSERT INTO `persona` (`id`, `nombre`, `apellido`, `genero`, `fecha_nacimiento`,
 (31, 'Felipe', 'Arevalo', 'M', '1978-08-18', '3200001', 'felipearevalo@gmail.com', 305, 'carrera 82', '11112'),
 (32, 'Santiago', 'Arevalo', 'M', '2000-06-23', '3200022', 'santiago@gmail.com', 1033, 'carrera 86 g 4', '11112'),
 (33, 'Andrea', 'Castillo', 'F', '2012-10-20', '7836329', 'andrea_castillo@gmail.com', 560, 'calle 2', '11222'),
-(34, 'Paola', 'Ramirez', 'F', '1991-01-01', '7836329', 'paoramirez@gmail.com', 107, 'carrera 86 g 5', '12222');
+(34, 'Paola', 'Ramirez', 'F', '1991-01-01', '7836329', 'paoramirez@gmail.com', 107, 'carrera 86 g 5', '12222'),
+(35, 'Maria', 'Velasquez', 'F', '1995-05-05', '4783632', 'Mariav@example.com', 462, 'Carrera 82', '11112'),
+(36, 'Andres', 'Delgado', 'M', '1987-06-06', '66984422', 'AndresD@gmail.com', 107, 'Transversal 2 # 60 g', '111112');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `progresofisico`
+--
+
+CREATE TABLE `progresofisico` (
+  `Id` int(11) NOT NULL,
+  `UsuarioId` int(11) NOT NULL,
+  `FechaRegistro` datetime NOT NULL DEFAULT current_timestamp(),
+  `Peso` decimal(5,2) NOT NULL,
+  `MedidaCintura` decimal(5,2) DEFAULT NULL,
+  `MedidaPecho` decimal(5,2) DEFAULT NULL,
+  `FotoProgresoUrl` varchar(900) DEFAULT NULL,
+  `Observaciones` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `progresofisico`
+--
+
+INSERT INTO `progresofisico` (`Id`, `UsuarioId`, `FechaRegistro`, `Peso`, `MedidaCintura`, `MedidaPecho`, `FotoProgresoUrl`, `Observaciones`) VALUES
+(1, 28, '2025-06-02 20:47:25', 75.00, 80.00, 80.00, '/uploads/0ffd6813-baac-4eaa-9735-1e9ebfb02c62_Linda.PNG', 'Registro 1'),
+(2, 7, '2025-06-02 20:50:30', 75.00, 80.00, 80.00, '/uploads/5fd7ef59-df9e-42e0-acaf-c30cebc8f609_SNK.jpeg', 'Registro 1'),
+(3, 28, '2025-06-03 23:00:00', 72.00, 78.00, 78.00, '/uploads/a2274b52-e953-4267-a158-c00a8edd1a36_ddd.jpg', 'Registro 2'),
+(4, 7, '2025-06-03 00:00:00', 90.00, 85.00, 90.00, '/uploads/421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.jpeg', 'Registro 2');
 
 -- --------------------------------------------------------
 
@@ -1424,28 +1477,39 @@ CREATE TABLE `suplemento_deportivo` (
   `precio` decimal(10,2) NOT NULL,
   `id_usuario` int(11) DEFAULT NULL,
   `estado` tinyint(4) DEFAULT 1,
-  `Stock` int(11) NOT NULL DEFAULT 0
+  `Stock` int(11) NOT NULL DEFAULT 0,
+  `UrlImagen` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `suplemento_deportivo`
 --
 
-INSERT INTO `suplemento_deportivo` (`id`, `nombre`, `tipo`, `descripcion`, `precio`, `id_usuario`, `estado`, `Stock`) VALUES
-(1, 'Proteína Whey', 'Proteína', 'Suplemento de proteína avanzada', 50000.00, 3, 1, 20),
-(2, 'Creatina', 'Creatina', 'Vitaminas y minerales esenciales', 38000.00, 3, 1, 0),
-(3, 'Suplemento especial', 'Suplemento', 'Especial para recuperar el cuerpo', 50000.00, 3, 1, 0),
-(4, 'Colageno', 'Suplemento', 'Ayuda a mantener la elasticidad y firmeza de la piel, fortalece los huesos y articulaciones, y contribuye a la salud de los tendones y músculos. También es importante para la cicatrización de heridas y la salud del cabello y las uñas', 42000.00, 3, 1, 0),
-(5, 'Colageno', 'Suplemento', 'Ayuda a mantener la elasticidad y firmeza de la piel, fortalece los huesos y articulaciones, y contribuye a la salud de los tendones y músculos. También es importante para la cicatrización de heridas y la salud del cabello y las uñas', 42000.00, 3, 1, 0),
-(6, 'Vitamita A', 'Suplemento', 'Esencial para la visión, el sistema inmunológico, la reproducción, el crecimiento y el desarrollo', 30000.00, 3, 1, 0),
-(7, 'Vitamia B', 'Suplemento', 'Ayudan a convertir los alimentos en energía, a producir glóbulos rojos y a mantener la salud del sistema nervioso', 40000.00, 3, 1, 0),
-(8, 'Vitamina C', 'Suplemento', 'Sirve para fortalecer el sistema inmunológico, actúa como antioxidante protegiendo las células, mejora la absorción de hierro y es esencial para la producción de colágeno, importante para la piel, huesos y tejido conectivo', 42000.00, 3, 1, 0),
-(9, 'Vitamina D', 'Suplemento', 'Es fundamental para la absorción de calcio y fósforo, esenciales para la salud ósea', 42000.00, 3, 1, 0),
-(10, 'Vitamina E', 'Suplemento', 'ayuda al cuerpo en muchas funciones, entre ellas, la visión, la reproducción, la salud de la piel, el cerebro y la sangre', 41000.00, 3, 1, 0),
-(11, 'Vitamina K', 'Suplemento', 'es un nutriente que ayuda a la coagulación de la sangre y a mantener huesos y tejidos saludables', 42000.00, 3, 1, 0),
-(12, 'Vitamina b12', 'Suplemento', 'Es esencial para la formación de glóbulos rojos, la función nerviosa y la producción de ADN', 41000.00, 3, 1, 0),
-(13, 'Citrato de magnesio', 'Suplemento', 'Es un suplemento utilizado para tratar el estreñimiento a corto plazo. Además, el magnesio, en forma de citrato, contribuye a la salud ósea, regula la función muscular y nerviosa, y participa en la producción de energía', 51000.00, 3, 1, 0),
-(14, 'Vitamina H', 'Suplemento', 'Suplemento importante', 35000.00, 3, 0, 50);
+INSERT INTO `suplemento_deportivo` (`id`, `nombre`, `tipo`, `descripcion`, `precio`, `id_usuario`, `estado`, `Stock`, `UrlImagen`) VALUES
+(1, 'Proteína Wheys', 'Proteína', 'Suplemento de proteína avanzada', 70000.00, 3, 1, 25, '/suplementos/cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.webp'),
+(2, 'Creatina', 'Creatina', 'Vitaminas y minerales esenciales', 38000.00, 3, 1, 5, '/suplementos/0c09a37d-41b7-4498-be8b-7e05bb6cb7f9_images (2).jpg'),
+(3, 'Suplemento especial', 'Suplemento', 'Especial para recuperar el cuerpo', 50000.00, 3, 1, 10, '/suplementos/9c3fae61-dd71-41cc-b4f2-dc63ec6a0b05_images (3).jpg'),
+(4, 'Colageno', 'Suplemento', 'Ayuda a mantener la elasticidad y firmeza de la piel, fortalece los huesos y articulaciones, y contribuye a la salud de los tendones y músculos. También es importante para la cicatrización de heridas y la salud del cabello y las uñas', 42000.00, 3, 1, 0, '/suplementos/49b62780-82d1-412c-9c5c-e0437af0459a_images (2).jpg'),
+(5, 'Colageno', 'Suplemento', 'Ayuda a mantener la elasticidad y firmeza de la piel, fortalece los huesos y articulaciones, y contribuye a la salud de los tendones y músculos. También es importante para la cicatrización de heridas y la salud del cabello y las uñas', 40000.00, 3, 1, 10, '/suplementos/843a48fb-bf14-4df2-81a4-7ab6759091bf_images.jpg'),
+(6, 'Vitamita A', 'Suplemento', 'Esencial para la visión, el sistema inmunológico, la reproducción, el crecimiento y el desarrollo', 30000.00, 3, 1, 0, '/suplementos/0eec4f21-3439-42bd-8c5a-3ef9627bcbbd_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'),
+(7, 'Vitamia B', 'Suplemento', 'Ayudan a convertir los alimentos en energía, a producir glóbulos rojos y a mantener la salud del sistema nervioso', 40000.00, 3, 1, 0, '/suplementos/0c6cc931-93b6-4281-8a36-39e5c0364416_images (3).jpg'),
+(8, 'Vitamina C', 'Suplemento', 'Sirve para fortalecer el sistema inmunológico, actúa como antioxidante protegiendo las células, mejora la absorción de hierro y es esencial para la producción de colágeno, importante para la piel, huesos y tejido conectivo', 42000.00, 3, 1, 0, '/suplementos/c4375d6b-636d-43e9-8885-3ed0b1dbe230_images (1).jpg'),
+(9, 'Vitamina D', 'Suplemento', 'Es fundamental para la absorción de calcio y fósforo, esenciales para la salud ósea', 42000.00, 3, 1, 0, '/suplementos/335218e1-4df3-45f3-9abc-955c5e0c9d24_D_NQ_676098-MLU75735728915_042024-V.webp'),
+(10, 'Vitamina E', 'Suplemento', 'ayuda al cuerpo en muchas funciones, entre ellas, la visión, la reproducción, la salud de la piel, el cerebro y la sangre', 41000.00, 3, 1, 0, '/suplementos/4621d30f-68d0-4d00-99f0-d683666e5fe6_D_NQ_NP_881760-MLU72613038759_112023-O.webp'),
+(11, 'Vitamina K', 'Suplemento', 'es un nutriente que ayuda a la coagulación de la sangre y a mantener huesos y tejidos saludables', 42000.00, 3, 1, 0, '/suplementos/019843f2-7411-40a4-ab6d-1d9f7d740656_images (2).jpg'),
+(12, 'Vitamina b12', 'Suplemento', 'Es esencial para la formación de glóbulos rojos, la función nerviosa y la producción de ADN', 41000.00, 3, 1, 0, '/suplementos/ee5b2413-42a0-49b0-9c44-c64952feede1_images (1).jpg'),
+(13, 'Citrato de magnesio', 'Suplemento', 'Es un suplemento utilizado para tratar el estreñimiento a corto plazo. Además, el magnesio, en forma de citrato, contribuye a la salud ósea, regula la función muscular y nerviosa, y participa en la producción de energía', 51000.00, 3, 1, 0, '/suplementos/24dd0ad1-c9de-4356-b3d7-3378635815a5_images.jpg'),
+(14, 'Vitamina H', 'Suplemento', 'Suplemento importante', 35000.00, 3, 1, 50, '/suplementos/a76943e0-66a4-4458-a8af-8583cec754d7_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'),
+(15, 'Complejo B', 'Vitamina', 'Grupo de vitaminas hidrosolubles esenciales para la salud humana', 42000.00, 3, 1, 40, '/suplementos/8c0d0fc8-02f2-4e45-af70-2daee7e21f2f_images (2).jpg'),
+(16, 'Ácido fólico', 'Vitaminas', 'Ayuda en el crecimiento de los tejidos y en el trabajo celular', 90000.00, 3, 1, 20, '/suplementos/bc598522-a975-458d-b784-26f8c0ba9156_images (3).jpg'),
+(17, 'Proteína Reyes', 'Proteína', 'Proteina para reyes (y reinas) de verdad', 250000.00, 8, 1, 15, NULL),
+(18, 'Nuevo Suplemento', 'Vitaminas', 'Suplemento economico para mayores de 18', 12000.00, 3, 1, 14, '/suplementos/8ef11e70-5928-4d93-864c-9523c14dddef_D_NQ_NP_881760-MLU72613038759_112023-O.webp'),
+(19, 'Vitamina D', 'Vitamina', 'Vitamina especial para todas las mañanas', 40000.00, 8, 1, 40, NULL),
+(20, 'Proteína Especial', 'Suplemento', 'Esta proteina es ideal para tus dias de cardio intenso', 92000.00, 3, 1, 2, '/suplementos/eef4aae9-a1ee-423c-a90e-bcc704ad0d72_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'),
+(21, 'Suplemento 1', 'Proteina', 'Proteina de prueba', 50000.00, 3, 1, 2, '/suplementos/f515e8b2-2ef8-44bb-97c9-5477ac94823e_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg'),
+(22, 'Suplemento 2', 'Suplemento', 'suplemento de prueba', 42000.00, 3, 1, 20, '/suplementos/1d881428-158f-4c69-82d3-32cb982b601f_images.jpg'),
+(23, 'Suplemento 3', 'Suplemento', 'Suplemento 3', 55000.00, 3, 1, 10, '/suplementos/cbf9c00f-2d00-4ed7-9109-f107c3f845c0_images (1).jpg'),
+(24, 'Suplemento 4', 'Suplemento', 'Suplemento de prueba', 4500.00, 3, 1, 30, '/suplementos/4c5cc7cf-7595-4c37-87d0-0b80f92edf7d_D_NQ_676098-MLU75735728915_042024-V.webp');
 
 -- --------------------------------------------------------
 
@@ -1493,7 +1557,7 @@ INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `PersonaId`, `RolId`, `es
 (2, 'Carlos_López', 'password1', 1, 2, 1),
 (3, 'Ana_Martínez', 'password2', 2, 4, 1),
 (4, 'María_Gómez', 'password3', 3, 3, 1),
-(5, 'Pedro_Ramírez', 'password4', 4, 1, 1),
+(5, 'Pedro_Ramírez', 'password4', 4, 2, 1),
 (6, 'Laura_Torres', 'password5', 5, 2, 1),
 (7, 'Luis_Pérez', 'password6', 6, 3, 1),
 (8, 'Jorge_Rojas', 'password7', 7, 4, 1),
@@ -1509,10 +1573,12 @@ INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `PersonaId`, `RolId`, `es
 (18, 'Yennifer_Vargas', '123456', 22, 3, 1),
 (21, 'Ana_Leal', '12345', 29, 3, 0),
 (22, 'Esteban_arevalo', '12345', 30, 2, 1),
-(23, 'Felipe_Arevalo', '12345', 31, 4, 1),
+(23, 'Felipe_Arevalo', 'aaaaaaaa', 31, 4, 1),
 (24, 'Santiago_Arevalo', '12345', 32, 4, 0),
-(25, 'Ana_Castillo', '12345', 33, 2, 1),
-(26, 'Paola_ramirez', '12345', 34, 2, 0);
+(25, 'Ana_Castillo', '12345666', 33, 2, 1),
+(26, 'Paola_ramirez', '12345', 34, 2, 0),
+(27, 'NelsonV', '123456', 35, 2, 1),
+(28, 'Andres_Delgado', '12345678', 36, 3, 1);
 
 --
 -- Índices para tablas volcadas
@@ -1577,6 +1643,13 @@ ALTER TABLE `persona`
   ADD KEY `fk_persona_municipio` (`id_municipio`);
 
 --
+-- Indices de la tabla `progresofisico`
+--
+ALTER TABLE `progresofisico`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `FK_ProgresoFisico_Usuario` (`UsuarioId`);
+
+--
 -- Indices de la tabla `rol`
 --
 ALTER TABLE `rol`
@@ -1611,43 +1684,49 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `clase`
 --
 ALTER TABLE `clase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `inscripcion`
 --
 ALTER TABLE `inscripcion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT de la tabla `membresia`
 --
 ALTER TABLE `membresia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `pago`
 --
 ALTER TABLE `pago`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT de la tabla `progresofisico`
+--
+ALTER TABLE `progresofisico`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `suplemento_deportivo`
 --
 ALTER TABLE `suplemento_deportivo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas
@@ -1695,6 +1774,12 @@ ALTER TABLE `pago`
 --
 ALTER TABLE `persona`
   ADD CONSTRAINT `fk_persona_municipio` FOREIGN KEY (`id_municipio`) REFERENCES `municipio` (`id`);
+
+--
+-- Filtros para la tabla `progresofisico`
+--
+ALTER TABLE `progresofisico`
+  ADD CONSTRAINT `FK_ProgresoFisico_Usuario` FOREIGN KEY (`UsuarioId`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `suplemento_deportivo`
