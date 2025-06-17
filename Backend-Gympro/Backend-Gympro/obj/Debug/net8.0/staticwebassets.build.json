@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e8N5WM5AUZFpEAC1KDmq9YmJMdcC7XW63Uj941l+AyE=",
+  "Hash": "Rlh4BHDo+kLgd5CGmyTHKFrobyVoRrYSIrDioUfVuvg=",
   "Source": "Backend-Gympro",
   "BasePath": "_content/Backend-Gympro",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\suplementos\\019843f2-7411-40a4-ab6d-1d9f7d740656_images (2).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna.jpg",
+      "SourceId": "Backend-Gympro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\",
+      "BasePath": "_content/Backend-Gympro",
+      "RelativePath": "suplementos/01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ry20r3o96h",
+      "Integrity": "/Um4QyhqQeeeUrNbEp0Lfd15jy59qAlJuM+ZodyqwD0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\suplementos\\01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna.jpg"
     },
     {
       "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\053ce94a-84f1-490c-b378-aade53aa33ea_images.jpg",
@@ -416,6 +437,27 @@
       "OriginalItemSpec": "wwwroot\\suplementos\\c4375d6b-636d-43e9-8885-3ed0b1dbe230_images (1).jpg"
     },
     {
+      "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.webp",
+      "SourceId": "Backend-Gympro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\",
+      "BasePath": "_content/Backend-Gympro",
+      "RelativePath": "suplementos/cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l7msy873ti",
+      "Integrity": "cRH6Vw3odCQSI6BBBHEQchlSaYRMB1U45zgXJOH90e8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\suplementos\\cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.webp"
+    },
+    {
       "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\cbf9c00f-2d00-4ed7-9109-f107c3f845c0_images (1).jpg",
       "SourceId": "Backend-Gympro",
       "SourceType": "Discovered",
@@ -479,6 +521,27 @@
       "OriginalItemSpec": "wwwroot\\suplementos\\eef4aae9-a1ee-423c-a90e-bcc704ad0d72_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg"
     },
     {
+      "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3).jpg",
+      "SourceId": "Backend-Gympro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\",
+      "BasePath": "_content/Backend-Gympro",
+      "RelativePath": "suplementos/f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3)#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k3jrc1ftoh",
+      "Integrity": "kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\suplementos\\f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3).jpg"
+    },
+    {
       "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\f515e8b2-2ef8-44bb-97c9-5477ac94823e_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg",
       "SourceId": "Backend-Gympro",
       "SourceType": "Discovered",
@@ -521,6 +584,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\0ffd6813-baac-4eaa-9735-1e9ebfb02c62_Linda.PNG"
     },
     {
+      "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\41934dc7-19ae-4520-920d-26ee52a7cf65_SNK.jpeg",
+      "SourceId": "Backend-Gympro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\",
+      "BasePath": "_content/Backend-Gympro",
+      "RelativePath": "uploads/41934dc7-19ae-4520-920d-26ee52a7cf65_SNK#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "idc5tjww9f",
+      "Integrity": "GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\41934dc7-19ae-4520-920d-26ee52a7cf65_SNK.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.jpeg",
       "SourceId": "Backend-Gympro",
       "SourceType": "Discovered",
@@ -540,6 +624,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA.jpg",
+      "SourceId": "Backend-Gympro",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\",
+      "BasePath": "_content/Backend-Gympro",
+      "RelativePath": "uploads/42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "n0ls0rbsri",
+      "Integrity": "maq0tSwPEsCuQP+iTLPjZzs9qKobXqOvjqE4oghEvf8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA.jpg"
     },
     {
       "Identity": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\5fd7ef59-df9e-42e0-acaf-c30cebc8f609_SNK.jpeg",
@@ -664,6 +769,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-U2ZLBPw3AIdGmCdLZnYZicwqndw6NwhgDj5gBCLovCg="
+        }
+      ]
+    },
+    {
+      "Route": "suplementos/01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna.jpg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9147"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/Um4QyhqQeeeUrNbEp0Lfd15jy59qAlJuM+ZodyqwD0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:11:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/Um4QyhqQeeeUrNbEp0Lfd15jy59qAlJuM+ZodyqwD0="
+        }
+      ]
+    },
+    {
+      "Route": "suplementos/01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna.ry20r3o96h.jpg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9147"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/Um4QyhqQeeeUrNbEp0Lfd15jy59qAlJuM+ZodyqwD0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:11:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ry20r3o96h"
+        },
+        {
+          "Name": "label",
+          "Value": "suplementos/01bc86b8-829b-41ab-a65d-bbe607308f85_Creatinna.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/Um4QyhqQeeeUrNbEp0Lfd15jy59qAlJuM+ZodyqwD0="
         }
       ]
     },
@@ -2144,6 +2331,88 @@
       ]
     },
     {
+      "Route": "suplementos/cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.l7msy873ti.webp",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13882"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cRH6Vw3odCQSI6BBBHEQchlSaYRMB1U45zgXJOH90e8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 02:07:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l7msy873ti"
+        },
+        {
+          "Name": "label",
+          "Value": "suplementos/cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cRH6Vw3odCQSI6BBBHEQchlSaYRMB1U45zgXJOH90e8="
+        }
+      ]
+    },
+    {
+      "Route": "suplementos/cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.webp",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\cabf2d01-c6e4-42ab-8461-60d22e03aa98_D_NQ_676098-MLU75735728915_042024-V.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13882"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cRH6Vw3odCQSI6BBBHEQchlSaYRMB1U45zgXJOH90e8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 02:07:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cRH6Vw3odCQSI6BBBHEQchlSaYRMB1U45zgXJOH90e8="
+        }
+      ]
+    },
+    {
       "Route": "suplementos/cbf9c00f-2d00-4ed7-9109-f107c3f845c0_images (1).3bp4ek5057.jpg",
       "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\cbf9c00f-2d00-4ed7-9109-f107c3f845c0_images (1).jpg",
       "Selectors": [],
@@ -2390,6 +2659,88 @@
       ]
     },
     {
+      "Route": "suplementos/f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3).jpg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:09:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0="
+        }
+      ]
+    },
+    {
+      "Route": "suplementos/f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3).k3jrc1ftoh.jpg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8863"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:09:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k3jrc1ftoh"
+        },
+        {
+          "Name": "label",
+          "Value": "suplementos/f0836dc1-78ef-4f4d-8864-dc260932fa0b_images (3).jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kAaDSWdqO1jbyGv+4rLV+LEvGNtWWhkuLFnT7GMkoO0="
+        }
+      ]
+    },
+    {
       "Route": "suplementos/f515e8b2-2ef8-44bb-97c9-5477ac94823e_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.feid0frgnx.jpg",
       "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\suplementos\\f515e8b2-2ef8-44bb-97c9-5477ac94823e_Los-mejores-suplementos-de-proteinas-disponibles-en-Amazon.jpg",
       "Selectors": [],
@@ -2554,6 +2905,88 @@
       ]
     },
     {
+      "Route": "uploads/41934dc7-19ae-4520-920d-26ee52a7cf65_SNK.idc5tjww9f.jpeg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\41934dc7-19ae-4520-920d-26ee52a7cf65_SNK.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35765"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:20:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "idc5tjww9f"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/41934dc7-19ae-4520-920d-26ee52a7cf65_SNK.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/41934dc7-19ae-4520-920d-26ee52a7cf65_SNK.jpeg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\41934dc7-19ae-4520-920d-26ee52a7cf65_SNK.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35765"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 02:20:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw="
+        }
+      ]
+    },
+    {
       "Route": "uploads/421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.idc5tjww9f.jpeg",
       "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\421cc4c3-6e20-4dd1-8466-b5861d7838d4_SNK.jpeg",
       "Selectors": [],
@@ -2632,6 +3065,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-GsnbdVQ5BkXslGA74PkDOqi1TDnhHJJ6YtsOU03/Xyw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA.jpg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"maq0tSwPEsCuQP+iTLPjZzs9qKobXqOvjqE4oghEvf8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 01:10:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-maq0tSwPEsCuQP+iTLPjZzs9qKobXqOvjqE4oghEvf8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA.n0ls0rbsri.jpg",
+      "AssetFile": "C:\\Users\\yenni\\OneDrive\\Documentos\\GitHub\\ADSO_GYMPRO_Evidencias-\\Backend-Gympro\\Backend-Gympro\\wwwroot\\uploads\\42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"maq0tSwPEsCuQP+iTLPjZzs9qKobXqOvjqE4oghEvf8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 01:10:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n0ls0rbsri"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/42607afb-f9c9-49b6-a4c5-2ac4ba469169_PmARIA.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-maq0tSwPEsCuQP+iTLPjZzs9qKobXqOvjqE4oghEvf8="
         }
       ]
     },

@@ -298,17 +298,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Inscripcion"
+                "$ref": "#/components/schemas/InscripcionClaseDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Inscripcion"
+                "$ref": "#/components/schemas/InscripcionClaseDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Inscripcion"
+                "$ref": "#/components/schemas/InscripcionClaseDTO"
               }
             }
           }
@@ -2451,6 +2451,32 @@
           },
           "clase": {
             "$ref": "#/components/schemas/Clase"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InscripcionClaseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha_inscripcion": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_clase": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_usuario": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

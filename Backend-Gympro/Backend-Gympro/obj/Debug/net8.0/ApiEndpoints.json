@@ -196,8 +196,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "inscripcion",
-        "Type": "Backend_Gympro.Domain.Entidades.Inscripcion",
+        "Name": "dto",
+        "Type": "Backend_Gympro.Application.DTOs.InscripcionClaseDTO",
         "IsRequired": true
       }
     ],

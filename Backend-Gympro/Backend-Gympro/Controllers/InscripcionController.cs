@@ -1,4 +1,5 @@
-﻿using Backend_Gympro.Application.Services;
+﻿using Backend_Gympro.Application.DTOs;
+using Backend_Gympro.Application.Services;
 using Backend_Gympro.Domain.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -34,8 +35,16 @@ namespace Backend_Gympro.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Inscripcion inscripcion)
+        public async Task<IActionResult> Create(InscripcionClaseDTO dto)
         {
+                var inscripcion = new Inscripcion
+                {
+                    fecha_inscripcion = dto.fecha_inscripcion,
+                    estado = dto.estado,
+                    id_clase = dto.id_clase,
+                    id_usuario = dto.id_usuario
+                };
+
             await _inscripcionService.AddInscripcionAsync(inscripcion);
             return CreatedAtAction(nameof(GetById), new { id = inscripcion.Id }, inscripcion);
         }
